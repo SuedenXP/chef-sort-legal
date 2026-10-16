@@ -60,3 +60,19 @@ bleiben Position und Groesse ruhig. Plattformlogos unveraendert. 20 bestehende
 Browser-Szenarien und drei gezielte Bewegungs-Testgruppen bestanden, inklusive
 Abbruch der Touch-Eingabe. Siehe .local-preview/qa/motion-review.md.
 Keine neuen Bibliotheken, Fremdassets, Lizenzpflichten oder Dienstkosten.
+
+
+## Gelieferte Buchcover (16.10.2026)
+
+| Lokale Webdateien | Quelle / Auswahl | Rechte / Kosten / Verbindungen | Stand |
+| --- | --- | --- | --- |
+| books/farm-de-{front,back}[-thumb].jpg | Nutzerdatei Vorne und Hinten v2_RGB.png; Mein bunter Bauernhof; B0HKRVNMDD | Selbst erstellt laut Nutzer; lokaler Zuschnitt/Verkleinerung beauftragt. Keine neuen Dienstkosten oder externen Ladeverbindungen. | Lokal eingebaut |
+| books/animals-de-{front,back}[-thumb].jpg | Nutzerdatei cover_artwork_v01 gesamt.png; Hoppla! Da fehlt etwas! - Tiere; B0HL6QCTC6 | Wie oben | Lokal eingebaut |
+| books/farm-en-{front,back}[-thumb].jpg | Nutzerdatei GesamtCover_rgb_v01.png; My Colorful Farm; B0HN29BR28 | Wie oben | Lokal eingebaut |
+| books/fall-en-{front,back}[-thumb].jpg | Nutzerdatei cover_artwork_v03_en_rgb_v02_barcode.png; My Colorful Fall; B0HKL1ZL3P | Wie oben | Lokal eingebaut |
+
+Sichtbare Texte, Motive und Barcodefelder erhalten; Original-PNGs nicht veraendert.
+Keine neue Fremd-Lizenz oder Fontdatei eingebaut; separate Nachweise zu den im
+Cover verwendeten Illustrationen/Schriften fehlen weiterhin. Dies ist keine
+pauschale Rechtsfreigabe fuer eine spaetere Veroeffentlichung. Einzelne Schnittdaten
+und SHA-256: .local-preview/qa/books/crops.json; Pruefbericht: dortige README.md.

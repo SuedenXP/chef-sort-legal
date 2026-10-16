@@ -1,2 +1,5 @@
 # Unveroeffentlichte Website-Vorschau und lokale Pruefergebnisse.
 /.local-preview/
+
+# Grosse Originalcover bleiben lokal; Webkopien liegen in der Vorschau.
+/art/pictures/

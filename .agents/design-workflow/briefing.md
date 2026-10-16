@@ -190,3 +190,20 @@ bleiben Position und Groesse ruhig. Plattformlogos unveraendert. 20 bestehende
 Browser-Szenarien und drei gezielte Bewegungs-Testgruppen bestanden, inklusive
 Abbruch der Touch-Eingabe. Siehe .local-preview/qa/motion-review.md.
 Keine neuen Bibliotheken, Fremdassets, Lizenzpflichten oder Dienstkosten.
+
+
+## Buchcover lokal eingebaut (16.10.2026)
+
+Vier vom Nutzer bereitgestellte Umschlaege aus art/pictures wurden ohne
+Bildgenerierung lokal in Vorder-/Rueckseiten getrennt und verkleinert. Originale
+unveraendert, Originalordner von Git ausgeschlossen. Acht Webansichten plus acht
+kleine Vorschaudateien, zusammen ca. 3,9 MB statt 171,4 MB Originaldaten.
+Pro Buch Vorne/Hinten und native Grossansicht mit erreichbaren Schaltern,
+Pfeiltasten, Escape und Fokusrueckkehr. Keine automatische Rotation.
+Bestaetigte Zuordnung: Mein bunter Bauernhof -> B0HKRVNMDD;
+Hoppla! Da fehlt etwas! - Tiere -> B0HL6QCTC6;
+My Colorful Farm -> B0HN29BR28; My Colorful Fall -> B0HKL1ZL3P.
+Details, Grenzen und Original-/Webdatei-Hashes: .local-preview/qa/books/README.md
+und crops.json. Buchumschlaege bleiben in ihrer Originalsprache; Oberflaeche DE/EN.
+20 Standard-, vier Buch- und drei Bewegungs-Szenariogruppen sowie sechs Serverchecks
+bestanden. Keine Kosten fuer neue Dienste und keine Veroeffentlichung.

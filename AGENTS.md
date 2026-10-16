@@ -4,7 +4,7 @@ Kommuniziere auf Deutsch und erkläre Entscheidungen für jemanden mit wenig Web
 
 ## Aktueller Auftrag und Grenzen
 
-- Freigegeben und umgesetzt ist ein lokaler, responsiver Entwurf ohne Bilder in `.local-preview/`: freundlich und hochwertig, Spiel zuerst, dann Malbücher mit Social Media, dann YouTube. Der Ordner ist von Git ausgeschlossen. Die öffentliche Website bleibt unverändert; Login, Statistik und zusätzliches Hosting sind vorerst nicht vorgesehen. Aktuelle Nutzerentscheidung: vorerst nur eigene lokale Bilder und normale Links, keine Einbettungen; auch YouTube bleibt ein normaler Link. Weitere Entscheidungen stehen im Briefing.
+- Freigegeben und umgesetzt ist ein lokaler, responsiver Entwurf mit lokal aufbereiteten Buchcovern des Nutzers in `.local-preview/`: freundlich und hochwertig, Spiel zuerst, dann Malbücher mit Social Media, dann YouTube. Der Ordner ist von Git ausgeschlossen. Die öffentliche Website bleibt unverändert; Login, Statistik und zusätzliches Hosting sind vorerst nicht vorgesehen. Aktuelle Nutzerentscheidung: vorerst nur eigene lokale Bilder und normale Links, keine Einbettungen; auch YouTube bleibt ein normaler Link. Weitere Entscheidungen stehen im Briefing.
 - Kein Push und keine Veröffentlichung ohne entsprechenden Auftrag. Kostenpflichtige Dienste oder Käufe brauchen Zustimmung.
 - Vor umfangreichen automatischen Designläufen erst Umfang, Modell-/Toolverbrauch und voraussichtliche Kosten besprechen. Keine automatischen Variantenserien, Bildgenerierung oder mehrstufigen Agentenläufe aus Skill-Vorgaben ableiten.
 - `CNAME` und die Pfade `datenschutz/`, `impressum/`, `terms/` erhalten. Vorhandene Rechtstexte nicht eigenständig ersetzen oder ungeprüfte Entwürfe veröffentlichen.
