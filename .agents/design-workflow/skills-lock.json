@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-16",
+  "installation": "project-local .agents/skills; copied text only; no global config or upstream executables",
+  "projects": [
+    {
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "commit_date": "2026-10-14T15:00:49Z",
+      "license": "MIT",
+      "skills": [
+        "brainblooms-taste-direction"
+      ]
+    },
+    {
+      "repository": "pbakaus/impeccable",
+      "revision": "6af45ac9a5eb8792f033d3242f52e99812fd91fa",
+      "commit_date": "2026-10-16T07:19:47Z",
+      "license": "Apache-2.0",
+      "upstream_version": "4.6.0",
+      "skills": [
+        "brainblooms-impeccable-review"
+      ]
+    },
+    {
+      "repository": "emilkowalski/skills",
+      "revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "commit_date": "2026-10-11T13:58:32Z",
+      "license": "MIT",
+      "skills": [
+        "animate",
+        "review-animations"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": ".agents/skills/animate/LICENSE",
+      "repository": "emilkowalski/skills",
+      "revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/LICENSE",
+      "source_sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/animate/RECIPES.md",
+      "repository": "emilkowalski/skills",
+      "revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "source_path": "skills/animate/RECIPES.md",
+      "source_url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/animate/RECIPES.md",
+      "source_sha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+      "sha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/animate/SKILL.md",
+      "repository": "emilkowalski/skills",
+      "revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "source_path": "skills/animate/SKILL.md",
+      "source_url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/animate/SKILL.md",
+      "source_sha256": "b8ede161270458e6ae2e45e8a1985373515d4c63de5568ddb0f9012d7634356c",
+      "sha256": "1617c06306b448cbb9b2c445a96874c56a3131a239a599d25ae4cde71dda73e1",
+      "changes": "remove English greeting/wait block; add project scope and provenance note"
+    },
+    {
+      "file": ".agents/skills/brainblooms-impeccable-review/LICENSE",
+      "repository": "pbakaus/impeccable",
+      "revision": "6af45ac9a5eb8792f033d3242f52e99812fd91fa",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/pbakaus/impeccable/blob/6af45ac9a5eb8792f033d3242f52e99812fd91fa/LICENSE",
+      "source_sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/brainblooms-impeccable-review/NOTICE.md",
+      "repository": "pbakaus/impeccable",
+      "revision": "6af45ac9a5eb8792f033d3242f52e99812fd91fa",
+      "source_path": "NOTICE.md",
+      "source_url": "https://github.com/pbakaus/impeccable/blob/6af45ac9a5eb8792f033d3242f52e99812fd91fa/NOTICE.md",
+      "source_sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+      "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/brainblooms-impeccable-review/references/audit.md",
+      "repository": "pbakaus/impeccable",
+      "revision": "6af45ac9a5eb8792f033d3242f52e99812fd91fa",
+      "source_path": ".agents/skills/impeccable/reference/audit.md",
+      "source_url": "https://github.com/pbakaus/impeccable/blob/6af45ac9a5eb8792f033d3242f52e99812fd91fa/.agents/skills/impeccable/reference/audit.md",
+      "source_sha256": "4b726d8f13ca1dbb82ca8179cbfefca8c53c13766fef4d7b8870f5d4324da2d6",
+      "sha256": "5af2cda08d4375c23d0b7e5bcdbbb95fec58aaf8572a2132e70116406c8a7cd3",
+      "changes": "retain dimensions 1-4; remove native/CLI/report routing; replace integrity check; add change/copyright notice"
+    },
+    {
+      "file": ".agents/skills/brainblooms-impeccable-review/references/critique.md",
+      "repository": "pbakaus/impeccable",
+      "revision": "6af45ac9a5eb8792f033d3242f52e99812fd91fa",
+      "source_path": ".agents/skills/impeccable/reference/critique.md",
+      "source_url": "https://github.com/pbakaus/impeccable/blob/6af45ac9a5eb8792f033d3242f52e99812fd91fa/.agents/skills/impeccable/reference/critique.md",
+      "source_sha256": "c210c9506877c6c8d88880a337fddd95d4315daf70ed6bc631ee6520481f1a0c",
+      "sha256": "10795194f24f8b507cfdbff6325528b7e99b3298ba9c373e2abe0011b58e88bd",
+      "changes": "excerpt: retain Reference Material only; add change/copyright notice"
+    },
+    {
+      "file": ".agents/skills/brainblooms-impeccable-review/SKILL.md",
+      "repository": "pbakaus/impeccable",
+      "revision": "6af45ac9a5eb8792f033d3242f52e99812fd91fa",
+      "source_path": null,
+      "sha256": "24f40a0785f7f283b5d3a6bc3cead19cf6df5869588253285a682539164680ab",
+      "changes": "new German project entrypoint; adapted workflow; upstream entrypoint not copied"
+    },
+    {
+      "file": ".agents/skills/brainblooms-taste-direction/LICENSE",
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/Leonxlnx/taste-skill/blob/f624f37a8c650b9cc550253104925efe4c8de246/LICENSE",
+      "source_sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+      "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/brainblooms-taste-direction/references/colour.md",
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "source_path": "skills/taste-skill/references/colour.md",
+      "source_url": "https://github.com/Leonxlnx/taste-skill/blob/f624f37a8c650b9cc550253104925efe4c8de246/skills/taste-skill/references/colour.md",
+      "source_sha256": "6556bcc7eed48b7bc2d0d281c28bf57c1b75e94d7ca0bde49f5d9df8c6a09351",
+      "sha256": "6556bcc7eed48b7bc2d0d281c28bf57c1b75e94d7ca0bde49f5d9df8c6a09351",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/brainblooms-taste-direction/references/copy.md",
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "source_path": "skills/taste-skill/references/copy.md",
+      "source_url": "https://github.com/Leonxlnx/taste-skill/blob/f624f37a8c650b9cc550253104925efe4c8de246/skills/taste-skill/references/copy.md",
+      "source_sha256": "676edbe75d5f3cfd8a793010ea9f730525ae074b231a674c2426264d3398262e",
+      "sha256": "676edbe75d5f3cfd8a793010ea9f730525ae074b231a674c2426264d3398262e",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/brainblooms-taste-direction/references/layout.md",
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "source_path": "skills/taste-skill/references/layout.md",
+      "source_url": "https://github.com/Leonxlnx/taste-skill/blob/f624f37a8c650b9cc550253104925efe4c8de246/skills/taste-skill/references/layout.md",
+      "source_sha256": "87d915bfb9324cafa23d90d2b71e977c835c01f56ea96ada31f604ada81bf675",
+      "sha256": "87d915bfb9324cafa23d90d2b71e977c835c01f56ea96ada31f604ada81bf675",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/brainblooms-taste-direction/references/type.md",
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "source_path": "skills/taste-skill/references/type.md",
+      "source_url": "https://github.com/Leonxlnx/taste-skill/blob/f624f37a8c650b9cc550253104925efe4c8de246/skills/taste-skill/references/type.md",
+      "source_sha256": "6353ff1d0ce2f9913628c88fbcb7dad3cc3877e61196848bce99e33a17d20611",
+      "sha256": "6353ff1d0ce2f9913628c88fbcb7dad3cc3877e61196848bce99e33a17d20611",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/brainblooms-taste-direction/SKILL.md",
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "f624f37a8c650b9cc550253104925efe4c8de246",
+      "source_path": null,
+      "sha256": "e8449143d5c1d4c0c74cf9d9222f17d859555c5c11f0a7a9a4b27aed6f6f62ab",
+      "changes": "new German project entrypoint; adapted workflow; upstream entrypoint not copied"
+    },
+    {
+      "file": ".agents/skills/review-animations/LICENSE",
+      "repository": "emilkowalski/skills",
+      "revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/LICENSE",
+      "source_sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "changes": "none; byte-identical copy"
+    },
+    {
+      "file": ".agents/skills/review-animations/SKILL.md",
+      "repository": "emilkowalski/skills",
+      "revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "source_path": "skills/review-animations/SKILL.md",
+      "source_url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/review-animations/SKILL.md",
+      "source_sha256": "6ff590d29e436766135aa3d137be1fac2a867165c7257fc315b189361f1873af",
+      "sha256": "64366e7fc668c36660a5ca80d64ecf00d918c3e957e6aa4f9fbd71a3a7a6cfaf",
+      "changes": "remove English greeting/wait block; add project scope and provenance note; remove provider invocation frontmatter"
+    },
+    {
+      "file": ".agents/skills/review-animations/STANDARDS.md",
+      "repository": "emilkowalski/skills",
+      "revision": "2d228630ba1446365f614a108cb8252f1feda202",
+      "source_path": "skills/review-animations/STANDARDS.md",
+      "source_url": "https://github.com/emilkowalski/skills/blob/2d228630ba1446365f614a108cb8252f1feda202/skills/review-animations/STANDARDS.md",
+      "source_sha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+      "sha256": "e7d3605034acda54ca13e43aec9e64d65b53de20f75b11b8d694e373012fbe07",
+      "changes": "none; byte-identical copy"
+    }
+  ],
+  "website_baseline": [
+    {
+      "file": "CNAME",
+      "sha256": "b54c9a839a993f2aa2e8f7547e71383f84ead084f1d066b4c84e269250c121d3"
+    },
+    {
+      "file": "datenschutz/index.html",
+      "sha256": "949e72cc391d8b0199b6a19dae830e9d17704a7395d69e447e1f036e3025a113"
+    },
+    {
+      "file": "impressum/index.html",
+      "sha256": "1f00321f7df6c0f50faa253aaa762b587d6d57a90f18497dbccd7d82e3944f49"
+    },
+    {
+      "file": "index.html",
+      "sha256": "8c6e62b1ad75576bec28e55deb3a2d786f6583d489b9544a9f395078a29ba0f2"
+    },
+    {
+      "file": "language.js",
+      "sha256": "8220422fe33f08d35078ee03ad60f83cf2c0c503aab0b3ebf01246ed3629f902"
+    },
+    {
+      "file": "style.css",
+      "sha256": "c53b458be1929491fcc05eb112693bd1e5b0d50a3d6c38e5cbbaef28ccc360ad"
+    },
+    {
+      "file": "terms/index.html",
+      "sha256": "89e615ca2a9b95b36e8198b45fb9cb669245a3f51ab648f24fc26e310dbbfbcb"
+    }
+  ]
+}
