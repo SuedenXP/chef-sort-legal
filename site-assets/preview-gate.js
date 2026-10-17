@@ -2,7 +2,7 @@
 // Remove this file, preview-gate.css, the gate markup and the preview-site wrapper to retire it.
 (() => {
   'use strict';
-  const key = 'brainblooms-preview-access-v1';
+  const key = 'brainblooms-preview-access-v2';
   const gate = document.getElementById('preview-gate');
   const site = document.getElementById('preview-site');
   const form = document.getElementById('preview-gate-form');
@@ -19,7 +19,7 @@
   }
   form.addEventListener('submit', event => {
     event.preventDefault();
-    if (user.value.trim() === 'Sueden' && password.value === 'eintrittistfrei') {
+    if (user.value.trim() === 'Suvi' && password.value === 'supersexy') {
       try { sessionStorage.setItem(key, 'open'); } catch { /* Access works without storage. */ }
       error.hidden = true;
       open();
