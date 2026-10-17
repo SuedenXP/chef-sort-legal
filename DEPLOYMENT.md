@@ -33,6 +33,16 @@ diese beiden Dateien löschen und die Änderungen veröffentlichen.
 
 ## Prüfung vor dem Upload
 
+Aktualisierung vom 17.10.2026 auf ausdrücklichen Nutzerauftrag: Der aktuelle
+Entwurf wurde erneut in die öffentliche Fassung übernommen. Spielgalerie und
+Fächer sind zu einem Slider zusammengeführt; automatischer Wechsel nach vier
+Sekunden mit animierter Fortschrittsanzeige. Sichtbare Bildzähler entfallen.
+Die bisherige Vorschau-Sperre bleibt unverändert. Geänderte Slider-Dateien
+erhalten Versionsparameter gegen vermischte Browser-Cache-Stände.
+Geprüft wurde die exportierte Fassung hinter der Sperre in Edge-Browseremulation:
+320/390/768/1440 Pixel, DE/EN, Bilddateien, Touch-Wischen, Vergrößerung,
+reduzierte Bewegung und 200 % Text. Kein physischer Handytest.
+
 Manuelle Projektprüfung mit brainblooms-impeccable-review; ohne Engine oder
 unabhängige Zweitprüfung. Edge headless bei 1440/390/320 Pixeln: zunächst nur
 Anmeldung, ungültige/gültige Zugangsdaten, Freigabe nach Neuladen, erneutes Sperren,
