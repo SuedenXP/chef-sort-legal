@@ -9,8 +9,7 @@
   const user = document.getElementById('preview-user');
   const password = document.getElementById('preview-password');
   const error = document.getElementById('preview-gate-error');
-  const lock = document.getElementById('preview-lock');
-  function open(focus = true) {
+    function open(focus = true) {
     gate.hidden = true;
     site.hidden = false;
     password.value = '';
@@ -29,15 +28,7 @@
       password.focus();
     }
   });
-  lock.addEventListener('click', () => {
-    try { sessionStorage.removeItem(key); } catch { /* Optional persistence. */ }
-    site.hidden = true;
-    gate.hidden = false;
-    error.hidden = true;
-    form.reset();
-    window.scrollTo(0, 0);
-    user.focus();
-  });
+
   document.getElementById('preview-gate-submit').disabled = false;
   try { if (sessionStorage.getItem(key) === 'open') open(false); } catch { /* Stay locked. */ }
 })();

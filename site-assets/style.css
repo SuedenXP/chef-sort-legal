@@ -35,7 +35,6 @@ main:focus { outline: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .skip-link { position: absolute; top: .5rem; left: 1rem; z-index: 5; padding: .75rem 1rem; background: var(--bg); transform: translateY(-200%); }
 .skip-link:focus { transform: none; }
-.preview-note { background: var(--paper); color: var(--muted); padding-block: .4rem; font-size: .75rem; }
 .site-header { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.5rem; padding-block: 1rem; }
 .wordmark { display: inline-flex; align-items: center; min-height: 44px; font-size: clamp(1.5rem, 2.5vw, 2rem); letter-spacing: -.065em; font-weight: 750; text-decoration: none; }
 .wordmark > span { color: var(--accent); }
@@ -250,3 +249,26 @@ a, button { -webkit-tap-highlight-color: #c9d1c8; }
   .game-gallery.has-game-images { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   .has-game-images .gallery-portrait { margin-top: 4rem; }
 }
+
+/* BrainBlooms header: game-like buttons, using the existing local font. */
+.site-header { row-gap: 1rem; padding-block: 1rem 1.4rem; }
+.main-nav { gap: .65rem; align-items: stretch; }
+.main-nav a {
+  flex: 1 1 5rem; justify-content: center; min-height: 48px;
+  padding: .65rem .75rem; border: 2px solid #fff0bc; border-radius: .9rem;
+  background: linear-gradient(#fbe09b, #efbe60); color: #183c32;
+  font-family: 'Titan One', system-ui, sans-serif; font-size: .8125rem;
+  font-weight: 400; line-height: 1.35; text-align: center;
+  box-shadow: inset 0 2px 0 #fff7d8, inset 0 -3px 0 #d3983a, 0 0 0 1px #8a622c, 0 4px 0 #936532;
+}
+.main-nav a:active { background: #efbe60; box-shadow: inset 0 2px 0 #fff7d8, inset 0 -1px 0 #d3983a, 0 0 0 1px #8a622c, 0 1px 0 #936532; }
+.main-nav a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+@media (hover: hover) and (pointer: fine) {
+  .main-nav a:hover { background: linear-gradient(#fff0bb, #f4cb7a); }
+}
+@media (min-width: 64rem) {
+  .main-nav { gap: .85rem; }
+  .main-nav a { flex: 0 1 auto; padding-inline: 1.15rem; }
+}
+.site-header .wordmark.has-wordmark-image { width: clamp(10rem, 19vw, 15rem); max-width: 100%; padding-block: .15rem; }
+.wordmark-image { display: block; width: 100%; height: auto; }

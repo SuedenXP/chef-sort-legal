@@ -26,12 +26,24 @@ Veröffentlichung rechtlich freigegeben oder ersetzt.
 
 ## Sperre später entfernen
 
-In index.html: den markierten preview-gate-Block und den Sperrknopf löschen;
+In index.html: den markierten preview-gate-Block löschen;
 den umschließenden preview-site-Div samt schließendem Kommentar entfernen;
 die beiden Verweise auf site-assets/preview-gate.css und .js löschen. Danach
 diese beiden Dateien löschen und die Änderungen veröffentlichen.
 
 ## Prüfung vor dem Upload
+
+Kopfzeilen-Aktualisierung auf Nutzerauftrag vom 17.10.2026: kombinierter
+BrainBlooms-Schriftzug (cremefarbenes Schild, bunte Buchstaben, kleine Blätter)
+als lokale PNG-Datei unter site-assets/images/brainblooms-wordmark-combined-v1.png.
+Webfassung 720 × 159 Pixel, transparenter Außenbereich. KI-Entwurf aus den zuvor
+erstellten eigenen Varianten, keine zusätzliche Schrift oder Fremdkomponente.
+Goldene Sprungbuttons zu Spiel, Malbüchern und YouTube. Vorschau-Hinweis und
+Sperrknopf entfernt; die bestehende Anmeldung und Sitzung bleiben erhalten.
+Die Entfernung des Sperrknopfs erfordert die angepasste preview-gate.js;
+Versionsparameter verhindern das Laden einer alten Skriptfassung.
+Kopfzeile und Bilder bei 320/390/768/1440 Pixeln, DE/EN und 200 % Textgröße
+in Edge-Browseremulation geprüft und Handy-/Desktopaufnahme visuell angesehen.
 
 Aktualisierung vom 17.10.2026 auf ausdrücklichen Nutzerauftrag: Der aktuelle
 Entwurf wurde erneut in die öffentliche Fassung übernommen. Spielgalerie und
