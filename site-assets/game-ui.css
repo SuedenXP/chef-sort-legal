@@ -1,0 +1,19 @@
+/* Chef Sort: game-like surfaces, restricted to the game presentation. */
+.banner .eyebrow { letter-spacing: .055em; text-shadow: 0 2px 0 #102130, 0 0 5px #102130; }
+.banner h1 { color: #fff1c8; -webkit-text-stroke: 1.4px #102539; paint-order: stroke fill; text-shadow: 0 4px 0 #0b1d2b, 0 6px 12px #07141d80; }
+.banner .description { color: #fff3d4; text-shadow: 0 2px 2px #07141d; }
+.banner .status { border: 0; border-left: 4px solid #f1c469; border-radius: 0 .5rem .5rem 0; padding: .6rem .9rem; background: rgb(14 32 45 / .94); box-shadow: 0 2px 0 #08192580; }
+.banner .status::before { display: none; }
+.banner .button-link { min-height: 62px; min-width: min(100%, 18rem); margin-top: .5rem; padding: .8rem 1.4rem; gap: 1rem; border: 3px solid #ffe6a3; border-radius: 1.15rem; background: linear-gradient(#c8ec78,#88bd3f); color: #162d26; font-family: 'Titan One',system-ui,sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.4; letter-spacing: .01em; text-align: center; text-shadow: 0 1px 0 #e8ffc2; box-shadow: inset 0 3px 0 #eeffc0, inset 0 -4px 0 #5e8a2b, 0 0 0 3px #122b3a, 0 7px 0 #72512e, 0 11px 15px #07141d66; }
+.banner .button-link:active, .banner .button-link[data-pressed] { box-shadow: inset 0 2px 0 #eeffc0, inset 0 -2px 0 #5e8a2b, 0 0 0 3px #122b3a, 0 3px 0 #72512e; }
+.banner .button-link:focus-visible { outline: 3px solid #fff6d8; outline-offset: 8px; }
+.banner .shot { box-shadow: 0 0 0 2px #f6d898, 0 0 0 4px #132a3a, 0 1.5rem 3rem #07131e66; }
+.game-carousel .carousel-slide { border: 2px solid #d0b473; box-shadow: inset 0 2px 0 #fff9e9, 0 5px 0 #aa8d58; }
+:is(.game-carousel,.game-stack) .showcase-controls button { border: 2px solid #edce84; color: #fff1cf; background: #244763; box-shadow: inset 0 2px 0 #52758e, 0 3px 0 #142b40; }
+:is(.game-carousel,.game-stack) .showcase-controls button:active { background: #19394f; box-shadow: inset 0 1px 0 #52758e, 0 1px 0 #142b40; }
+:is(.game-carousel,.game-stack) .showcase-controls button:focus-visible { outline-offset: 5px; }
+.game-carousel .showcase-dots button[aria-pressed="true"] span { background: #d39127; box-shadow: 0 1px 0 #6a4924; }
+@media(max-width:800px) {
+  .banner .button-link { width: min(100%,19rem); }
+  .banner .status { max-width: 100%; text-align: left; }
+}

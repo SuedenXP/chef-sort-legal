@@ -24,3 +24,17 @@ Die Projektfassungen enthalten keine ausführbaren Fremdskripte, Hooks, Installe
 Vorgaben zu Farben, Schriften, Bildanzahl oder Animationen sind Gestaltungshilfen der Autoren, keine beschlossene BrainBlooms-Identität. Nutzerentscheidung, Lesbarkeit, Zugänglichkeit und sachlich richtige Inhalte haben Vorrang. Performance-Aussagen aus Skills am konkreten Browser prüfen; GPU-Beschleunigung nicht pauschal versprechen. Rechtstextseiten dienen dem Lesen und benötigen keine Marketingeffekte.
 
 Bilder, Schriften, Icons und Komponenten einzeln auf Herkunft, Lizenz, kommerzielle Nutzung, Kosten und externe Verbindungen prüfen. Lizenz-/Copyright-Hinweise erhalten; Änderungen an Apache-lizenzierten Dateien kennzeichnen. Auswahl im [Asset-Register](.agents/design-workflow/asset-register.md) dokumentieren. Externe Font-Links und Beispielbilder aus Referenzen nicht ungeprüft einbauen.
+
+
+## Aktueller Nutzerauftrag vom 17.10.2026
+
+Der Nutzer beauftragt ausdrücklich, den lokalen Entwurf auf der bestehenden Domain
+brainblooms.de über das vorhandene GitHub-Pages-Repository zu veröffentlichen.
+Die temporäre clientseitige Vorschau-Sperre mit den vereinbarten Zugangsdaten
+soll vorgeschaltet bleiben und später entfernt werden. Der Nutzer kennt die
+Grenze als Sichtblende; keine Serverauthentifizierung. Dieser konkrete Auftrag
+ersetzt die bisherigen Vorgaben „nur lokal“, „kein Login“ und „nicht veröffentlichen“
+für diese Veröffentlichung. Keine Freigabe zusätzlicher Dienste oder Kosten.
+CNAME und bestehende Rechtstextseiten samt bisherigen style.css/language.js erhalten.
+Webassets des Entwurfs liegen getrennt unter site-assets/. Originaldateien,
+Prüfprofile und der gesamte Ordner .local-preview/ bleiben von Git ausgeschlossen.
