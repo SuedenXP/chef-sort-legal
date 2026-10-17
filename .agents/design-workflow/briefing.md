@@ -207,3 +207,89 @@ Details, Grenzen und Original-/Webdatei-Hashes: .local-preview/qa/books/README.m
 und crops.json. Buchumschlaege bleiben in ihrer Originalsprache; Oberflaeche DE/EN.
 20 Standard-, vier Buch- und drei Bewegungs-Szenariogruppen sowie sechs Serverchecks
 bestanden. Keine Kosten fuer neue Dienste und keine Veroeffentlichung.
+
+
+## Buchnavigation nach Screenshot angepasst (16.10.2026)
+
+Sichtbare Seitenzaehlung und Amazon-Produktnummern unter den Buechern entfernt.
+Die Produktnummern bleiben ausschliesslich Bestandteil der bestaetigten URLs.
+Seitenstatus bleibt unsichtbar fuer Hilfstechniken, damit ein Bildwechsel angesagt
+werden kann. Links-/Rechtspfeile verwenden die akzeptierte geschwungene
+Aufwaertsform, statisch gedreht, mit 44-Pixel-Bedienflaechen am Bildrand.
+Beide Pfeile wechseln zyklisch zwischen Vorder- und Rueckseite, auch im nativen
+Vergroesserungsdialog. In der Uebersicht bleiben Vorne/Hinten erhalten; im Dialog
+ersetzen die Pfeile die dortigen doppelten Textschalter. Tastaturpfeile funktionieren
+weiterhin. Amazon-Linkpfeil sitzt unmittelbar am Text (Abstand 0,35 rem).
+
+20 bestehende Browser-Szenarien, vier Buchpruefgruppen mit beiden Pfeilen an
+allen vier Buechern sowie Touch in der Grossansicht bei 320/390 Pixeln und
+200 Prozent Textgroesse, und drei Bewegungspruefgruppen bestanden. Fuer grosse
+Schrift wurde die native Dialog-Maximalbreite explizit auf die verfuegbare Breite
+gesetzt und der Innenabstand angepasst. Bilder und Originale nicht veraendert.
+Keine neuen Assets, Lizenzpflichten oder Dienstkosten; nichts veroeffentlicht.
+
+
+## Seitenabhaengige Bildpfeile (16.10.2026)
+
+Rechter Pfeil ist die horizontale Spiegelung der linken gebogenen Form:
+scaleX(-1) rotate(-90deg), Bogen auf beiden Seiten oben. Vorderseite zeigt
+ausschliesslich rechts, Rueckseite ausschliesslich links; gilt fuer alle Karten
+und die Grossansicht. Kein zyklisches Weiterblaettern an den Grenzen.
+Tastaturpfeile folgen der gleichen Richtung. Verschwindet der aktivierte Pfeil,
+wandert der Fokus zum jetzt verfuegbaren Gegenpfeil, ohne die Seite zu verschieben.
+Vier Buchpruefgruppen und 20 Layout-/Navigationsszenarien bestanden, inklusive
+Sichtbarkeit/Fokus fuer alle vier Buecher sowie Touch in der Grossansicht bei
+200 Prozent Textgroesse. Keine Bilddateien oder oeffentlichen Seiten veraendert.
+
+
+## Reduzierte Buch-Grossansicht (16.10.2026)
+
+Auf Nutzerwunsch keine sichtbare Titel-/Kopfzeile und kein unterer Link zur
+vollen Bildgroesse mehr. Oben rechts eigenes, kraeftiges und leicht gebogenes
+SVG-X im Stil der Pfeile; 44-Pixel-Bedienflaeche, beim Scrollen erreichbar,
+DE/EN-Beschriftung fuer Hilfstechniken. Der Dialogtitel bleibt nur unsichtbar
+fuer die zugaengliche Benennung erhalten. Seitlicher Pfeil passend zu Vorder-
+oder Rueckseite, Escape und Fokusrueckkehr bleiben funktionsfaehig.
+Vier Buchpruefgruppen bestanden, jetzt einschliesslich Touch-Schliessen am X
+nach Scrollen bei 320/390 Pixeln und 200 Prozent Textgroesse. Screenshot
+books-dialog-desktop.png visuell kontrolliert. Kein echter Handytest.
+close.svg ist eigene Projektgeometrie ohne neue Fremdlizenz oder Dienstkosten.
+
+## Vom Nutzer gelieferte Spielangaben und Bildprioritaet (17.10.2026)
+
+Quelle: Nutzerzusammenfassung vorhandener Projektunterlagen; nicht eigenstaendig im Unity-Projekt nachgeprueft. Zuerst Bilder bearbeiten, Marketingtexte spaeter auf dieser Grundlage.
+
+- Drei gleiche Gegenstaende in einem Regalfach kombinieren; Drag-and-drop vom Foerderband oder zwischen Faechern. Dreierkombinationen verschwinden. Spielfeld innerhalb des Zeitlimits leeren und Belohnungen erhalten.
+- Sortierlevel mit Restaurantmanagement verbunden: Restaurants freischalten, verbessern und Manager einsetzen. Erspielte Boni wirken zeitweise auf Restaurants. Weitere Level erschliessen; u.a. gesperrte Faecher, wechselnd zugaengliche und nachrueckende Regale.
+- Spielbarer Entwicklungsstand und Android-Testbuilds. Tests/Abnahmen ausstehend, Termin und Altersfreigabe offen; Hinweis weiterhin Demnaechst bei Google Play.
+- Eingebaute Sprachen: EN, DE, ES, FI. Lokales Spielen ohne erfolgreiche Anmeldung vorgesehen. Cloud-Save, Echtgeldkaeufe und Werbung benoetigen Online-Dienste. Nutzer nennt vollstaendige Offline-Nutzbarkeit als moeglich; genaue Abgrenzung fuer Website-Behauptung noch zu bestaetigen, kein pauschales Offline-Versprechen veroeffentlichen.
+- Download gratis; freiwillige Werbung gegen Belohnungen und In-App-Kaeufe fuer Premiumwaehrung/Shopangebote vorhanden. Nicht als werbe- oder kostenfrei ohne Einschraenkung bewerben.
+- Aktuelle Bildauswahl: 01-hero als Einstieg, 03-gravity fuer anderes Regallayout und 04-burger-restaurant fuer Management. 02 ist 01 sehr aehnlich; 05 zeigt nur den Ladebildschirm; 06 hat sichtbar abgeschnittene UI-Texte und wird vorerst nicht praesentiert. Jeweils DE/EN, Originale unveraendert.
+
+## Spielbereich neu aufgebaut (17.10.2026)
+
+Nutzer beauftragt nach Banner-Abnahme den Umbau des Spielbereichs in der lokalen Hauptvorschau. Freigegebene Richtung: Marineblau/Creme/Gold, Original-Spiellogo, alle Spieltexte Titan One. Der Bannerentwurf ist jetzt am Anfang der Startseite integriert; bestehende Abschnitte fuer Malbuecher, Social Media, YouTube, Kontakt und Rechtliches bleiben erhalten.
+
+Direkt nach dem Banner vier Spieleinblicke mit passenden Erklaerungen (01,02,03,04). Auf ausdruecklichen Nutzerwunsch automatischer Wechsel alle sechs Sekunden; Pause/Starten, vier Positionspunkte und Pfeile im bestehenden Stil. Automatik pausiert bei Hover, stoppt nach manueller Bedienung oder Fokus/Beruehrung; pausiert ausserhalb des sichtbaren Bereichs, bei inaktivem Browser-Tab und offenen Dialogen. Reduzierte Bewegung: kein automatischer Start. Nutzer kann explizit Starten waehlen. Keine weiteren automatischen Bewegungen.
+
+Darunter manuelle Galerie mit vier Bildern, drei davon versetzt hinter dem vorderen sichtbar. Pfeile, Tastatur und Wischen; Bildgroesse per Klick mit eigenem X/Escape und Fokusrueckkehr. Ohne JavaScript stehen alle Ansichten als normale Bildlinks bereit. Deutsche/englische Bilder, Beschreibungen und Bedienelemente wechseln gemeinsam. Alle verwendeten Bildquellen lokal; keine neuen Kosten oder Veroeffentlichung.
+
+Die bisherige Ausgangsregel ohne automatisch laufende Animationen wird ausschliesslich fuer diese explizit gewuenschte Bildfolge ersetzt. Keine pauschale Freigabe weiterer Loops, Bildgenerierung, automatischer Variantenserien oder externer Dienste.
+
+## Mehr Mobile-Game-Charakter (17.10.2026)
+
+Nutzer akzeptiert den generierten Hintergrund und wuenscht mehr Mobile-Game-Optik. Hintergrund unveraendert erhalten. Eine begrenzte CSS-Ueberarbeitung bringt kraeftigere Ueberschriftskonturen, einen plastischen gruenen Entdecken-Button mit goldener Kante, einen passiven Google-Play-Hinweis als dunkles Band, feine goldene Kanten um die Spielaufnahmen sowie blaue/goldene Galerie-Bedienelemente. Der Hinweis bleibt keine Download-Schaltflaeche. Keine neuen Inhalte, Funktionen, Bilder, Fonts oder automatisch laufenden Effekte. Neue Regeln nur in den Spielbereichen, nicht bei Malbuechern/YouTube/Rechtstexten.
+
+## Lokale Bildwechsler-Anpassung nach Veroeffentlichung (17.10.2026)
+
+Neuester ausdruecklicher Nutzerauftrag: ausschliesslich den Entwurf aendern; veroeffentlichte Dateien, Push und erneute Veroeffentlichung erst auf gesonderte Anweisung. `index.html` im Repository und `site-assets/` sind in dieser Runde unveraendert.
+
+Im lokalen Entwurf startet der obere Bildwechsler ohne Starttaste, sobald er sichtbar ist und keine reduzierte Bewegung eingestellt ist. Wechsel alle sechs Sekunden. Start/Pause-Taste vollstaendig entfernt. Hover, Fokus und Beruehrung pausieren; danach geht es automatisch weiter. Unsichtbarer Bereich, inaktiver Tab oder offener Dialog pausieren ebenfalls. Untere gestapelte Galerie bleibt manuell. Beide Bildbereiche haben Pfeile unmittelbar am linken/rechten Rand des jeweils vorderen Bildes; Zaehler und Punkte bleiben unten. Wischen, Tastatur und Bildvergroesserung erhalten.
+
+Folgeentscheidung: Bildwechsel auf vier Sekunden verkuerzt. Der breite aktive Positionsbalken fuellt sich goldfarben von links nach rechts und zeigt die verbleibende Wartezeit. Eine gemeinsame Web-Animation-Zeitquelle steuert Balken und naechsten Bildwechsel; Pausen frieren den Fortschritt ein, danach wird an derselben Stelle fortgesetzt. Manuelles Wechseln setzt den Fortschritt fuer das neue Bild zurueck. Keine Automatik oder laufender Balken bei reduzierter Bewegung. Ausschliesslich Entwurf, keine Aenderung an der Veroeffentlichung.
+
+## Slider und Faecher zusammengefuehrt (17.10.2026)
+
+Auf Nutzerwunsch nur noch zwei grosse Spielabschnitte: Banner und ein kombinierter Slider mit Bildfaecher. Der separate Abschnitt Noch naeher dran entfaellt. Im Slider links die wechselnde Erklaerung, rechts vier aufgefaecherte Bilder mit genau einer bedienbaren Frontaufnahme; mobil Text und Faecher untereinander. Text, Frontbild, Positionspunkt und Fortschrittsanzeige teilen denselben Index. Alle sichtbaren x/4-Zaehler entfernt, einschliesslich der kleinen Abschnittsnummern. Bildposition bleibt nur unsichtbar fuer Hilfstechniken beschrieben.
+
+Vier-Sekunden-Automatik, animierter aktiver Balken, temporaere Pausen, reduzierte Bewegung, seitliche Bildpfeile, Touch-Wischen, vertikales Scrollen, Tastatur und Grossansicht erhalten. Nur Entwurf geaendert, veroeffentlichte Dateien bleiben unangetastet.
