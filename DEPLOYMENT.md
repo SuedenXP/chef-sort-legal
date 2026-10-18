@@ -43,6 +43,24 @@ diese beiden Dateien löschen und die Änderungen veröffentlichen.
 
 ## Prüfung vor dem Upload
 
+App-Identität und Logoabstand, 18.10.2026: Auf Nutzerauftrag wird das in Unity
+tatsächlich für Android zugewiesene AppIcon_ChefSort_Shelf_v02.png verwendet.
+Unity bleibt unverändert; die Originalkopie liegt nur lokal. Öffentliche PNGs
+unter site-assets/images/chef-sort-app-icon-{16,32,48,128,180,512}.png, ICO mit
+16/32/48 unter site-assets/favicon.ico. Startseite und Rechtsseiten erhalten
+Browser-/Touch-Icon-Verweise. Teilen-Metadaten der Startseite verwenden das
+quadratische 512-Pixel-Motiv; keine garantierte Darstellung bei einzelnen
+Social-Diensten, deren Cache und Ausschnitt eigene Regeln haben.
+
+Im Spieleinstieg steht das App-Symbol neben Chef Sort, beschriftet mit
+Für Android / For Android. Der Spielschriftzug ist auf breiten Bildschirmen
+gegenüber der ersten Verschiebung nochmals gleich weit nach rechts versetzt;
+Mobilformat behält seine Anordnung. Geprüft bei 320/390/768/1024/1440/1866,
+DE/EN und 200 % Text; Bilder und ICO im Browser dekodiert, schmale und breite
+Desktopaufnahmen visuell kontrolliert. Bestehende eigene Spielgrafik,
+keine neue Bildgenerierung, Fremdlizenz, Bibliothek oder Dienstkosten.
+Rechtsseiten erhalten nur andere Icon-Verweise; Rechtstexte bleiben wortgleich.
+
 Spracherkennung und Rechtsseitendesign vom 18.10.2026, auf Nutzerauftrag online:
 Startseite und alle drei Rechtsseiten laden language-preference.js vor dem
 Textaufbau. Eine gültige gespeicherte manuelle Auswahl hat Vorrang; andernfalls

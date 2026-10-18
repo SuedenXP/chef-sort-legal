@@ -1,4 +1,13 @@
 /* Chef Sort: game-like surfaces, restricted to the game presentation. */
+.game-brand { display: flex; align-items: center; gap: clamp(.65rem, 1.5vw, 1.25rem); width: min(100%, 40rem); }
+.game-brand .game-logo { flex: 1 1 0; min-width: 0; width: 0; margin: 0; }
+@media (min-width:801px) {
+  .game-brand .game-logo { position: relative; left: clamp(2rem, 5vw, 6rem); }
+}
+.app-identity { flex: 0 0 clamp(3.5rem, 7vw, 6rem); width: clamp(3.5rem, 7vw, 6rem); }
+.game-app-icon { display: block; width: 100%; height: auto; border-radius: 22%; box-shadow: 0 3px 0 #082c3b, 0 5px 12px #07141d55; }
+.app-identity figcaption { margin-top: .45rem; font: 700 .75rem/1.4 system-ui, sans-serif; text-align: center; color: #fff2ca; }
+@media (max-width:800px) { .game-brand { margin-inline: auto; } }
 .banner .eyebrow { letter-spacing: .055em; text-shadow: 0 2px 0 #102130, 0 0 5px #102130; }
 .banner h1 { color: #fff1c8; -webkit-text-stroke: 1.4px #102539; paint-order: stroke fill; text-shadow: 0 4px 0 #0b1d2b, 0 6px 12px #07141d80; }
 .banner .description { color: #fff3d4; text-shadow: 0 2px 2px #07141d; }
