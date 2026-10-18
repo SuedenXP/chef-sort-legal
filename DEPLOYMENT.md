@@ -225,3 +225,10 @@ Buchrückseiten, Buch- und Spielgroßansichten bestanden. Keine JS-Fehler oder
 externen Ressourcenanfragen in diesen Abläufen. Mobile Gesamtansicht manuell
 betrachtet. Sechs bestehende Serverprüfungen bestanden. Kein physischer
 Geräte- oder Screenreadertest. Direkt erreichbare Rechtstextseiten bleiben erhalten.
+
+
+## Abgleich und Veroeffentlichung am 18.10.2026
+
+Entwurf und oeffentliche Fassung zusammengefuehrt: Pinterest-Ziel https://pin.it/5O5hcjmCQ dauerhaft im Entwurf; Textlinks in kraeftiger Schrift mit einheitlichem vorhandenem Verlinkungspfeil. Aktuelle Headergrafik mit weisser Kontur, passive Logoanzeige und bereits veroeffentlichte Hover-/Fokus-/Druckzustaende erhalten. Chef-Sort-Logo, mobile Kopfzeilenreihenfolge, App-Symbol unter dem Banner und linke Ausrichtung wie freigegeben. Offizielle unveraenderte Google-Play-Badges lokal gehostet, DE/EN, mit Demnaechst-Hinweis ohne Downloadlink.
+
+Methode: manuelle Projektpruefung ohne Impeccable-Engine oder unabhaengige Zweitpruefung. Edge-Browseremulation: 320/390/768/1440 Pixel, DE/EN, 200 Prozent Text, geladene Bilder und keine externen Ressourcen. 67 bedienbare Elemente auf Hover, Druck, Fokus und Mindestgroesse geprueft; Slider, Vier-Sekunden-Fortschritt, Touch-Wischen, Dialoge, Tastatur und Vorschau-Sperre bestanden. Screenshots von Handy- und Desktopansicht betrachtet. CNAME, Rechtsseiten, alte root-CSS/JS und Sperrlogik unveraendert. Kein physischer Handytest. CSS-/JS-Versionen beim Export aus Dateiinhalt erzeugt.
