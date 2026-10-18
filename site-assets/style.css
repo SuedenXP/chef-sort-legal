@@ -195,6 +195,11 @@ a, button { -webkit-tap-highlight-color: #c9d1c8; }
   .main-nav a:hover, .legal-nav a:hover, .text-link:hover, .channel-list a:hover, .book-link:hover .book-action, .youtube-preview:hover .youtube-action { text-decoration: underline; }
   .button-link:hover { background: var(--peach); }
   .language-switch button:not([aria-pressed="true"]):hover { background: var(--paper); }
+  .language-switch button[aria-pressed="true"]:hover { background: var(--deep); }
+  .language-switch button:hover { border-color: currentColor; }
+  .book-face-controls button:hover, .book-dialog-controls button:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .2em; }
+  .book-stage .book-image-arrow:hover:not(:active), .book-dialog .book-image-arrow:hover:not(:active),
+  .book-dialog #book-dialog-close:hover:not(:active), .book-dialog #game-dialog-close:hover:not(:active) { background: var(--gold); box-shadow: 0 0 0 2px var(--accent); }
   .book-view:hover:not(:focus-visible):not(:active):not([data-pressed]) .book-cover { transform: translateY(-.25rem); }
   .youtube-preview:hover:not(:focus-visible):not(:active):not([data-pressed]) .youtube-image-content { transform: scale(1.025); }
   .book-link:hover:not(:focus-visible):not(:active) .book-action > .icon,
@@ -203,6 +208,9 @@ a, button { -webkit-tap-highlight-color: #c9d1c8; }
   .channel-list a:hover:not(:focus-visible):not(:active) .channel-handle > .icon { transform: translate(2px, -2px); }
   .button-link:hover:not(:focus-visible):not(:active) > .icon { transform: translateY(2px); }
 }
+/* Press feedback also works without hover, including touch and selected controls. */
+.language-switch button:active { border-color: currentColor; box-shadow: inset 0 0 0 2px currentColor; }
+.book-face-controls button:active, .book-dialog-controls button:active { box-shadow: inset 0 0 0 2px currentColor; text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   .book-cover, .youtube-image-content, .button-link, .language-switch button, .jump-circle,
   .book-action > .icon, .youtube-action > .icon, .text-link > .icon, .channel-handle > .icon, .button-link > .icon { transition: none; }

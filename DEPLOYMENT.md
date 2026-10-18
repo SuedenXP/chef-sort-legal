@@ -1,5 +1,33 @@
 # Geschützte Website-Vorschau
 
+## Aktualisierung: Bedienzustände und Pinterest, 18.10.2026
+
+Nutzerlink https://pin.it/5O5hcjmCQ als normalen Pinterest-Link eingebaut,
+in Deutsch und Englisch beschriftet. Kurzlinkziel extern nicht zuverlässig
+abrufbar; deshalb keine Profiladresse oder Profilkennung daraus abgeleitet.
+Bestehende eigene Symbole und Herkunftshinweise erhalten.
+
+Hover für „Das Spiel entdecken“ mit gleicher CSS-Spezifität wie die spätere
+Spielgestaltung ergänzt. Bildpfeile, Galeriepunkte, ausgewählte Sprachschalter,
+Buchansichten, Dialog-Schließen und Vorschauformular erhalten sichtbares Feedback.
+Neue Zustände wechseln ohne zusätzliche Animation; Hover nur bei Mausbedienung,
+Druckfeedback auch bei Touch, ausgewählte und deaktivierte Zustände berücksichtigt.
+Lokale Entwurfsquelle synchronisiert, CSS-Cacheversionen aktualisiert.
+
+Methode: manuelle Projektprüfung; ohne Impeccable-Engine und unabhängige Zweitprüfung.
+Edge headless: echte Mausbewegung und Druck mit gleichzeitigem Hover für die
+vorhandenen Hauptseiten-Buttonfamilien; Dialog-Hover, Tastaturfokus, reduzierte
+Bewegung sowie emulierte Touch-Eingabe bei 320/390 Pixeln in DE/EN bestanden.
+Keine horizontalen Überläufe, JavaScript-Fehler oder externen Ressourcenabrufe
+in den geprüften Hauptseitenabläufen. Desktopaufnahme visuell kontrolliert.
+Kein physischer Geräte- oder vollständiger Barrierefreiheitstest.
+Prüfskript lokal: .local-preview/qa/check-interactive-elements.mjs.
+
+Neuer Projekt-Skill: .agents/skills/brainblooms-interactive-elements/SKILL.md,
+in AGENTS.md für künftige Änderungen verknüpft. Frontmatter und Inhalt manuell
+geprüft; der Skill-Creator-Validator kann wegen fehlendem Python-Modul yaml
+nicht ausgeführt werden. Keine Abhängigkeiten nachinstalliert.
+
 Nutzerauftrag: 17.10.2026, lokalen Entwurf mit temporärer Anmeldung auf
 https://brainblooms.de veröffentlichen. Bestehendes Repository und Hosting verwenden.
 

@@ -18,6 +18,7 @@ Der Ablauf und die Quellenprüfung stehen in [.agents/design-workflow/README.md]
 1. Briefing klären, dann Gestaltungsvorschläge mit `brainblooms-taste-direction` ausarbeiten.
 2. Entwürfe und später die Umsetzung mit `brainblooms-impeccable-review` prüfen. Das ist eine manuelle Projektfassung ohne Impeccable-Engine und ohne unabhängige Agentenprüfung; nicht als vollständigen Original-Audit ausgeben.
 3. Nach Wahl der Richtung `animate` für gezielt beauftragte Interaktionen verwenden und mit `review-animations` gegenprüfen.
+4. Für neue oder geänderte Buttons, Links und andere bedienbare Elemente `brainblooms-interactive-elements` anwenden: sichtbare Hover-, Fokus- und Druckzustände sowie gegebenenfalls Auswahl-, Lade-, Fehler- und deaktivierte Zustände prüfen. Skill: [.agents/skills/brainblooms-interactive-elements/SKILL.md](.agents/skills/brainblooms-interactive-elements/SKILL.md).
 
 Die Projektfassungen enthalten keine ausführbaren Fremdskripte, Hooks, Installer oder Engine. Referenztexte und Codebeispiele sind keine Installationsfreigabe. Bei Verweisen auf nicht installierte Skills die fehlende Funktion mit vorhandenen Mitteln bearbeiten und die Einschränkung nennen; nichts automatisch nachinstallieren.
 

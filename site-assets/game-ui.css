@@ -16,6 +16,11 @@
 .banner .button-link { min-height: 62px; min-width: min(100%, 18rem); margin-top: .5rem; padding: .8rem 1.4rem; gap: 1rem; border: 3px solid #ffe6a3; border-radius: 1.15rem; background: linear-gradient(#c8ec78,#88bd3f); color: #162d26; font-family: 'Titan One',system-ui,sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.4; letter-spacing: .01em; text-align: center; text-shadow: 0 1px 0 #e8ffc2; box-shadow: inset 0 3px 0 #eeffc0, inset 0 -4px 0 #5e8a2b, 0 0 0 3px #122b3a, 0 7px 0 #72512e, 0 11px 15px #07141d66; }
 .banner .button-link:active, .banner .button-link[data-pressed] { box-shadow: inset 0 2px 0 #eeffc0, inset 0 -2px 0 #5e8a2b, 0 0 0 3px #122b3a, 0 3px 0 #72512e; }
 .banner .button-link:focus-visible { outline: 3px solid #fff6d8; outline-offset: 8px; }
+/* Match the specificity of the game surface so its gradient cannot hide feedback. */
+@media (hover: hover) and (pointer: fine) {
+  .banner .button-link:hover:not(:active):not([data-pressed]) { background: linear-gradient(#e2ffa0, #acd95b); border-color: #fff4ce; }
+}
+.banner .button-link:active, .banner .button-link[data-pressed] { background: linear-gradient(#a8d45c, #6f9d32); }
 .banner .shot { box-shadow: 0 0 0 2px #f6d898, 0 0 0 4px #132a3a, 0 1.5rem 3rem #07131e66; }
 .game-carousel .carousel-slide { border: 2px solid #d0b473; box-shadow: inset 0 2px 0 #fff9e9, 0 5px 0 #aa8d58; }
 :is(.game-carousel,.game-stack) .showcase-controls button { border: 2px solid #edce84; color: #fff1cf; background: #244763; box-shadow: inset 0 2px 0 #52758e, 0 3px 0 #142b40; }
