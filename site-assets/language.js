@@ -119,7 +119,7 @@
   document.addEventListener('pointerdown', event => {
     clear();
     if (!event.isPrimary || event.button !== 0) return;
-    pressed = event.target.closest('.book-link, .book-view, .youtube-preview, .button-link, .language-switch button');
+    pressed = event.target.closest('.book-link, .book-view, .youtube-preview, .button-link, .hero-game-view, .language-switch button');
     if (!pressed) return;
     startX = event.clientX;
     startY = event.clientY;

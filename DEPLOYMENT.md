@@ -33,6 +33,27 @@ diese beiden Dateien löschen und die Änderungen veröffentlichen.
 
 ## Prüfung vor dem Upload
 
+Aktualisierung vom 18.10.2026 auf ausdrücklichen Nutzerauftrag:
+
+- Spieleinstieg mit kräftigerem Küchenhintergrund und sichtbaren Dreiergruppen.
+  KI-Bildentwurf aus eigenen Referenzen; Original und Prompts bleiben lokal.
+  Öffentliche Web-JPEGs: chef-sort-pantry-trios-v2-1200.jpg (97.235 Bytes) und
+  chef-sort-pantry-trios-v2-1983.jpg (206.573 Bytes), unter site-assets/images/.
+  Keine zusätzlichen Schriftdateien, Fremdkomponenten oder Einbettungen.
+- Original-Spielaufnahmen mit anklickbarer Großansicht und dezentem Druckeffekt;
+  Original-Tassenausschnitte als Dreierkombination. Reduzierte Bewegung erhalten.
+- Galerie mit kompakter Überschrift statt zusätzlicher großer Zwischenüberschrift.
+- Navigation: Holzzüge / Wooden Trains. Desktop-Logo etwa 80 % der Kopfzeilenhöhe,
+  Sprungbuttons etwa 70 %, gleichmäßig mit ihrem ursprünglichen Seitenverhältnis
+  vergrößert. Auf schmalen Displays flexible Anordnung.
+- Anmeldung, Zugangsdaten, CNAME und Rechtstextdateien bleiben unverändert.
+  Alle CSS-/JS-Verweise bekommen aktuelle Versionsparameter gegen alte Caches.
+
+Exportierte Website hinter der Anmeldung in Edge-Browseremulation geprüft:
+320/390/768/1440 Pixel, Deutsch/Englisch, 200 % Text, Bildladung, Slider,
+Touch-/Maus-Vergrößerung, Escape, Fokusrückgabe und reduzierte Bewegung.
+Kein physischer Handytest und keine vollständige Rechts- oder WCAG-Prüfung.
+
 Kopfzeilen-Aktualisierung auf Nutzerauftrag vom 17.10.2026: kombinierter
 BrainBlooms-Schriftzug (cremefarbenes Schild, bunte Buchstaben, kleine Blätter)
 als lokale PNG-Datei unter site-assets/images/brainblooms-wordmark-combined-v1.png.

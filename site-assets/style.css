@@ -270,5 +270,13 @@ a, button { -webkit-tap-highlight-color: #c9d1c8; }
   .main-nav { gap: .85rem; }
   .main-nav a { flex: 0 1 auto; padding-inline: 1.15rem; }
 }
-.site-header .wordmark.has-wordmark-image { width: clamp(10rem, 19vw, 15rem); max-width: 100%; padding-block: .15rem; }
+.site-header .wordmark.has-wordmark-image { width: 20rem; min-width: 44px; max-width: calc(100% - 6.5rem); padding-block: 0; }
 .wordmark-image { display: block; width: 100%; height: auto; }
+@media (max-width: 63.999rem) {
+  .site-header { column-gap: .5rem; }
+}
+@media (min-width: 64rem) {
+  .site-header { min-height: 6rem; padding-block: .3rem; }
+  .site-header .wordmark.has-wordmark-image { width: min(27vw, 21.73585rem); max-width: 100%; }
+  .main-nav a { min-height: 4.2rem; padding: .91rem 1.61rem; border-width: 2.8px; border-radius: 1.26rem; font-size: 1.1375rem; }
+}
