@@ -23,6 +23,9 @@ body { margin: 0; background: var(--bg); color: var(--ink); font: 1rem/1.6 syste
 .jump-circle .icon { width: 1.5rem; height: 1.5rem; }
 .jump-circle:active { opacity: 1; }
 [hidden] { display: none !important; }
+/* Apply English text immediately while deferred scripts finish initialization. */
+html[lang="en"] [data-lang="de"] { display: none !important; }
+html[lang="en"] [data-lang="en"][hidden] { display: revert !important; }
 a { color: inherit; text-underline-offset: .25em; text-decoration-thickness: 1px; }
 button { font: inherit; }
 figure, p, h1, h2, h3 { margin: 0; }

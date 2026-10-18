@@ -33,6 +33,29 @@ diese beiden Dateien löschen und die Änderungen veröffentlichen.
 
 ## Prüfung vor dem Upload
 
+Spracherkennung und Rechtsseitendesign vom 18.10.2026, auf Nutzerauftrag online:
+Startseite und alle drei Rechtsseiten laden language-preference.js vor dem
+Textaufbau. Eine gültige gespeicherte manuelle Auswahl hat Vorrang; andernfalls
+führt die bevorzugte Browsersprache de/de-* zu Deutsch, alle anderen zu Englisch.
+Die Erkennung schreibt keine Cookies oder lokalen Speichereinträge. Nur eine
+bewusste manuelle Sprachwahl wird wie bisher optional in localStorage gespeichert.
+Bei gesperrtem Speicher funktionieren Erkennung und manueller Wechsel weiterhin.
+Ohne JavaScript bleibt die deutsche HTML-Fassung erhalten.
+
+Impressum, Datenschutz und Terms verwenden das vorhandene Logo sowie lokale
+legal.css/legal-language.js unter site-assets/. Ihre originalen article-Blöcke
+einschließlich Platzhaltern, Warnhinweisen und Textlinks wurden wortgleich
+erhalten. Die Pfade bleiben unverändert und ohne Anmeldung erreichbar.
+Root-style.css, Root-language.js, CNAME und Login-Dateien bleiben unverändert.
+Keine neuen Bilder, Fremdschriften, Bibliotheken oder Anbieter; bestehende
+Titan-One-OFL-Lizenz erhalten. Rechtstexte bleiben ausdrücklich vorläufig.
+
+Vor Upload geprüft: 48 Initialsprachfälle über vier Seiten, gespeicherte/ungültige
+Wahl, gesperrter Speicher, manuelle Auswahl, Neuladen, seitenübergreifende Wahl,
+früher englischer Text und No-JS-Fallback. Rechtsseiten bei 320/390/768/1440,
+Deutsch/Englisch und 200 % Text, sichtbarer Fokus und Tastaturauswahl geprüft.
+Browseremulation mit Edge; kein physischer Geräte- oder vollständiger Rechtsaudit.
+
 Aktualisierung vom 18.10.2026 auf ausdrücklichen Nutzerauftrag:
 
 - Spieleinstieg mit kräftigerem Küchenhintergrund und sichtbaren Dreiergruppen.

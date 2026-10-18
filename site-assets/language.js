@@ -37,9 +37,8 @@
     }
   }
 
-  let saved = 'de';
-  try { saved = localStorage.getItem(storageKey) || 'de'; } catch { /* German remains the default. */ }
-  setLanguage(saved);
+  // The synchronous head script already resolved saved choice / browser language.
+  setLanguage(document.documentElement.lang);
   document.querySelectorAll('[data-set-lang]').forEach(button => {
     button.addEventListener('click', () => setLanguage(button.dataset.setLang, true));
   });
