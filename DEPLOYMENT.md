@@ -17,8 +17,18 @@ nicht übernommen. Schriftlizenz unter site-assets/fonts/TitanOne-OFL.txt erhalt
 Eigene bereitgestellte Buchcover, Spielbilder, Logo und Videobild sowie der
 bereits akzeptierte generierte Hintergrund werden im vorhandenen Stand verwendet.
 Herkunftsnachweise im bestehenden Asset-Register; dies ist keine Rechtsprüfung.
-Die ungeklärten TikTok-/Pinterest-Outline-Symbole werden nicht veröffentlicht;
-Plattformnamen und vorhandene Linkziele bleiben erhalten. Keine Fremdassets ergänzt.
+Aktualisierung vom 18.10.2026: Auf Nutzerhinweis zu den online fehlenden Icons
+werden die ausdrücklich beauftragten eigenen TikTok-/Pinterest-Outline-Zeichnungen
+aus dem lokalen Entwurf übernommen. Quellenhinweise in den SVG-Kommentaren bleiben
+erhalten. Dies sind keine offiziellen Markenassets und keine dokumentierte
+Markenfreigabe. Die geprüften Pinterest-Richtlinien untersagen Outline-Varianten;
+die Veröffentlichung der gewünschten Eigenzeichnung ist daher nicht als
+richtlinienkonforme Badge-Nutzung dokumentiert. TikTok verweist ebenfalls auf
+Markennutzungsbedingungen; keine Lizenz- oder Rechtefreiheit behauptet.
+Keine kopierten Fremdpfade oder externen Ressourcen. Bestätigte Profilziele bleiben
+erhalten, bei Pinterest bis zur Angabe eines Profils weiterhin „Link folgt“.
+Die Exportregel, die pauschal den älteren Social-Block ohne Symbole beibehielt,
+wurde korrigiert. Keine neuen Dienst- oder Lizenzkosten.
 
 CNAME, datenschutz/, impressum/, terms/, style.css und language.js unverändert.
 Rechtstextseiten bleiben direkt erreichbar; Texte werden nicht durch diese
