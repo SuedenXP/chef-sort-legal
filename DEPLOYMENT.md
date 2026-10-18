@@ -1,5 +1,19 @@
 # Geschützte Website-Vorschau
 
+## Vier Hover-Bildelemente, 18.10.2026
+
+Auf Nutzerauftrag kippen Sortierbild, Restaurantbild, Dreierkombination und
+kleine Gegenstandskarte beim Hover jeweils um zwei Grad und heben sich drei
+Pixel. Bestehendes Tempo: 160 ms, vorhandenes --ease-out, nur transform.
+CSS-Transitions erlauben unmittelbares Umkehren beim Verlassen; keine Schleife.
+Nur Maus mit feinem Zeiger, keine Kippbewegung bei reduzierter Bewegung.
+Dekorative Elemente erhalten keine Klickfunktion. Tastaturfokus bleibt unmittelbar.
+In Edge per echter Mausbewegung gegen lokale Website-Fassung (4188) und Entwurf
+(4173) geprüft: alle vier Bewegungen und Rückkehr, Reduced Motion, Tastaturfokus,
+Großansicht/Escape/Fokusrückkehr, emulierter Touch und kein mobiler Überlauf.
+Andere laufende Entwurfs-/Logoänderungen separat erhalten und nicht mitveröffentlicht.
+Prüfergebnisse lokal: .local-preview/qa/hero-hover-{draft,public}.json.
+
 ## Vollständige Buttonprüfung und Social-Abgleich, 18.10.2026
 
 Auf erneuten Nutzerauftrag nach brainblooms-interactive-elements geprüft und

@@ -58,9 +58,12 @@
 .match-piece svg { display: block; width: 100%; height: 100%; }
 .match-check { position: absolute; right: -.9rem; top: -.9rem; display: grid; place-items: center; width: 2rem; height: 2rem; border: 2px solid #fff2b8; border-radius: 50%; background: #b8e85d; color: #173b31; font-size: 1.15rem; box-shadow: 0 2px 0 #1c5437; }
 .match-trio p { margin-top: .55rem; text-align: center; color: #fff1c9; font-size: clamp(.6rem, 1vw, .9rem); line-height: 1.4; text-shadow: 0 2px 0 #153b2f; }
-@media (hover:hover) and (pointer:fine) {
-  .hero-game-view { transition: transform var(--motion-press) var(--ease-out); }
-  .banner .hero-game-view:hover:not(:focus-visible) { transform: rotate(-6deg) translateY(-3px); }
+/* Four scene pieces share the existing subtle hover tilt; decoration stays non-clickable. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .banner .scene > :where(.shot, .match-trio, .item-card.cool) { transition: transform var(--motion-press) var(--ease-out); }
+  .banner .hero-game-view:hover:not(:focus-visible):not(:active):not([data-pressed]) { transform: rotate(-6deg) translateY(-3px); }
+  .banner .shot.back:hover, .banner .item-card.cool:hover { transform: rotate(13deg) translateY(-3px); }
+  .banner .match-trio:hover { transform: rotate(-3deg) translateY(-3px); }
 }
 .banner .hero-game-view[data-pressed]:not(:focus-visible) { transform: rotate(-8deg) scale(.98); transition-duration: 100ms; }
 .banner .hero-game-view:focus-visible { transition: none; }
