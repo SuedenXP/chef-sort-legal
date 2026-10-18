@@ -1,5 +1,17 @@
 # Geschützte Website-Vorschau
 
+## Kopfzeilenlogo ohne Interaktion, 18.10.2026
+
+Auf Nutzerauftrag ist das BrainBlooms-Logo oben auf Startseite und Rechtsseiten
+ein reines Bild: kein Link, Tabstopp, Hover- oder Druckeffekt. Bildbeschreibung
+und bestehende Gestaltung erhalten. CSS-Effekte der Wortmarke sind auf der
+Startseite auf den bestehenden Fußbereich-Link begrenzt. Der Tastaturfokus des
+Sprungs zum Seitenanfang geht zum ersten Navigationslink statt zum Logo.
+Entwurf und Website-Dateifassung separat angepasst. Edge-Prüfung für vier Seiten:
+keine Navigation/visuelle Änderung bei Hover oder Druck, kein Logo-Tabstopp,
+Bildbeschreibung vorhanden und Fokusrückkehr zum Navigationslink bestanden.
+Laufende zusätzliche Logo-/Layoutänderungen werden dabei nicht mitveröffentlicht.
+
 ## Vier Hover-Bildelemente, 18.10.2026
 
 Auf Nutzerauftrag kippen Sortierbild, Restaurantbild, Dreierkombination und

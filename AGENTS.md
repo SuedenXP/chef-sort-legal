@@ -20,6 +20,8 @@ Der Ablauf und die Quellenprüfung stehen in [.agents/design-workflow/README.md]
 3. Nach Wahl der Richtung `animate` für gezielt beauftragte Interaktionen verwenden und mit `review-animations` gegenprüfen.
 4. Für neue oder geänderte Buttons, Links und andere bedienbare Elemente `brainblooms-interactive-elements` anwenden: sichtbare Hover-, Fokus- und Druckzustände sowie gegebenenfalls Auswahl-, Lade-, Fehler- und deaktivierte Zustände prüfen. Skill: [.agents/skills/brainblooms-interactive-elements/SKILL.md](.agents/skills/brainblooms-interactive-elements/SKILL.md).
 
+Das BrainBlooms-Logo in der Kopfzeile ist auf Nutzerwunsch ein reines Bild: kein Link, kein Tabstopp und keine Hover- oder Druckeffekte.
+
 Die Projektfassungen enthalten keine ausführbaren Fremdskripte, Hooks, Installer oder Engine. Referenztexte und Codebeispiele sind keine Installationsfreigabe. Bei Verweisen auf nicht installierte Skills die fehlende Funktion mit vorhandenen Mitteln bearbeiten und die Einschränkung nennen; nichts automatisch nachinstallieren.
 
 Vorgaben zu Farben, Schriften, Bildanzahl oder Animationen sind Gestaltungshilfen der Autoren, keine beschlossene BrainBlooms-Identität. Nutzerentscheidung, Lesbarkeit, Zugänglichkeit und sachlich richtige Inhalte haben Vorrang. Performance-Aussagen aus Skills am konkreten Browser prüfen; GPU-Beschleunigung nicht pauschal versprechen. Rechtstextseiten dienen dem Lesen und benötigen keine Marketingeffekte.

@@ -215,11 +215,11 @@ a, button { -webkit-tap-highlight-color: #c9d1c8; }
 .book-face-controls button:active, .book-dialog-controls button:active { box-shadow: inset 0 0 0 2px currentColor; text-decoration: underline; }
 /* All clickable image and text families retain feedback without motion. */
 @media (hover: hover) and (pointer: fine) {
-  .wordmark:hover:not(:active) { box-shadow: 0 2px 0 var(--accent); }
+  .site-footer .wordmark:hover:not(:active) { box-shadow: 0 2px 0 var(--accent); }
   .contact-email:hover, .footer-bottom a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
   .book-view:hover:not(:active):not([data-pressed]), .game-view:hover:not(:active):not([data-pressed]) { box-shadow: 0 0 0 2px var(--accent); }
 }
-.wordmark:active { box-shadow: 0 3px 0 var(--accent); }
+.site-footer .wordmark:active { box-shadow: 0 3px 0 var(--accent); }
 .jump-circle:active { box-shadow: inset 0 0 0 2px currentColor; }
 .book-view:active, .book-view[data-pressed], .game-view:active, .game-view[data-pressed] { box-shadow: 0 0 0 4px var(--gold); }
 .legal-nav a:active, .text-link:active, .channel-list a:active, .contact-email:active,

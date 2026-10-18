@@ -65,7 +65,7 @@
     const atBottom = maximum - position <= 1;
     // If a used link disappears on arrival, keep keyboard focus at its destination.
     if (atTop && (document.activeElement === up || focusDestination === 'top')) {
-      document.querySelector('.site-header .wordmark').focus({ preventScroll: true });
+      document.querySelector('.site-header .main-nav a').focus({ preventScroll: true });
       focusDestination = null;
     }
     if (atBottom && (document.activeElement === down || focusDestination === 'bottom')) {
