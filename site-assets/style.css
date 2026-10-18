@@ -142,6 +142,8 @@ h3 { font-size: 1.25rem; line-height: 1.3; font-weight: 650; letter-spacing: -.0
 .channel-list li:has(a) { padding: 0; }
 .channel-list a { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1rem; width: 100%; min-height: 44px; padding-block: .75rem; text-decoration: none; }
 .channel-handle, .pending { color: var(--muted); font-size: .8125rem; overflow-wrap: anywhere; }
+.channel-handle { font-weight: 700; }
+.channel-handle > .icon { margin-left: .15rem; }
 .youtube-section { display: grid; gap: 2rem; padding-block: clamp(4rem, 7vw, 7rem); }
 .youtube-copy .intro-copy { margin-top: 1.5rem; }
 .text-link { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 1rem; max-width: 100%; min-width: 44px; min-height: 44px; margin-top: 1rem; padding-block: .5rem; font-size: .9375rem; }
@@ -211,6 +213,17 @@ a, button { -webkit-tap-highlight-color: #c9d1c8; }
 /* Press feedback also works without hover, including touch and selected controls. */
 .language-switch button:active { border-color: currentColor; box-shadow: inset 0 0 0 2px currentColor; }
 .book-face-controls button:active, .book-dialog-controls button:active { box-shadow: inset 0 0 0 2px currentColor; text-decoration: underline; }
+/* All clickable image and text families retain feedback without motion. */
+@media (hover: hover) and (pointer: fine) {
+  .wordmark:hover:not(:active) { box-shadow: 0 2px 0 var(--accent); }
+  .contact-email:hover, .footer-bottom a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+  .book-view:hover:not(:active):not([data-pressed]), .game-view:hover:not(:active):not([data-pressed]) { box-shadow: 0 0 0 2px var(--accent); }
+}
+.wordmark:active { box-shadow: 0 3px 0 var(--accent); }
+.jump-circle:active { box-shadow: inset 0 0 0 2px currentColor; }
+.book-view:active, .book-view[data-pressed], .game-view:active, .game-view[data-pressed] { box-shadow: 0 0 0 4px var(--gold); }
+.legal-nav a:active, .text-link:active, .channel-list a:active, .contact-email:active,
+.footer-bottom a:active, .book-link:active .book-action, .youtube-preview:active .youtube-action { text-decoration: underline; text-decoration-thickness: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .book-cover, .youtube-image-content, .button-link, .language-switch button, .jump-circle,
   .book-action > .icon, .youtube-action > .icon, .text-link > .icon, .channel-handle > .icon, .button-link > .icon { transition: none; }
@@ -275,7 +288,7 @@ a, button { -webkit-tap-highlight-color: #c9d1c8; }
 .main-nav a:active { background: #efbe60; box-shadow: inset 0 2px 0 #fff7d8, inset 0 -1px 0 #d3983a, 0 0 0 1px #8a622c, 0 1px 0 #936532; }
 .main-nav a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
 @media (hover: hover) and (pointer: fine) {
-  .main-nav a:hover { background: linear-gradient(#fff0bb, #f4cb7a); }
+  .main-nav a:hover:not(:active) { background: linear-gradient(#fff0bb, #f4cb7a); }
 }
 @media (min-width: 64rem) {
   .main-nav { gap: .85rem; }

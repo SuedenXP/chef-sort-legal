@@ -64,6 +64,10 @@
 }
 .banner .hero-game-view[data-pressed]:not(:focus-visible) { transform: rotate(-8deg) scale(.98); transition-duration: 100ms; }
 .banner .hero-game-view:focus-visible { transition: none; }
+@media (hover: hover) and (pointer: fine) {
+  .banner .hero-game-view:hover:not(:active):not([data-pressed]) { box-shadow: 0 0 0 4px #fff0bb, 0 0 0 6px #132a3a, 0 1.5rem 3rem #07131e66; }
+}
+.banner .hero-game-view:active, .banner .hero-game-view[data-pressed] { box-shadow: 0 0 0 4px var(--gold), 0 0 0 6px #132a3a; }
 @media (max-width:800px) {
   .banner {
     background-color: #0b4662;

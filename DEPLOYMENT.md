@@ -1,5 +1,39 @@
 # Geschützte Website-Vorschau
 
+## Vollständige Buttonprüfung und Social-Abgleich, 18.10.2026
+
+Auf erneuten Nutzerauftrag nach brainblooms-interactive-elements geprüft und
+repariert: Pinterest verwendet jetzt exakt denselben bestehenden SVG-Pfeil wie
+Instagram und TikTok, statt des abweichenden Textzeichens. Alle drei rechten
+Social-Beschriftungen verwenden dieselbe fette Schrift (700), Größe und Farbe;
+Icons haben identisches Markup, Abmessungen und Strichstärke. Linkziel bleibt
+https://pin.it/5O5hcjmCQ. Keine neuen Assets oder externen Einbettungen.
+
+Fehlendes bzw. nicht unterscheidbares Feedback bei Wortmarken, Bildlinks,
+Seitensprüngen, Textlinks, Navigation und ausgewählten Sprachbuttons der
+Rechtsseiten ergänzt. Galeriepunkte erhalten etwas Abstand und einen
+kontrastierenden Rand. Keine zusätzliche Bewegung. Auf den Rechtsseiten nur
+CSS-Versionen und gemeinsame Bedienzustände geändert; article-Blöcke wortgleich.
+
+Methode: manuelle Projektprüfung; ohne Impeccable-Engine und unabhängige Zweitprüfung.
+71 tatsächlich bedienbare Elemente in Edge headless einzeln auf sichtbaren Hover,
+Hover plus Druck, Tastaturfokus und Zielgröße geprüft: Startseite, Anmeldung,
+Buch-/Spielgroßansicht, Impressum, Datenschutz und Terms. Keine verbleibenden
+Fehler in diesen Prüfungen. Namen, Button-Typen, normale Textkontraste, 44-Pixel-
+Zielgrößen und Überläufe bei 320/390/1440 Pixeln, DE/EN und 200 % Text geprüft.
+Social-Schrift und SVG-Gleichheit im Browser verifiziert; mobile Aufnahme
+visuell kontrolliert. Tastaturtests für Sprachwahl, alle vier Galeriepunkte,
+alle Buchrückseiten, Dialogpfeile, Tab, Escape und Fokusrückkehr bestanden.
+Native Dialoge können Tab an die Browserleiste übergeben; beim Weiter-Tabben
+kehrt der Fokus in den Dialog zurück, Hintergrundlinks werden übersprungen.
+Reduzierte Bewegung, emulierte Touchbedienung und deaktivierter Vorschau-Button
+gegengeprüft. Kein physischer Geräte-, Screenreader- oder vollständiger WCAG-Test.
+
+Prüfergebnisse bleiben lokal in .local-preview/qa/all-buttons-audit.json und
+button-quality.json. Gemeinsame Entwurfs-CSS synchronisiert; zusätzliche lokale
+Google-Play-Vorbereitung separat erhalten. CNAME, Root-style.css, Root-language.js
+und Zugangsdaten unverändert. Bestehendes GitHub-Pages-Hosting, keine neuen Kosten.
+
 ## Aktualisierung: Bedienzustände und Pinterest, 18.10.2026
 
 Nutzerlink https://pin.it/5O5hcjmCQ als normalen Pinterest-Link eingebaut,

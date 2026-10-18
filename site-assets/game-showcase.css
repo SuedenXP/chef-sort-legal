@@ -35,9 +35,9 @@
 .showcase-prev .icon { transform: rotate(-90deg); }
 .showcase-next .icon { transform: scaleX(-1) rotate(-90deg); }
 .showcase-count { min-width: 4rem; text-align: center; }
-.showcase-dots { display: flex; justify-content: center; flex-wrap: wrap; margin-top: .5rem; }
+.showcase-dots { display: flex; justify-content: center; flex-wrap: wrap; gap: .25rem; margin-top: .5rem; }
 .showcase-dots button { border: 0; }
-.showcase-dots button span { width: .6rem; height: .6rem; background: #92aaa0; border-radius: 50%; }
+.showcase-dots button > span { width: .6rem; height: .6rem; border: 1px solid var(--accent); background: #92aaa0; border-radius: 50%; }
 .showcase-dots button[aria-pressed="true"] span { width: 1.3rem; border-radius: 1rem; background: var(--accent); }
 /* Static feedback preserves arrow positioning and selected-dot progress. */
 @media (hover: hover) and (pointer: fine) {
