@@ -31,6 +31,7 @@
       else progress.pause();
     }
     function render() {
+      root.dataset.activeKind = cards[index]?.dataset.kind || 'screenshot';
       slides.forEach((slide,i) => {
         const active = i === index;
         if(carousel) { slide.dataset.active=String(active); slide.inert=!active; slide.setAttribute('aria-hidden',String(!active)); }

@@ -6,7 +6,7 @@
 .game-brand { display: flex; align-items: center; gap: clamp(.65rem, 1.5vw, 1.25rem); width: min(100%, 40rem); }
 .game-brand .game-logo { flex: 1 1 0; min-width: 0; width: 0; margin: 0; }
 @media (min-width:801px) {
-  .game-brand .game-logo { position: relative; left: calc(clamp(2rem, 5vw, 6rem) + 1.5rem); transform: translateY(-3rem) scale(1.3); transform-origin: center bottom; }
+  .game-brand .game-logo { position: relative; left: calc(clamp(2rem, 5vw, 6rem) + clamp(2rem, 3vw, 3.5rem)); transform: scale(1.3); transform-origin: center bottom; }
 }
 .app-identity { flex: 0 0 clamp(3.5rem, 7vw, 6rem); width: clamp(3.5rem, 7vw, 6rem); }
 .game-app-icon { display: block; width: 100%; height: auto; border-radius: 22%; box-shadow: 0 3px 0 #082c3b, 0 5px 12px #07141d55; }
@@ -61,19 +61,23 @@
 .banner .shot.front { top: 7%; left: 14%; width: 43%; max-width: none; transform: rotate(-8deg); z-index: 2; border-radius: .6rem; }
 .banner .shot.front .game-screenshot { display: block; width: 100%; height: auto; border-radius: inherit; }
 .banner .shot.front:focus-visible { outline: 4px solid #ffdf78; outline-offset: 7px; }
-.banner .item-card.cool { right: 0; bottom: 10%; width: 30%; z-index: 3; transform: rotate(11deg); border: 3px solid #f9d886; }
-.match-trio { position: absolute; left: 0; bottom: 0; z-index: 4; width: 58%; padding: .7rem .7rem .6rem; border: 3px solid #ffe4a4; border-radius: 1.1rem; background: linear-gradient(#459b78, #1e664e); box-shadow: inset 0 2px 0 #81cda2, 0 5px 0 #103e33, 0 10px 22px #07141d55; transform: rotate(-5deg); }
+.banner .item-card.cool { right: 0; bottom: 10%; width: 30%; aspect-ratio: 98 / 59; z-index: 3; transform: rotate(11deg); border: 3px solid #f9d886; background: #e9dfc5; }
+.banner .item-card.fresh { left: 47%; top: auto; bottom: 24%; width: 30%; z-index: 4; transform: rotate(0deg); border: 3px solid #f9d886; background: #e9dfc5; }
+.match-trio { position: absolute; left: 0; bottom: 0; z-index: 5; width: 58%; padding: .7rem .7rem .6rem; border: 3px solid #ffdc65; border-radius: 1.1rem; background: linear-gradient(#268de1, #17469d); box-shadow: inset 0 2px 0 #8bceff, 0 5px 0 #102c67, 0 10px 22px #07141d55; transform: rotate(-5deg); }
+.bright-item-row { display: flex; width: 100%; height: 100%; background: #e9dfc5; }
+.bright-item-row svg { flex: 1 1 0; min-width: 0; width: 33.333%; height: 100%; }
 .match-pieces { position: relative; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .35rem; }
 .match-piece { display: block; overflow: hidden; aspect-ratio: 1; border: 2px solid #ffe7ac; border-radius: .65rem; background: #e9dfc5; box-shadow: 0 2px 0 #143d30; }
 .match-piece svg { display: block; width: 100%; height: 100%; }
 .match-check { position: absolute; right: -.9rem; top: -.9rem; display: grid; place-items: center; width: 2rem; height: 2rem; border: 2px solid #fff2b8; border-radius: 50%; background: #b8e85d; color: #173b31; font-size: 1.15rem; box-shadow: 0 2px 0 #1c5437; }
 .match-trio p { margin-top: .55rem; text-align: center; color: #fff1c9; font-size: clamp(.6rem, 1vw, .9rem); line-height: 1.4; text-shadow: 0 2px 0 #153b2f; }
-/* Four scene pieces share the existing subtle hover tilt; decoration stays non-clickable. */
+/* Scene pieces share the existing subtle hover tilt; decoration stays non-clickable. */
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .banner .scene > :where(.shot, .match-trio, .item-card.cool) { transition: transform var(--motion-press) var(--ease-out); }
+  .banner .scene > :where(.shot, .match-trio, .item-card.cool, .item-card.fresh) { transition: transform var(--motion-press) var(--ease-out); }
   .banner .hero-game-view:hover:not(:focus-visible):not(:active):not([data-pressed]) { transform: rotate(-6deg) translateY(-3px); }
   .banner .shot.back:hover, .banner .item-card.cool:hover { transform: rotate(13deg) translateY(-3px); }
   .banner .match-trio:hover { transform: rotate(-3deg) translateY(-3px); }
+  .banner .item-card.fresh:hover { transform: rotate(2deg) translateY(-3px); }
 }
 .banner .hero-game-view[data-pressed]:not(:focus-visible) { transform: rotate(-8deg) scale(.98); transition-duration: 100ms; }
 .banner .hero-game-view:focus-visible { transition: none; }
@@ -102,6 +106,7 @@
   .banner .shot.front { top: 0; left: 15%; width: 43%; }
   .banner .shot.back { top: 2%; right: 5%; width: 39%; }
   .banner .item-card.cool { bottom: 15%; width: 28%; }
+  .banner .item-card.fresh { left: 46%; top: auto; bottom: 24%; width: 30%; }
   .match-trio { width: 55%; bottom: 0; padding: .45rem; border-width: 2px; }
   .match-trio p { margin-top: .35rem; }
 }
