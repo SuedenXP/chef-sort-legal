@@ -1,0 +1,27 @@
+/* Draft deletion pages: local system fonts, no embeds or external resources. */
+.deletion-language { display: flex; align-items: center; gap: .5rem; }
+.deletion-language > * { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: .5rem; }
+.deletion-language [aria-current] { color: #fff; background: #175f54; border-radius: 50%; font-weight: 700; }
+.deletion-language a { font-weight: 700; border: 1px solid #175f54; border-radius: .5rem; }
+.deletion-app { padding: clamp(1.25rem, 4vw, 2rem); margin-block: 1.75rem 2.5rem; background: #175f54; color: #fff; border-radius: 1rem; }
+.deletion-page .deletion-app h2 { margin-top: 0; color: inherit; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; }
+.deletion-app ol { padding-left: 1.4rem; }
+.deletion-app li { padding-left: .3rem; margin-block: .75rem; }
+.deletion-app li::marker { color: #ffe19a; font-weight: 700; }
+.deletion-app p:last-child { margin-bottom: 0; }
+.deletion-link-note { padding: 1rem; border: 1px solid #b58838; border-radius: .75rem; background: #fff3d8; margin-block: 0 1.5rem; color: #523812; }
+.deletion-contact { display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; margin-block: 1.5rem 2rem; }
+.deletion-contact p { font-size: .9375rem; color: #46544c; }
+.deletion-email-button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 48px; max-width: 100%; padding: .75rem 1rem; border: 2px solid #175f54; border-radius: .6rem; color: #175f54; background: transparent; font-weight: 700; text-align: center; text-decoration: none; }
+.deletion-address, .deletion-info-link { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; font-weight: 700; }
+.deletion-link-note { max-width: 58rem; margin-top: 2rem; }
+.deletion-link-note h2 { margin-top: 0; }
+@media (hover: hover) and (pointer: fine) {
+  .deletion-email-button:hover { background: #e1ece4; border-color: #103f38; text-decoration: underline; text-decoration-thickness: 2px; }
+  .deletion-language a:hover { background: #e1ece4; text-decoration-thickness: 3px; }
+  .deletion-address:hover, .deletion-info-link:hover { text-decoration-thickness: 3px; background: #e1ece4; }
+  .deletion-page a:not(.deletion-email-button):hover { text-decoration-thickness: 3px; }
+}
+.deletion-email-button:active { background: #c9dfcf; border-color: #092e29; box-shadow: inset 0 0 0 2px #175f54; }
+.deletion-language a:active { background: #c9dfcf; box-shadow: inset 0 0 0 2px #175f54; }
+.deletion-address:active, .deletion-info-link:active { text-decoration-thickness: 4px; background: #c9dfcf; }

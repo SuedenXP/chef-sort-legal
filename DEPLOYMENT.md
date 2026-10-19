@@ -1,5 +1,13 @@
 # Geschützte Website-Vorschau
 
+## Konto- und Datenlöschseiten – 19.10.2026
+
+Auf ausdrücklichen Folgeauftrag des Nutzers werden `/daten-loeschen/` und `/delete-data/` veröffentlicht. Der Nutzer beauftragt die Veröffentlichung nach Rückfrage auch ohne bestätigte Anwaltsfreigabe. Dies ist keine dokumentierte Rechtsfreigabe. Die vorhandene Vorschau-Anmeldung der Startseite bleibt bestehen; die Löschseiten sind wie die übrigen Rechtsseiten direkt ohne Anmeldung erreichbar.
+
+Die Seiten zeigen den Löschweg im Spiel in einer hervorgehobenen Box und danach die E-Mail-Alternative. Zur Kontozuordnung wird eine zehnstellige Spieler-ID oder Google-Play-Bestellnummer benötigt. Löschumfang und Fristen werden ausschließlich über die bestehende Datenschutzerklärung verlinkt. Deren Artikel bleibt unverändert; ergänzt wird ein gesonderter Link zu den Löschseiten. Der Sprachparameter `?lang=de/en` wird von `site-assets/legal-language.js` ausgewertet. Footer-Verweise sind in beiden Sprachen ergänzt. Keine neuen Dienste oder externen Ressourcen.
+
+Gezielter Export: `.local-preview/qa/publish-deletion-pages.mjs`; spätere Startseitenexporte erhalten bereits veröffentlichte Löschlinks. Exportierte Dateifassung in Edge bei 320/390/768/1440 Pixeln in DE/EN geprüft, einschließlich 200 Prozent Text, E-Mail-Betreff, Sprach-/Datenschutzlinks, ohne JavaScript und Hover-/Druck-/Fokuszuständen. Bestehender Datenschutzartikel, CNAME, Impressum, Terms und Vorschau-Anmeldung unverändert geprüft. Kein physischer Handytest und keine Rechtsfreigabe.
+
 ## Spielbares Level 7 unter /play/ – 19.10.2026
 
 Ausdrücklicher Nutzerauftrag: abgenommenen Chef-Sort-Prototyp veröffentlichen und Spielbilder sinnvoll verkleinern. Veröffentlichung über das vorhandene GitHub-Pages-Repository; keine zusätzlichen Dienste oder Kosten. „Level ausprobieren“ / „Try a level“ steht als zweiter Hero-Button neben „Das Spiel entdecken“, auf schmalen Displays darunter. Die bisherige Anmeldung bleibt erhalten und wird beim Seitenwechsel im selben Tab übernommen.

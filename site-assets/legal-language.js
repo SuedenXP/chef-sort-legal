@@ -13,7 +13,8 @@
     if (remember) { try { localStorage.setItem(key, lang); } catch { /* Language selection works without browser storage. */ } }
   }
   // Use the same initial choice as the homepage, resolved before page rendering.
-  setLanguage(document.documentElement.lang);
+  const requested = new URLSearchParams(location.search).get('lang');
+  setLanguage(requested === 'de' || requested === 'en' ? requested : document.documentElement.lang);
   const controls = document.querySelector('.language-switch');
   controls.hidden = false;
   controls.addEventListener('click', event => {
