@@ -1,0 +1,117 @@
+/* Chef Sort Level 7 web prototype. Proportions follow the Unity Kitchen Belt screen
+   (KitchenActionBelt.uss, KitchenBeltSortController): one --u equals one Unity pixel of a
+   600-unit shelf cell, so all shelf parts scale with the board width. */
+.play-page { background: var(--bg); }
+.play-header { flex-wrap: nowrap; justify-content: space-between; }
+/* The home header shifts its parts down for the overlapping logo; this page has no logo. */
+.play-header { min-height: 0; padding-block: 1rem; }
+.play-header .language-switch { position: static; top: auto; margin-left: auto; }
+.play-back { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding-inline: .25rem; color: var(--ink); font-weight: 650; text-decoration: none; border-radius: .5rem; }
+.play-back .icon { width: 1.25rem; height: 1.25rem; color: var(--accent); }
+.play-back:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .play-back:hover { text-decoration: underline; text-decoration-thickness: 2px; } }
+.play-back:active { text-decoration: underline; text-decoration-thickness: 3px; }
+.play-main { padding: 0 var(--gutter, 1rem) 2rem; outline: none; }
+
+.play-frame {
+  position: relative;
+  width: min(100%, 30rem);
+  margin-inline: auto;
+  padding: 1rem .75rem 1.5rem;
+  border-radius: 1.25rem;
+  background: rgb(245 224 176);
+  box-shadow: 0 0 0 3px #e3c98f, 0 1rem 2rem #3b2a1426;
+  font-family: 'Titan One', system-ui, sans-serif;
+  font-synthesis: none;
+  color: #3b2f1e;
+}
+
+/* HUD: chips as in the round header (rgb 218 196 140, fully rounded). */
+.play-hud { display: grid; grid-template-columns: 1fr 1fr auto; gap: .5rem; align-items: center; }
+.play-chip { display: flex; align-items: center; justify-content: center; min-height: 2.75rem; margin: 0; padding: .25rem .9rem; border-radius: 999px; background: rgb(218 196 140); font-size: 1.15rem; letter-spacing: .02em; line-height: 1; }
+.play-timer { color: #fff; text-shadow: 0 0 2px #5b4426, 0 1px 0 #5b4426, 0 -1px 0 #5b4426, 1px 0 0 #5b4426, -1px 0 0 #5b4426; font-variant-numeric: tabular-nums; }
+.play-timer.is-urgent { color: #ffe1dc; background: #c8442f; text-shadow: 0 1px 0 #6d1d12; }
+.play-restart { width: 2.75rem; min-width: 44px; padding: 0; border: 0; color: #3b2f1e; cursor: pointer; transition: transform var(--motion-press, 160ms) var(--ease-out, ease-out), background-color var(--motion-fast, 140ms) ease-out; }
+.play-restart .icon { width: 1.35rem; height: 1.35rem; }
+.play-restart:focus-visible { outline: 3px solid #3b2f1e; outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .play-restart:hover:not(:active) { background: rgb(230 211 160); } }
+.play-restart:active { transform: scale(.94); background: rgb(200 176 118); }
+
+.play-help { margin: .85rem .25rem .5rem; font: 600 .875rem/1.5 system-ui, sans-serif; color: #5b4a32; text-align: center; }
+
+/* Board: 3 x 4 grid of 3:2 cells, inset 2 % on each side like the Unity cell layer. */
+.play-board-wrap { container-type: inline-size; margin-top: 1.25rem; }
+.play-board {
+  --u: calc(32cqw / 600);
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.play-board { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, calc(400 * var(--u))); padding: calc(37 * var(--u)) 2%; }
+.play-shelf { position: relative; }
+
+.shelf-part { position: absolute; z-index: 1; pointer-events: none; border-style: solid; box-sizing: border-box; }
+.board-top, .board-bottom {
+  left: calc(-18 * var(--u)); right: calc(-18 * var(--u)); height: calc(74 * var(--u));
+  border-width: 0 calc(15 * var(--u));
+  border-image: url('img/shelf-board.png') 0 15 fill stretch;
+}
+.board-top { top: calc(-37 * var(--u)); }
+.board-bottom { bottom: calc(-37 * var(--u)); }
+.wall-left, .wall-right {
+  top: calc(37 * var(--u)); bottom: calc(-9 * var(--u)); width: calc(36 * var(--u));
+  z-index: 4;
+  border-width: calc(20 * var(--u)) 0;
+  border-image: url('img/shelf-wall.png') 20 0 fill stretch;
+}
+.wall-left { left: calc(-18 * var(--u)); }
+.wall-right { right: calc(-18 * var(--u)); }
+
+/* Item area: left 18, right 12, top 26, bottom 26; three equal slots. */
+.shelf-items { position: absolute; inset: calc(26 * var(--u)) calc(12 * var(--u)) calc(26 * var(--u)) calc(18 * var(--u)); display: grid; grid-template-columns: repeat(3, 1fr); }
+.play-slot { position: relative; display: block; margin: 0; padding: 0; border: 0; border-radius: calc(16 * var(--u)); background: transparent; cursor: grab; touch-action: none; -webkit-tap-highlight-color: transparent; }
+/* Relative offset instead of translate: a transform would give the slot its own stacking context and push its items below the boards. */
+.play-slot:nth-child(n + 2) { left: calc(-5 * var(--u)); }
+.play-slot.is-empty { cursor: default; }
+.play-slot:focus-visible { z-index: 3; outline: 3px solid #1d5fb8; outline-offset: calc(-2 * var(--u)); }
+.play-slot.is-selected { z-index: 3; outline: 4px solid #2f8f2f; outline-offset: calc(-2 * var(--u)); background: #ffffff59; }
+
+/* Icon box: top 4 %, bottom -9.41 % of the 348-unit slot, lifted 5 units; sprites keep their baked 1:2 canvas. */
+.slot-item, .slot-pending { position: absolute; left: 0; width: 100%; top: calc(13.92 * var(--u)); height: calc(366.8 * var(--u)); object-fit: contain; object-position: center bottom; pointer-events: none; }
+.slot-item { z-index: 3; translate: 0 calc(-5 * var(--u)); }
+.slot-item.is-lifted { visibility: hidden; }
+.slot-item.is-none, .slot-pending.is-none { visibility: hidden; }
+/* Next hidden item: darkened, lifted 18 units so it stands on the back of the board.
+   Clipped only at the top (below the upper board); the bottom stays visible on the board. */
+.slot-back { position: absolute; inset: calc(11 * var(--u)) 0 calc(-60 * var(--u)); z-index: 2; overflow: hidden; pointer-events: none; }
+.slot-pending { top: calc(2.92 * var(--u)); translate: 0 calc(-18 * var(--u)); filter: brightness(.353); }
+
+/* Dragged item and match clones float above the page. */
+.play-floating { position: fixed; z-index: 50; object-fit: contain; object-position: center bottom; pointer-events: none; }
+.play-floating.is-dragging { filter: drop-shadow(0 .5rem .5rem #3b2a1440); }
+
+/* Result card */
+.play-result { position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; padding: 1rem; border-radius: inherit; background: #2a1e0fb3; }
+.play-result[hidden] { display: none; }
+.play-result-card { width: min(100%, 22rem); padding: 1.5rem 1.25rem; border: 3px solid #ffe6a3; border-radius: 1.25rem; background: #fff6df; text-align: center; box-shadow: 0 6px 0 #72512e, 0 1rem 2rem #07141d66; }
+.play-result-card h2 { margin: 0; font-size: 1.75rem; line-height: 1.2; font-weight: 400; color: #3b2f1e; }
+.play-result-card p { margin: .75rem 0 1.25rem; font: 600 1rem/1.55 system-ui, sans-serif; color: #4d3f2a; }
+.play-result-actions { display: grid; gap: .85rem; }
+.play-button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: .65rem 1.2rem; border: 3px solid #ffe6a3; border-radius: 1.15rem; background: linear-gradient(#c8ec78, #88bd3f); color: #162d26; font: 400 1.0625rem/1.3 'Titan One', system-ui, sans-serif; text-decoration: none; cursor: pointer; box-shadow: inset 0 3px 0 #eeffc0, inset 0 -4px 0 #5e8a2b, 0 0 0 3px #122b3a, 0 5px 0 #72512e; transition: transform var(--motion-press, 160ms) var(--ease-out, ease-out); }
+.play-button.is-secondary { background: linear-gradient(#fff4d6, #f1d79a); box-shadow: inset 0 3px 0 #fffbee, inset 0 -4px 0 #c9a25a, 0 0 0 3px #122b3a, 0 5px 0 #72512e; }
+.play-button:focus-visible { outline: 3px solid #122b3a; outline-offset: 6px; }
+@media (hover: hover) and (pointer: fine) {
+  .play-button:hover:not(:active) { background: linear-gradient(#e2ffa0, #acd95b); }
+  .play-button.is-secondary:hover:not(:active) { background: linear-gradient(#fffaea, #f6e2b2); }
+}
+.play-button:active { transform: translateY(2px) scale(.98); box-shadow: inset 0 2px 0 #eeffc0, inset 0 -2px 0 #5e8a2b, 0 0 0 3px #122b3a, 0 2px 0 #72512e; }
+.play-button.is-secondary:active { background: linear-gradient(#f1d79a, #e6c67e); }
+
+.play-footer { margin-top: 1rem; }
+.play-footer .legal-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.play-footer .legal-nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .play-restart, .play-button { transition: none; }
+}

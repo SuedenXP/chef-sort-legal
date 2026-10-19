@@ -207,3 +207,60 @@ Auf Nutzerauftrag ein kombinierter Bildentwurf mittels integriertem image_gen: c
 
 
 Nutzerfreigabe und Veroeffentlichung des kombinierten Schriftzugs: 17.10.2026, Revision 46c443b. Web-PNG 720 x 159 Pixel, 235779 Bytes, nur transparente Aussenraender gekuerzt und fuer Web skaliert. Original und Prompt weiterhin lokal erhalten. Kopfzeile ohne Vorschau-Hinweis/Sperrknopf, Anmeldung erhalten. Edge-Emulation 320/390/768/1440, DE/EN und 200 Prozent Text bestanden, mobile/Desktop-Aufnahmen manuell betrachtet. Slider-/Touch-/Dialogpruefungen bestanden; kein physischer Geraetetest.
+
+
+## Spielwelt-Hintergrund mit Dreiergruppen - 18.10.2026
+
+Nutzerauftrag: Spieleinstieg und grosses Hintergrundmotiv staerker im Mobile-Game-Stil, anschliessende Praezisierung jeweils drei Gegenstaende nebeneinander. Integriertes image_gen: ein neuer Stilentwurf aus eigenem bisherigem Hintergrund und Original-Gegenstandstafel als Referenzen, danach eine gezielte Bearbeitung auf Dreiergruppen. Finale Original-PNG: .local-preview/art/chef-sort-pantry-trios-v2.png. Prompts: .local-preview/qa/gamey-background-v2-prompt.txt sowie gamey-background-trios-v2-prompt.txt. Webfassungen .local-preview/public/images/chef-sort-pantry-trios-v2-1200.jpg (97235 Bytes) und -1983.jpg (206573 Bytes), nur verkleinert/JPEG-komprimiert. Bild als Hintergrundillustration, echte Spielaufnahmen unveraendert separat. Dreiergruppen aus Tellern, Dosen, Honig, Tassen, Orangen und Loeffeln visuell kontrolliert. Drei gleiche Tassenausschnitte im Vordergrund aus vorhandenem Originalbild game-item-overview.jpg, keine zusaetzliche Fremdgrafik. Vorhandene Titan-One-OFL-Lizenz und Originalhinweise erhalten; keine externen Bild-/Font-Aufrufe oder neuen Komponenten. Vorhandenes Generierungskontingent genutzt; kein neuer Dienst/Kauf. KI-Entwurf ohne Zusage exklusiver Rechte oder Markenfreigabe. Nur lokaler Entwurf, oeffentliche Website und Unity unveraendert. Pruefbericht: .local-preview/qa/gamey-hero-v2-review.md.
+
+
+Veroeffentlichung auf Nutzerauftrag vom 18.10.2026: Revision 396439f ueber vorhandenes GitHub Pages. Beide Dreiergruppen-Hintergrund-JPEGs oeffentlich unter site-assets/images/, Original-PNG und Prompts weiterhin ausschliesslich lokal. Live-Dateien mit geprueftem Stand identisch, Lizenzdatei erhalten und erreichbar. Livepruefung von vier Breiten, DE/EN, Textvergroesserung, Slider, neuer Grossansicht, Touch und reduzierter Bewegung bestanden; Bericht .local-preview/qa/publication-396439f.md.
+
+
+18.10.2026: Lokale Designanpassung von Impressum, Datenschutz und Terms unter .local-preview/public/. Vorhandenes kombiniertes BrainBlooms-Logo und lokale Titan-One-OFL-Schrift wiederverwendet; Rechtstext-Systemschrift, keine weiteren Assets oder Dienste. Bestehende article-Inhalte wortgleich uebernommen, Ursprungsdateien per SHA256 unveraendert. Neue projektinterne legal.css und legal-language.js, keine Fremdbibliothek. Pruefung: .local-preview/qa/legal-design-review.md. Keine Veroeffentlichung.
+
+
+18.10.2026: Spracherkennung und Rechtsseitendesign auf Nutzerauftrag online, Revision 3c51769. Bestehendes Logo und Titan-One-OFL-Schrift wiederverwendet. Gemeinsames projektinternes language-preference.js, legal.css/legal-language.js und Hauptsprachskript; keine neuen Fremdassets oder Anbieter. Original-Rechtstextbloecke unveraendert und ohne Login erreichbar. Live-Pruefung von Spracherkennung, Speicherungsausfall, manueller Auswahl, vier Breiten und 200 Prozent Text bestanden. Bericht .local-preview/qa/publication-3c51769.md.
+
+
+## Online fehlende Social-Symbole - 18.10.2026
+
+Ursache: Export behielt den aelteren Live-Social-Block ohne TikTok/Pinterest bei. Auf aktuellen Nutzerhinweis die zuvor ausdruecklich beauftragten eigenen Outline-SVGs aus dem Entwurf wieder eingebunden (Revision b6b3472); Quellkommentare und Markenhinweise erhalten. Eigene Pfade, keine neuen Fremdassets, externen Aufrufe, Dienste oder Kosten. Exportregel angepasst, damit Symbole nicht wieder verschwinden. Keine offizielle Markenfreigabe behauptet. Originalquellen erneut geprueft: https://business.pinterest.com/en-gb/brand-guidelines/ (unveraenderte Badges, Outline ausgeschlossen, Profilbezug verlangt), https://developers.tiktok.com/docs/en/getting-started-design-guidelines (Marken-/Nutzungsvorgaben, vorherige schriftliche Erlaubnis genannt). Die Eigenzeichnungen sind entsprechend nicht als richtlinienkonforme offizielle Logos oder markenrechtlich freigegeben dokumentiert; Nutzer gewaehlt/angefordert und ueber Abweichung informiert. Pinterest-Profiladresse per Rueckfrage angefordert, bis dahin unveraendert Link folgt und kein funktionsloser Link. Browserdarstellung bei 390/1440, DE/EN, keine Ueberlaeufe oder externen Ressourcen, alle drei Symbole sichtbar; mobile Aufnahme manuell kontrolliert.
+
+
+## Chef Sort App-Symbol fuer die Website - 18.10.2026
+
+Nutzer wuenscht vorhandenes Unity-App-Symbol als Browser-Icon und neben Chef Sort im Spieleinstieg; Platzierung ausdruecklich bestaetigt. Tatsachliche Android-Zuweisung aus ProjectSettings.asset ueber GUID 5a5ca3abe84a8ff45a28e924f4947115 auf Assets/Project/Art/AppIcon/AppIcon_ChefSort_Shelf_v02.png zurueckgefuehrt. Quelle nur gelesen, lokale unveraenderte Sicherung .local-preview/art/chef-sort-app-icon-unity-v02.png; SHA256 ef52126839af7f0cb0270148c429354119f878c8f27ab323de288d0808323a8b. Vorhandene vom Nutzer bereitgestellte Spielgrafik, keine neue Fremdquelle oder gesonderte Drittanbieter-Lizenzdatei im Quellordner gefunden; keine weitergehende Rechtefreiheit behauptet. Web-PNG 16/32/48/128/180/512 Pixel und mehrgroessiges favicon.ico aus demselben Motiv, nur proportional verkleinert. Spielbereich mit Klartext Fuer Android / For Android; keine zusaetzlichen Android-Markenassets. Quadratische Teilen-Vorschau als Open-Graph-Metadaten vorbereitet, kein externer Abruf beim Laden. Kein neuer Dienst, Kauf oder Bildgenerierung. Nur lokaler Entwurf; Browserpruefung und Grenzen siehe .local-preview/qa/app-icon-review.md.
+
+
+18.10.2026: App-Symbol, Browser-Icon und Teilen-Metadaten auf ausdruecklichen Nutzerauftrag veroeffentlicht, Revision 9307442. Chef-Sort-Schriftzug nochmals gleich weit nach rechts, insgesamt clamp(2rem,5vw,6rem) auf breiten Displays. Unity-Quelle unveraendert, oeffentliche Webfassungen unter site-assets/images/ und site-assets/favicon.ico; Original verbleibt lokal. Live-Pruefung sechs Breiten, DE/EN, 200 Prozent Text, ICO-Dekodierung und Dateiabgleich bestanden; Rechtsartikel unveraendert. Bericht .local-preview/qa/publication-9307442.md. Keine neuen Dienst-/Lizenzkosten oder Fremdassets.
+
+
+## Google-Play-Badge vorbereitet - 18.10.2026
+
+Auf Nutzerwunsch Badge-Anschluss ohne vorhandenen oeffentlichen Store-Link vorbereitet. Original-Google-Dateien DE (15496 Bytes)/EN (4904 Bytes), jeweils 646 x 250, unveraendert lokal unter .local-preview/public/images/google-play-badge-{de,en}.png. Quellen https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png und en_badge_web_generic.png; Richtlinien https://developer.android.com/distribute/marketing-tools/brand-guidelines?hl=en, Linkformat https://google.play/business/brand-and-marketing/linking-google-play/. Google-LLC-Markenassets, keine eigene oder allgemein freie Lizenz behauptet. Keine neuen Dienst-/Lizenzkosten, Einbettung oder externe Abrufe beim Laden. Badge wird derzeit nicht angezeigt oder geladen: googlePlayUrl ist null, sichtbarer nichtinteraktiver Demnaechst-Hinweis bleibt. Spaeter bestaetigten Link eintragen, originale lokale Badges verwenden; Export vorbereitet. Dokumentation .local-preview/qa/google-play-preparation.md. Nur lokaler Entwurf.
+
+## Pinterest und Bedienzustände – 18.10.2026
+
+Nutzer hat https://pin.it/5O5hcjmCQ geliefert. Als normaler Link mit „Auf Pinterest ansehen“ / „View on Pinterest“ in Startseite und lokaler Entwurfsquelle eingebaut. Der Kurzlink konnte extern nicht zuverlässig aufgelöst werden; kein Profilname daraus abgeleitet. Keine Einbettung oder neuen Assets/Dienste. Die bisherige Angabe „Link folgt“ ist damit überholt. Bestehende Symbolzeichnung und Herkunftshinweise erhalten. Buttons erhalten ergänzte sichtbare Hover-/Druckzustände; Projekt-Skill brainblooms-interactive-elements angelegt und in AGENTS.md verknüpft.
+
+
+## BrainBlooms-Logo mit weissem Rahmen ? 18.10.2026
+
+Vom Nutzer im Chat ausgewaehlte Bildbearbeitung: einheitliche dunkle Petrolkonturen und breiter weisser Aussenrahmen. Quelle: vorhandenes Nutzerlogo, im Chat mit dem OpenAI-Bildwerkzeug bearbeitet und ausdruecklich zum Einbau ausgewaehlt. Keine neue Generierung fuer den Einbau. Original lokal unter .local-preview/art/brainblooms-white-outline-approved-original.png; transparente Webfassung 2058 x 547 unter site-assets/images/brainblooms-wordmark-white-outline-v2.png. Nur transparenter Leerraum beschnitten, Motiv nicht neu gezeichnet. Vorhandene Rechte am Nutzerlogo bleiben Voraussetzung; keine gesonderte Drittanbieter-Lizenz oder Exklusivitaet behauptet. Keine neuen Fremdassets, Dienste oder externen Abrufe beim Seitenladen. Startseite und lokale Entwurfsquelle verwenden die neue Datei; Rechtsseiten und altes Logo bleiben erhalten. Kein Push und keine Veroeffentlichung in diesem Arbeitsschritt.
+
+18.10.2026: Ausgewaehltes weisses Logo auf ausdruecklichen Nutzerwunsch 1.25rem ueber der Kopfbereichskante positioniert. Auf schmalen Ansichten Menuezeile davor, um Logo und Buttons freizuhalten. Keine neuen Assets oder Generierungen. Entwurf und veroeffentlichbare CSS-Datei synchron; Pruefung in .local-preview/qa/white-outline-logo-review.md. Nicht veroeffentlicht.
+
+
+## Spielbarer Level-7-Prototyp (19.10.2026)
+
+| Datei/Komponente und Version | Originalquelle, Urheber | Lizenz + Nachweis | Kommerzielle Nutzung/Bearbeitung/Web-Einbettung | Kosten | Externe Verbindungen | Benötigte Hinweise | Freigabestand |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `.local-preview/public/play/img/item-*.png` (18 Dateien, 256 × 512 px) | Eigene Spielgrafik aus Chef Sort, `RestaurantGame/Assets/Project/Art/UI/KitchenBelt/Items/kitchenBelt_*.png` (1024 × 2048 px) | Eigenes Werk des Nutzers; Herkunft und SHA-256 der Originale in `.local-preview/qa/play-images.json` | Verkleinerte Webkopie (`qa/prepare-play.ps1`, nur lesender Zugriff auf das Unity-Projekt) | Keine | Keine; lokal ausgeliefert | Keine Fremdhinweise | Lokal eingesetzt; keine Veröffentlichung |
+| `.local-preview/public/play/img/shelf-board.png`, `shelf-wall.png` | Eigene Spielgrafik, `kitchenBelt_regaldark_board.png` / `_wall.png` | wie oben | Unveränderte Kopie | Keine | Keine | Keine | Lokal eingesetzt; keine Veröffentlichung |
+| `play/play.mjs`, `rules.mjs`, `level-07.mjs`, `play.css` | Im Projekt erstellt; Regeln nach dem Unity-Code von Chef Sort | Kein fremder Code, keine Bibliotheken | Projektintern | Keine | Keine (kein Netzwerkzugriff, kein Speicher außer der vorhandenen Sprachwahl) | Keine | Lokal eingesetzt; keine Veröffentlichung |
+
+
+### Weboptimierung und Veröffentlichungsfreigabe – 19.10.2026
+
+Nutzer erlaubt Veröffentlichung und sinnvolle Bildverkleinerung. 18 vorhandene Item-PNGs lokal zu WebP (Qualität 1, 256 × 512) umkodiert; Alpha-Kanal pixelgenau erhalten, kein Zuschnitt oder neues Motiv. Original-PNGs bleiben lokal. Item-Größe 2.910.454 → 2.061.510 Bytes; mit unveränderten Regal-PNGs 2.945.746 → 2.096.802 Bytes. Webfassungen unter play/img/, Module/CSS unter play/. Herkunft und bisherige Rechtebasis unverändert; keine neuen Fremdassets, Lizenzen, Bibliotheken oder Dienstkosten. Einzeldatei-Hashes und Qualitätsmessung: .local-preview/qa/play-image-optimization.json; Originalnachweise weiterhin play-images.json. Nutzerfreigabe gilt für diese Webfassungen; keine weitergehenden Rechte behauptet.

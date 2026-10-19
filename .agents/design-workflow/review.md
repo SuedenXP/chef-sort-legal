@@ -50,3 +50,32 @@ Die Prüfung umfasst die Skill-Struktur, lokale Markdown-Links, Datei-Prüfsumme
 Die konkreten Original-Lizenztexte sind maßgeblich. MIT erlaubt auch kommerzielle Nutzung unter Erhalt von Copyright-/Lizenzhinweisen bei Kopien und wesentlichen Teilen. Apache-2.0 verlangt bei Weitergabe insbesondere Lizenzbeilage, Erhalt einschlägiger Hinweise und Kennzeichnung geänderter Dateien; NOTICE wurde erhalten. Beide Lizenzen gewähren keine allgemeine Rechtefreigabe für fremde Medien oder Marken und enthalten Haftungsausschlüsse.
 
 Für diese Skill-Auswahl wurden keine Lizenzgebühren, Käufe oder Abos ausgelöst. Modell-/Codex-Kontingent wird durch die Nutzung beansprucht; ein konkreter Europreis hängt vom vorhandenen Tarif und künftigem Umfang ab. Kommerzielle Bild-/Fontangebote, Bildgenerierung, externe APIs und neue Web-Komponenten wurden nicht aktiviert. Vor ihrer Auswahl sind Rechte, Kosten und externe Datenübertragung separat zu prüfen; siehe [Asset-Register](asset-register.md).
+
+
+## Spielbarer Level-7-Prototyp – Übergabe 19.10.2026
+
+Dokumentationsübernahme des vom Nutzer mit „perfekt“ abgenommenen lokalen Chef-Sort-Prototyps unter `/play/`. Nutzerentscheidungen im [Briefing](briefing.md#abgenommener-spielbarer-chef-sort-prototyp--19102026), Grafikherkunft im [Asset-Register](asset-register.md#spielbarer-level-7-prototyp-19102026).
+
+Prüfstatus: Die bestandenen Ergebnisse stammen aus der Nutzerübergabe der vorherigen Sitzung. In dieser Dokumentationsrunde wurden Unterlagen und vorhandene Belegdateien gelesen; Browserprüfung und Solver wurden nicht erneut ausgeführt. Keine neue visuelle Prüfung, kein vollständiger Impeccable-Audit und kein Nachweis einer WCAG-Konformität.
+
+Übergebene Prüfergebnisse:
+
+- Regeln entsprechen dem Unity-Spielcode. Festes Brett ohne Förderband; Lösbarkeit durch `qa/play-solver.mjs` nachgewiesen, Gewinnfolge mit 37 Zügen in `qa/play-solution.json`.
+- Edge headless über `qa/check-play.mjs`: 320/390/768/1440 px, DE/EN, Vorschau-Anmeldung, Touch-Drag, komplette Gewinnrunde, Zeit vorbei, Kein Platz mehr, Tastatur, reduzierte Bewegung, keine externen Anfragen und Teile-Ebenen. Laut Übergabe alles bestanden.
+- Behobener Ebenenfehler: `translate` auf den Plätzen erzeugte eine eigene Zeichenebene; Teile erschienen vor oder hinter Regalbrettern. Durch `left` ersetzt, Regression im Prüfskript berücksichtigt.
+
+Vorhandene Belege unter `.local-preview/qa/`: `check-play.mjs`, `play-solver.mjs`, `play-solution.json`, `build-play-level.mjs`, `prepare-play.ps1`, `play-images.json` sowie Screenshots `play-390-de.png`, `play-1440-en.png`, `play-390-after-drag.png`, `play-390-won.png`, `play-390-no-space.png` und `play-layering-zoom.png`. Screenshots in dieser Runde nicht visuell bewertet. `play-images.json` enthält Herkunft, Original-SHA-256 und Dateigrößen. Unity-Grafiken laut Übergabe nur gelesen, Unity-Projekt unverändert.
+
+Bekannte Grenzen:
+
+- Kein Test auf einem echten Handy; Touch-Ergebnisse aus Browseremulation.
+- Spielbilder zusammen etwa 2,9 MB; weitere Verkleinerung nur auf Wunsch.
+- `preview-gate.js` erwartet das sonst fehlende `#preview-lock`; auf der Spielseite als verstecktes Element ohne Funktion vorhanden. Bereinigung offen. Die Anmeldung bleibt eine clientseitige Sichtblende.
+- Vor separat beauftragter Veröffentlichung `.local-preview/qa/export-public.mjs` für `/play/`, Module und Bilder erweitern, Pfade nach `play/` beziehungsweise `site-assets/` umschreiben, Gate-Dateien aus `site-assets/` nutzen und `DEPLOYMENT.md` ergänzen. Export hier nicht geändert.
+
+Nur Projektunterlagen ergänzt: keine Spielcode-, Brett- oder Layoutänderungen, Root-`index.html` und `site-assets/` unberührt, kein Push und keine Veröffentlichung. `.local-preview/`, Originale und Prüfprofile bleiben von Git ausgeschlossen. Brett nur über `qa/build-play-level.mjs` neu erzeugen und anschließend `qa/check-play.mjs` ausführen.
+
+
+## Veröffentlichungsprüfung der Demo – 19.10.2026
+
+Nach ausdrücklicher Nutzerfreigabe erstmals in dieser Sitzung selbst ausgeführt: check-play.mjs gegen optimierten Entwurf (4174) und Export (4188), jeweils vier Breiten, DE/EN, Anmeldung, Touch-Drag, komplette Gewinnfolge, Zeitablauf/Neustart, Kein Platz mehr, Tastatur, reduzierte Bewegung, Bildladung und Ebenen; bestanden. check-play-entry.mjs: Hero-Link in DE/EN und vier Breiten ohne Überlauf, mindestens 44 Pixel; Hover/Druck/Fokus am Desktop und 200 % Text bestanden. Wechsel von Startseite zu /play/ übernimmt Anmeldung. Komplette Gewinnrunde über tatsächliche Enter-Tasteneingaben an allen vier Breiten bestanden. Screenshots von schmaler Spielansicht und mobilem Einstieg visuell betrachtet. Bildqualität durch Pixelvergleich abgesichert (Transparenz unverändert), WebP-Abmessungen unverändert. Keine neue Designrichtung. Manuelle Projektprüfung ohne Impeccable-Engine oder unabhängige Zweitprüfung; kein physisches Gerät, Screenreader- oder vollständiger WCAG-Test. Gate-Dateien, CNAME, Rechtstexte und Root-CSS/JS beim Export per SHA-256 erhalten. Liveprüfung folgt nach Upload.

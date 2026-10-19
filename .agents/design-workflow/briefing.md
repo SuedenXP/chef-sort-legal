@@ -293,3 +293,47 @@ Folgeentscheidung: Bildwechsel auf vier Sekunden verkuerzt. Der breite aktive Po
 Auf Nutzerwunsch nur noch zwei grosse Spielabschnitte: Banner und ein kombinierter Slider mit Bildfaecher. Der separate Abschnitt Noch naeher dran entfaellt. Im Slider links die wechselnde Erklaerung, rechts vier aufgefaecherte Bilder mit genau einer bedienbaren Frontaufnahme; mobil Text und Faecher untereinander. Text, Frontbild, Positionspunkt und Fortschrittsanzeige teilen denselben Index. Alle sichtbaren x/4-Zaehler entfernt, einschliesslich der kleinen Abschnittsnummern. Bildposition bleibt nur unsichtbar fuer Hilfstechniken beschrieben.
 
 Vier-Sekunden-Automatik, animierter aktiver Balken, temporaere Pausen, reduzierte Bewegung, seitliche Bildpfeile, Touch-Wischen, vertikales Scrollen, Tastatur und Grossansicht erhalten. Nur Entwurf geaendert, veroeffentlichte Dateien bleiben unangetastet.
+
+
+18.10.2026: Nutzer waehlt staerkeren Mobile-Game-Look fuer den Spieleinstieg einschliesslich Hintergrund; Praezisierung: auch Hintergrundgegenstaende jeweils in Dreiergruppen nebeneinander. Lokal umgesetzt mit kraeftigerer Toon-Kueche, Original-Tassentrio, verbundenen Spielaufnahmen, creme/goldener Ueberschrift und dezenter Touch-/Hover-Rueckmeldung. Keine Veroeffentlichung beauftragt.
+
+
+18.10.2026: Auf Nutzerauftrag automatische Spracherkennung lokal in Startseite und Rechtsseiten eingebaut. Gueltige gespeicherte manuelle Auswahl hat Vorrang, sonst deutsche bevorzugte Browsersprache -> Deutsch, alle anderen -> Englisch. Erkennung ohne Cookies/Schreibzugriffe; manuelle Wahl wie bisher optional in localStorage. Ohne JavaScript deutscher Fallback. Gemeinsames fruehes Skript, keine Veroeffentlichung. Pruefung .local-preview/qa/language-detection-review.md.
+
+
+18.10.2026: Auf Nutzerauftrag beschreibenden Absatz unter der Spielueberschrift und sichtbaren Bildvergroesserungstipp DE/EN entfernt. Bisherigen Abstand zwischen Ueberschrift und CTA als leeren Raum erhalten, Messabweichung unter 0,1 Pixel an vier Breiten. Google-Play-Badge lokal vorbereitet, bis bestaetigter oeffentlicher Link vorliegt nur nicht anklickbares Demnaechst bei Google Play. Keine Veroeffentlichung beauftragt.
+
+## Pinterest und Bedienzustände – 18.10.2026
+
+Nutzer hat https://pin.it/5O5hcjmCQ geliefert. Als normaler Link mit „Auf Pinterest ansehen“ / „View on Pinterest“ in Startseite und lokaler Entwurfsquelle eingebaut. Der Kurzlink konnte extern nicht zuverlässig aufgelöst werden; kein Profilname daraus abgeleitet. Keine Einbettung oder neuen Assets/Dienste. Die bisherige Angabe „Link folgt“ ist damit überholt. Bestehende Symbolzeichnung und Herkunftshinweise erhalten. Buttons erhalten ergänzte sichtbare Hover-/Druckzustände; Projekt-Skill brainblooms-interactive-elements angelegt und in AGENTS.md verknüpft.
+
+
+## Abgenommener spielbarer Chef-Sort-Prototyp – 19.10.2026
+
+Quelle: Nutzerübergabe aus der anderen Sitzung; Demo mit „perfekt“ abgenommen. Eigene Unterseite `/play/` unter `.local-preview/public/play/`, verlinkt durch den zweiten Hero-Button „Level ausprobieren“ / „Try a level“ neben „Das Spiel entdecken“. Die frühere Beschränkung auf eine Startseite ohne separate Spielseite ist für diesen lokalen Prototyp überholt.
+
+Verbindliche Nutzerentscheidungen:
+
+- Festes Brett nach Level 7 (Regalaufbau und Item-Auswahl), bei jedem Neustart identisch. Kein Zufallsgenerator und kein Förderband.
+- Nur der Kern: Ziehen/Ablegen, drei gleiche verschwinden, verdeckte Ebenen rücken nach; Timer 2:51, Gewinnen / Zeit vorbei / Kein Platz mehr. Keine Power-Ups, Combo-Anzeige oder Belohnungen.
+- Keine Schatten. Verdeckte Teile abgedunkelt und leicht nach hinten auf dem Regalbrett versetzt. Regeln, Brett und Layout sind abgenommen; keine ungefragte Umgestaltung.
+- Dieselbe Vorschau-Anmeldung wie die Startseite, weiterhin clientseitige Sichtblende ohne Serverauthentifizierung.
+- HTML/CSS/JavaScript ohne Bibliotheken oder externe Anfragen. Kein zusätzlicher Speicher außer der vorhandenen Sprachwahl `chef-sort-language`. DE/EN mit `data-lang`, Maus/Finger/Tastatur (Enter wählt aus und legt ab, Escape bricht ab), reduzierte Bewegung berücksichtigt.
+
+Aktueller Auftrag: ausschließlich Dokumentation, keine Veröffentlichung und kein Push. Root-`index.html`, `site-assets/` und Unity bleiben in dieser Runde unverändert. Frühere Veröffentlichungsaufträge für die Website geben `/play/` nicht zur Veröffentlichung frei. Originaldateien, Prüfprofile und `.local-preview/` bleiben von Git ausgeschlossen.
+
+Prüfergebnisse und Grenzen stehen im [Prüfbericht](review.md#spielbarer-level-7-prototyp--übergabe-19102026); Bildherkunft im [Asset-Register](asset-register.md#spielbarer-level-7-prototyp-19102026) und in `.local-preview/qa/play-images.json`.
+
+Offen für spätere Entscheidungen:
+
+- Ob und wann `/play/` veröffentlicht werden soll. Dafür `.local-preview/qa/export-public.mjs` um Spielseite, Module und Bilder erweitern, Pfade nach `play/` beziehungsweise `site-assets/` umschreiben, Gate-Dateien aus `site-assets/` verwenden und `DEPLOYMENT.md` ergänzen. Der bisherige Export kennt laut Übergabe nur `index.html`.
+- Ob die zusammen etwa 2,9 MB großen Spielbilder weiter verkleinert werden sollen.
+- Test auf einem echten Handy; bisher Browseremulation.
+- Technische Bereinigung: `preview-gate.js` erwartet das sonst fehlende `#preview-lock`. Die Spielseite enthält es versteckt und ohne Funktion.
+
+`level-07.mjs` ausschließlich über `.local-preview/qa/build-play-level.mjs` neu erzeugen, nie von Hand ändern; danach `.local-preview/qa/check-play.mjs` ausführen. Dies ist kein Änderungsauftrag.
+
+
+## Veröffentlichung der Demo freigegeben – 19.10.2026
+
+Der Nutzer beauftragt jetzt ausdrücklich die Veröffentlichung von /play/ und erlaubt sinnvolle Bildverkleinerung. Damit ist die vorstehende Beschränkung auf Dokumentation/lokalen Betrieb für diese Veröffentlichung überholt. Demo-Link im Hero neben Das Spiel entdecken, mobil darunter; keine weiteren Platzierungen hinzugefügt. Vorhandene Anmeldung erhalten. WebP höchster Qualität, gleiche Abmessungen und unveränderte Transparenz, Original-PNGs lokal erhalten; Gesamtbilder 2.945.746 auf 2.096.802 Bytes reduziert (28,8 %). Export um Demo ergänzt. Regeln, Brett und Layout unverändert. Prüfungen und Dateiumfang in DEPLOYMENT.md. Ein echter Handytest bleibt offen.

@@ -1,5 +1,17 @@
 # Geschützte Website-Vorschau
 
+## Spielbares Level 7 unter /play/ – 19.10.2026
+
+Ausdrücklicher Nutzerauftrag: abgenommenen Chef-Sort-Prototyp veröffentlichen und Spielbilder sinnvoll verkleinern. Veröffentlichung über das vorhandene GitHub-Pages-Repository; keine zusätzlichen Dienste oder Kosten. „Level ausprobieren“ / „Try a level“ steht als zweiter Hero-Button neben „Das Spiel entdecken“, auf schmalen Displays darunter. Die bisherige Anmeldung bleibt erhalten und wird beim Seitenwechsel im selben Tab übernommen.
+
+Öffentliche Dateien: `play/index.html`, `play/play.css`, `play/play.mjs`, `play/rules.mjs`, `play/level-07.mjs`, 18 Item-WebPs und zwei Regal-PNGs unter `play/img/`. Gemeinsame CSS-, Sprach-, Icon- und Gate-Dateien aus `../site-assets/`. `noindex, nofollow` auch auf der Demo. Kein zusätzliches Speichern oder externe Ressourcen. Die nur lokal verfügbare QA-Schnittstelle wird auf brainblooms.de nicht eingerichtet.
+
+Export: `.local-preview/qa/export-public.mjs` exportiert jetzt auch `/play/`, schreibt gemeinsame Pfade um und versieht direkte CSS-/JS-/MJS-Verweise mit Inhaltsversionen. Das alte versteckte `#preview-lock`-Hilfselement wird beim Export entfernt; die veröffentlichte Gate-Datei benötigt es nicht. Bei späterer Entfernung der Sperre auch `play/index.html` berücksichtigen. Originale, PNG-Ausgangskopien, Export-/Prüfskripte und Browserprofile bleiben lokal und von Git ausgeschlossen.
+
+Bildoptimierung: 18 Items mit browserinternem WebP-Encoder auf höchster Qualität, weiterhin 256 × 512 Pixel, Transparenz pixelgenau erhalten. Item-Dateien 2.910.454 → 2.061.510 Bytes; einschließlich unveränderter Regal-PNGs 2.945.746 → 2.096.802 Bytes (28,8 % weniger). Kein neuer Zuschnitt oder neues Motiv. Herkunft unverändert, Nachweise lokal in `qa/play-images.json` und `qa/play-image-optimization.json`.
+
+Vor Upload bestanden: Edge headless 320/390/768/1440 px, DE/EN, Bildladung, Ebenen, Anmeldung, Touch-Drag, Gewinnfolge (37 Züge), Zeitablauf, Kein Platz mehr, Neustart, Tastatur und reduzierte Bewegung; gegen optimierten Entwurf und Export. Zusätzlich Hero-Button auf Größe/Überlauf, Hover, Druck, sichtbaren Tastaturfokus und 200 % Text geprüft; Anmeldung von Startseite übernommen und an jeder Breite komplette Gewinnrunde über echte Enter-Eingaben. Schmale Spielansicht und mobiler Einstieg visuell betrachtet. Kein physischer Handy- oder Screenreadertest, kein vollständiger WCAG-Audit. Regeln, Brett und Layout bleiben erhalten. CNAME, Rechtsseiten, Root-style.css/Root-language.js und beide Gate-Dateien beim Export per SHA-256 unverändert geprüft.
+
 ## Kopfzeilenlogo ohne Interaktion, 18.10.2026
 
 Auf Nutzerauftrag ist das BrainBlooms-Logo oben auf Startseite und Rechtsseiten

@@ -122,3 +122,20 @@
   .google-play-pending { margin-inline: 0; }
   .google-play-note { text-align: left; }
 }
+
+/* Hero actions: discover the game plus the playable Level 7 prototype (play/). */
+.banner .hero-actions { display: flex; flex-wrap: wrap; gap: 1.1rem 1.25rem; margin-top: .85rem; }
+.banner .hero-actions .button-link { margin-top: 0; }
+.banner .button-link.is-secondary { background: linear-gradient(#fff4d6, #f1d79a); text-shadow: 0 1px 0 #fffbee; box-shadow: inset 0 3px 0 #fffbee, inset 0 -4px 0 #c9a25a, 0 0 0 3px #122b3a, 0 7px 0 #72512e, 0 11px 15px #07141d66; }
+.banner .button-link.is-secondary:active, .banner .button-link.is-secondary[data-pressed] { background: linear-gradient(#f1d79a, #e6c67e); box-shadow: inset 0 2px 0 #fffbee, inset 0 -2px 0 #c9a25a, 0 0 0 3px #122b3a, 0 3px 0 #72512e; }
+@media (hover: hover) and (pointer: fine) {
+  .banner .button-link.is-secondary:hover:not(:active):not([data-pressed]) { background: linear-gradient(#fffaea, #f6e2b2); border-color: #fff4ce; }
+}
+/* The play triangle is drawn pointing right; it must not take the rotated arrow transform. */
+.banner .button-link.is-secondary > .icon, .banner .button-link.is-secondary:focus-visible > .icon { transform: none; }
+@media (hover: hover) and (pointer: fine) {
+  .banner .button-link.is-secondary:hover:not(:focus-visible):not(:active) > .icon { transform: translateX(2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .banner .button-link.is-secondary:hover > .icon { transform: none; }
+}

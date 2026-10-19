@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Chef Sort: ein Level direkt im Browser ausprobieren.">
+  <meta name="theme-color" content="#F7F7F2">
+  <title>Chef Sort – Level ausprobieren</title>
+  <link rel="icon" href="../site-assets/favicon.ico?v=f2bcab9683" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="../site-assets/images/chef-sort-app-icon-32.png?v=9e1553fa31">
+  <script src="../site-assets/language-preference.js?v=6e4a8bb40b"></script>
+  <link rel="stylesheet" href="../site-assets/style.css?v=4a80e70e13"><link rel="stylesheet" href="play.css?v=f12b50662e">
+  <link rel="stylesheet" href="../site-assets/preview-gate.css?v=6d05c18be5">
+  <script src="../site-assets/preview-gate.js?v=e651724fc6" defer></script>
+  <script type="module" src="play.mjs?v=4166439592"></script>
+</head>
+<body id="anfang" class="play-page">
+  <!-- TEMPORARY PREVIEW GATE: same markup and assets as the home page; remove together with it. -->
+  <main id="preview-gate" class="preview-gate" aria-labelledby="preview-gate-title">
+    <div class="preview-gate-card">
+      <p class="preview-gate-brand">BrainBlooms.</p>
+      <h1 id="preview-gate-title">Bald gibt es hier mehr.</h1>
+      <p>Unsere Website entsteht gerade. Mit deinen Zugangsdaten kannst du schon einen Blick hineinwerfen.</p>
+      <form id="preview-gate-form">
+        <label for="preview-user">Benutzername</label>
+        <input id="preview-user" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+        <label for="preview-password">Passwort</label>
+        <input id="preview-password" type="password" autocomplete="current-password" required>
+        <p id="preview-gate-error" role="alert" hidden>Benutzername oder Passwort stimmt nicht. Bitte versuche es erneut.</p>
+        <button id="preview-gate-submit" type="submit" disabled>Vorschau ansehen</button>
+      </form>
+      <noscript><p>Bitte aktiviere JavaScript, um die Vorschau zu öffnen.</p></noscript>
+    </div>
+  </main>
+  <div id="preview-site" hidden>
+
+  <a class="skip-link" href="#inhalt"><span data-lang="de">Zum Spiel</span><span data-lang="en" lang="en" hidden>Skip to the game</span></a>
+  <header class="site-header wrap play-header">
+    <a class="play-back" href="../#spiel"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span data-lang="de">Zur Startseite</span><span data-lang="en" lang="en" hidden>Back to home</span></a>
+    <div class="language-switch" id="language-switch" role="group" aria-label="Sprache wählen" data-label-de="Sprache wählen" data-label-en="Choose language" hidden><button type="button" data-set-lang="de" aria-pressed="true" lang="de">DE<span class="sr-only"> – Deutsch</span></button><button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN<span class="sr-only"> – English</span></button></div>
+  </header>
+
+  <main id="inhalt" class="play-main" tabindex="-1">
+    <h1 class="sr-only"><span data-lang="de">Chef Sort – Level 7 ausprobieren</span><span data-lang="en" lang="en" hidden>Chef Sort – try level 7</span></h1>
+    <section class="play-frame" aria-labelledby="play-help">
+      <div class="play-hud">
+        <p class="play-chip"><span aria-hidden="true">LV. 07</span><span class="sr-only">Level 7</span></p>
+        <p class="play-chip play-timer" data-timer><span data-timer-text>02:51</span></p>
+        <button type="button" class="play-chip play-restart" data-restart aria-label="Neu starten" data-label-de="Neu starten" data-label-en="Restart"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5"/></svg></button>
+      </div>
+      <p class="play-help" id="play-help"><span data-lang="de">Ziehe die Teile in die Regale. Drei gleiche in einem Fach verschwinden. Die Zeit startet mit deinem ersten Zug.</span><span data-lang="en" lang="en" hidden>Drag items between the shelves. Three identical items in one compartment disappear. The timer starts with your first move.</span></p>
+      <div class="play-board-wrap"><div class="play-board" data-board role="group" aria-label="Regale" data-label-de="Regale" data-label-en="Shelves"></div></div>
+      <p class="sr-only" data-status role="status" aria-live="polite"></p>
+      <div class="play-result" data-result hidden>
+        <div class="play-result-card" role="dialog" aria-modal="true" aria-labelledby="play-result-title">
+          <h2 id="play-result-title" data-result-title></h2>
+          <p data-result-text></p>
+          <div class="play-result-actions">
+            <button type="button" class="play-button" data-restart><span data-lang="de">Nochmal spielen</span><span data-lang="en" lang="en" hidden>Play again</span></button>
+            <a class="play-button is-secondary" href="../#spiel"><span data-lang="de">Mehr über Chef Sort</span><span data-lang="en" lang="en" hidden>More about Chef Sort</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer play-footer"><div class="wrap"><nav class="legal-nav" aria-label="Rechtliche Informationen" data-label-de="Rechtliche Informationen" data-label-en="Legal information"><a href="../impressum/"><span data-lang="de">Impressum</span><span data-lang="en" lang="en" hidden>Imprint</span></a><a href="../datenschutz/"><span data-lang="de">Datenschutz</span><span data-lang="en" lang="en" hidden>Privacy</span></a><a href="../terms/"><span data-lang="de">Nutzungsbedingungen</span><span data-lang="en" lang="en" hidden>Terms of use</span></a></nav><div class="footer-bottom" id="seitenende"><p>© BrainBlooms</p></div></div></footer>
+  </div>
+</body>
+</html>

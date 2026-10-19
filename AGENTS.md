@@ -1,5 +1,9 @@
 # BrainBlooms: Projektregeln
 
+## Folgeauftrag vom 19.10.2026: spielbare Demo veröffentlichen
+
+Der Nutzer gibt `/play/` ausdrücklich zur Veröffentlichung über das bestehende GitHub Pages frei und erlaubt sinnvolle Bildverkleinerung. Zweiter Hero-Link „Level ausprobieren“ / „Try a level“ neben „Das Spiel entdecken“, mobil darunter. Bestehende Vorschau-Anmeldung erhalten. Keine zusätzlichen Dienste oder Kosten; Regeln, Brett und Spielgestaltung unverändert. Diese Freigabe ersetzt die lokale Beschränkung für die Demo. Einzelheiten in Briefing und DEPLOYMENT.md.
+
 Kommuniziere auf Deutsch und erkläre Entscheidungen für jemanden mit wenig Website-Erfahrung.
 
 ## Aktueller Auftrag und Grenzen
