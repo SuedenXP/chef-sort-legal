@@ -1,5 +1,13 @@
 # Geschützte Website-Vorschau
 
+## Einzelner Play-Button und YouTube-Fächer – 19.10.2026
+
+Auf Nutzerauftrag wird der abgenommene Entwurf veröffentlicht: „Level ausprobieren“ / „Try a level“ führt als einziger Hero-Button im bisherigen grünen Entdecken-Design zu `/play/`. Das Play-Symbol zeigt nach rechts. Der bisherige zusätzliche Play-Button entfällt.
+
+Der YouTube-Bereich zeigt das vorhandene Bild und drei neue eigene Vorschaubilder als Fächer. Vier auswählbare Punkte zeigen das aktuelle Bild; der aktive breite Balken füllt sich über vier Sekunden bis zum automatischen Wechsel. Pause außerhalb des sichtbaren Bereichs, bei Hover, Tastaturfokus, Touch, verborgenem Dokument oder offenem Dialog. Bei reduzierter Bewegung kein automatischer Wechsel und statischer Auswahlbalken. Pfeile und Punkte bleiben bedienbar. Der vorhandene YouTube-Beispielvideo-Link bleibt unverändert; keine Einbettung und kein Video-Autoplay. Neue Bilder liegen als JPEG in 640 und 1280 Pixeln Breite vor; Originale bleiben lokal.
+
+Die exportierte Fassung wurde vor Upload in Edge bei 320/390/768/1440 Pixeln, DE/EN, 200 Prozent Text, mit Anmeldung, Pfeil-/Punktwahl, Fortschrittsfüllung und Pause/Fortsetzung geprüft. Play-Link samt Übernahme der Anmeldung, Hover, Druck, Tastatur und reduzierte Bewegung geprüft. Bestehende externe Links, Löschlinks, Vorschau-Zugangsdaten, CNAME und Rechtstextseiten unverändert verglichen. Keine physische Handyprüfung oder vollständige WCAG-Prüfung. Neue Dateien: `site-assets/youtube-fan.css`, `site-assets/youtube-fan.js` und acht JPEG-Webversionen unter `site-assets/images/youtube-*`. Keine neuen Dienste oder Kosten.
+
 ## Konto- und Datenlöschseiten – 19.10.2026
 
 Auf ausdrücklichen Folgeauftrag des Nutzers werden `/daten-loeschen/` und `/delete-data/` veröffentlicht. Der Nutzer beauftragt die Veröffentlichung nach Rückfrage auch ohne bestätigte Anwaltsfreigabe. Dies ist keine dokumentierte Rechtsfreigabe. Die vorhandene Vorschau-Anmeldung der Startseite bleibt bestehen; die Löschseiten sind wie die übrigen Rechtsseiten direkt ohne Anmeldung erreichbar.

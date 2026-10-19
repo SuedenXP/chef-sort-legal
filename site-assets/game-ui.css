@@ -139,3 +139,6 @@
 @media (prefers-reduced-motion: reduce) {
   .banner .button-link.is-secondary:hover > .icon { transform: none; }
 }
+
+/* The primary play link keeps its triangle pointing right in every state. */
+.banner .button-link.is-play > .icon { transform: none !important; }

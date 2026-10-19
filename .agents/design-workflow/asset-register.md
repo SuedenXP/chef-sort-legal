@@ -1,5 +1,11 @@
 # Asset- und Komponentenregister
 
+## YouTube-Bilderfächer, Entwurf und Veröffentlichungsauftrag vom 19.10.2026
+
+Vom Nutzer bereitgestellte Originale unter `art/pictures/`: `Video 25 v3.jpg` (bereits eingesetzt), `12 min3.jpg`, `Video 13 v1.jpg` und `V2.png`. Der Nutzer hat ihren Einbau und erforderliche Größenanpassungen ausdrücklich beauftragt. Keine externen Bilder beschafft; abgebildete Spielzeugmarken bleiben Marken ihrer jeweiligen Rechteinhaber. Keine separate Rechteübertragung aus der Bereitstellung abgeleitet.
+
+Nur lokale JPEG-Ableitungen unter `.local-preview/public/images/youtube-trains-25-*`, `youtube-trains-12min-*`, `youtube-trains-13-*` und `youtube-train-stunts-*`: je 640 × 360 und 1280 × 720 Pixel, Qualität 85, gesamtes Motiv erhalten, Originale unverändert. Die größere Webfassung liegt je Bild zwischen 158.438 und 210.876 Bytes. Maße und Dateigrößen stehen in `.local-preview/qa/youtube-fan-images.json`. Keine neuen Dienste, Kosten, Schriften, Fremdskripte oder externen Verbindungen; YouTube bleibt ein normaler Link. Nutzerentscheidung: der bisherige Beispielvideo-Link bleibt für den Fächer bestehen. Die Veröffentlichung dieser Änderung wurde anschließend am 19.10.2026 ausdrücklich beauftragt; Webkopien unter site-assets/images/, Originale weiterhin lokal.
+
 Stand 16.10.2026: In der lokalen Vorschau sind drei eigene SVG-Pfeile und unveränderte Originalicons von Instagram und YouTube eingebunden. Keine externen Fontdateien, Laufzeitpakete oder Einbettungen. Der frühere Player-Eintrag dokumentiert einen überholten Stand. Bestehende oder im Unity-Projekt enthaltene Bilder sind durch diese Vorbereitung nicht pauschal freigegeben.
 
 Bei jeder späteren Auswahl eine Zeile ergänzen:
