@@ -1,5 +1,17 @@
 # Geschützte Website-Vorschau
 
+## Öffentlichen Website-Start vorbereitet – 21.10.2026
+
+Aktueller Nutzerauftrag: Website-Datenschutz abschließen, leere Nutzungsbedingungen aus der Navigation nehmen und die Veröffentlichung vorbereiten. Impressum ist vom Nutzer als vollständig bestätigt; Pinterest bleibt ausdrücklich unverändert. Noch kein Push oder öffentlicher Start.
+
+Die eigenständige Website-Erklärung liegt unter `/datenschutz-website/`, Textquelle `docs/datenschutzerklaerung-website-entwurf-de-en.md`. Sie beschreibt GitHub Pages, die ausschließlich manuell gespeicherte Sprache, die flüchtige Browserdemo, Kontakt und Betroffenenrechte. Die bisherigen App-Verweise unter `/datenschutz/` bleiben erhalten; die mobile App ist nicht Gegenstand der Website-Erklärung. Leere `/terms/`-Verweise sind entfernt; die historische Adresse führt in der vorbereiteten Fassung zur Startseite.
+
+Lokaler vollständiger Start-Build: `node .local-preview/qa/export-public.mjs --prepare-launch`. Ziel: `.local-preview/release-public/` (von Git ausgeschlossen). Dieser Modus exportiert auch Impressum und Website-Datenschutz, entfernt den Login aus Startseite und Demo sowie dessen zwei Dateien aus dem Build und setzt kanonische URLs. Die Suchmaschinensperre entfällt auf Startseite, Demo, Impressum und Website-Datenschutz. Die geschützte aktuelle öffentliche Fassung wird dabei nicht verändert; der normale Export ohne Flag bleibt separat.
+
+Prüfansicht nach Start von `node .local-preview/qa/release-server.mjs`: http://127.0.0.1:4180 . Der Prüfserver sendet nur lokal `X-Robots-Tag: noindex, nofollow`; dieser Serverheader wird nicht mit veröffentlicht.
+
+Erst bei ausdrücklichem Veröffentlichungsauftrag den geprüften Build in die bestehenden Website-Pfade übernehmen, Unterschiede kontrollieren und über das vorhandene GitHub-Pages-Repository veröffentlichen. `.local-preview/`, Originalbilder und Prüfdaten nicht hochladen. Keine neuen Dienste oder Kosten.
+
 ## Einzelner Play-Button und YouTube-Fächer – 19.10.2026
 
 Auf Nutzerauftrag wird der abgenommene Entwurf veröffentlicht: „Level ausprobieren“ / „Try a level“ führt als einziger Hero-Button im bisherigen grünen Entdecken-Design zu `/play/`. Das Play-Symbol zeigt nach rechts. Der bisherige zusätzliche Play-Button entfällt.

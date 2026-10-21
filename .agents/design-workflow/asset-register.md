@@ -1,5 +1,13 @@
 # Asset- und Komponentenregister
 
+## Neue Chef-Sort-Aufnahmen – 21.10.2026
+
+Nutzerauftrag: Level-1-Aufnahme aus dem Fächer entfernen, Level 3 und Restaurant-Imperium in beiden Sprachen ergänzen, im Spieleinstieg Burger Hub durch Restaurant-Imperium ersetzen. Eigene vom Nutzer bereitgestellte Originale unter `art/pictures/Kitchen Sort/`: `de-level-03.png`, `en-level-03.png`, `de-franchise.png`, `en-franchise.png`, jeweils 2160 × 4080 Pixel. Alle vier Originale visuell angesehen und unverändert erhalten. Keine externe Quelle, generative Bearbeitung oder zusätzliche Lizenzbehauptung.
+
+Lokale Web-JPEGs unter `.local-preview/public/game/{de,en}-{level-03,franchise}-{540,1080}.jpg`: 540 × 1020 und 1080 × 2040 Pixel, JPEG-Qualität 90, vollständiger Bildinhalt ohne Zuschnitt. Acht Dateien zusammen 2.479.112 Byte; vier Originale zusammen 10.838.553 Byte. Aufbereitung mit vorhandenem System.Drawing; keine Pakete, externen Verbindungen, Dienste oder Zusatzkosten.
+
+Sechs Fächermotive mit bestehender Navigation, Großansicht und automatischem Wechsel. Unveröffentlichte Startfassung ebenfalls aktualisiert; keine Veröffentlichung beauftragt oder ausgeführt. Herkunft und vorhandene Rechte der Spielgrafik bleiben wie bei den übrigen Nutzer-Spielaufnahmen dokumentiert.
+
 ## YouTube-Bilderfächer, Entwurf und Veröffentlichungsauftrag vom 19.10.2026
 
 Vom Nutzer bereitgestellte Originale unter `art/pictures/`: `Video 25 v3.jpg` (bereits eingesetzt), `12 min3.jpg`, `Video 13 v1.jpg` und `V2.png`. Der Nutzer hat ihren Einbau und erforderliche Größenanpassungen ausdrücklich beauftragt. Keine externen Bilder beschafft; abgebildete Spielzeugmarken bleiben Marken ihrer jeweiligen Rechteinhaber. Keine separate Rechteübertragung aus der Bereitstellung abgeleitet.
@@ -270,3 +278,7 @@ Vom Nutzer im Chat ausgewaehlte Bildbearbeitung: einheitliche dunkle Petrolkontu
 ### Weboptimierung und Veröffentlichungsfreigabe – 19.10.2026
 
 Nutzer erlaubt Veröffentlichung und sinnvolle Bildverkleinerung. 18 vorhandene Item-PNGs lokal zu WebP (Qualität 1, 256 × 512) umkodiert; Alpha-Kanal pixelgenau erhalten, kein Zuschnitt oder neues Motiv. Original-PNGs bleiben lokal. Item-Größe 2.910.454 → 2.061.510 Bytes; mit unveränderten Regal-PNGs 2.945.746 → 2.096.802 Bytes. Webfassungen unter play/img/, Module/CSS unter play/. Herkunft und bisherige Rechtebasis unverändert; keine neuen Fremdassets, Lizenzen, Bibliotheken oder Dienstkosten. Einzeldatei-Hashes und Qualitätsmessung: .local-preview/qa/play-image-optimization.json; Originalnachweise weiterhin play-images.json. Nutzerfreigabe gilt für diese Webfassungen; keine weitergehenden Rechte behauptet.
+
+## Aktualisierte Spiel-Screenshots – 21.10.2026
+
+Zwölf vom Nutzer bereitgestellte korrigierte PNGs aus art/pictures/Kitchen Sort/ ersetzen die bisherigen Webfassungen: DE/EN für 01-hero, 02-sorting, 03-gravity, 04-burger-restaurant, level-03 und franchise. Nur proportional auf 540/1080 Pixel Breite verkleinert und als JPEG optimiert; Originale per SHA-256 unverändert. Bestehende Herkunft und Rechtebasis gelten weiter; keine neuen Fremdassets, Dienste, Lizenzen oder Kosten. Lokaler Entwurf und vorbereitete Startfassung enthalten dieselben 24 Webbilder. Keine Veröffentlichung. Prüfnachweis: .local-preview/qa/game-image-refresh-2026-10-21.md.
