@@ -1,5 +1,11 @@
 # Geschützte Website-Vorschau
 
+## Öffentlicher Website-Start – 22.10.2026
+
+Auf ausdrücklichen Nutzerauftrag wird die geprüfte Startfassung unter brainblooms.de veröffentlicht: ohne Vorschau-Anmeldung, mit eigenständiger Website-Datenschutzerklärung unter `/datenschutz-website/`, gekürztem Anbieterblock im Impressum, neuen Spielbildern DE/EN und überlagertem Demnächst-Banner am Google-Play-Badge. Das Badge hat weiterhin keinen Download-Link. Die bisherige App-Datenschutzseite bleibt inhaltlich erhalten; die leere Nutzungsbedingungen-Seite wird durch eine Weiterleitung zur Startseite ersetzt.
+
+Vor Upload bestanden: Browserprüfung bei 320/390/768/1440 Pixeln, DE/EN, Rechtsseiten mit 200 Prozent Schriftgröße und Tastaturbedienung, sechs Fächermotive mit Großansichten und automatischem Umlauf, Badge-Banner ohne Link sowie komplette Demo-Gewinnrunde, Zeitablauf, Platzmangel und Tastaturspiel. Kein physischer Gerätetest oder vollständiger Rechts-/WCAG-Audit. Neue Webbilder sind proportional verkleinerte Kopien eigener Nutzerdateien; Originale und lokale Prüfprofile bleiben ausgeschlossen. Keine zusätzlichen Dienste oder Kosten.
+
 ## Öffentlichen Website-Start vorbereitet – 21.10.2026
 
 Aktueller Nutzerauftrag: Website-Datenschutz abschließen, leere Nutzungsbedingungen aus der Navigation nehmen und die Veröffentlichung vorbereiten. Impressum ist vom Nutzer als vollständig bestätigt; Pinterest bleibt ausdrücklich unverändert. Noch kein Push oder öffentlicher Start.

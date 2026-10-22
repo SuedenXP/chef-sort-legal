@@ -23,8 +23,9 @@
     function schedule() {
       root.toggleAttribute('data-progress', !reduced.matches);
       if (reduced.matches) { progress?.cancel(); progress = null; }
+      const keyboardFocused = root.contains(document.activeElement) && document.activeElement.matches(':focus-visible');
       const blocked = !visible || reduced.matches || hovering || touching ||
-        root.contains(document.activeElement) || document.hidden || document.querySelector('dialog[open]');
+        keyboardFocused || document.hidden || document.querySelector('dialog[open]');
       if (blocked) { pause(); return; }
       if (timer !== null) return;
       if (!progress) {

@@ -1,5 +1,9 @@
 # BrainBlooms: Projektregeln
 
+## Veröffentlichung vom 22.10.2026
+
+Der Nutzer beauftragt die Veröffentlichung der geprüften öffentlichen Startfassung des Entwurfs. Diese Fassung entfernt die temporäre Vorschau-Anmeldung aus Startseite und Browserdemo. Website-Datenschutz unter `/datenschutz-website/`, aktualisiertes Impressum, neue Spielbilder und Demnächst-Banner werden übernommen. Die bestehende App-Datenschutzseite unter `/datenschutz/` bleibt inhaltlich erhalten; `/terms/` bleibt als Weiterleitung erreichbar. Diese konkrete Freigabe ersetzt für diesen Start die älteren Vorgaben zur Beibehaltung der Vorschau-Anmeldung. Keine zusätzlichen Dienste oder Kosten.
+
 ## Folgeauftrag vom 19.10.2026: spielbare Demo veröffentlichen
 
 Der Nutzer gibt `/play/` ausdrücklich zur Veröffentlichung über das bestehende GitHub Pages frei und erlaubt sinnvolle Bildverkleinerung. Zweiter Hero-Link „Level ausprobieren“ / „Try a level“ neben „Das Spiel entdecken“, mobil darunter. Bestehende Vorschau-Anmeldung erhalten. Keine zusätzlichen Dienste oder Kosten; Regeln, Brett und Spielgestaltung unverändert. Diese Freigabe ersetzt die lokale Beschränkung für die Demo. Einzelheiten in Briefing und DEPLOYMENT.md.

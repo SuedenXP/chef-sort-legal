@@ -1,8 +1,8 @@
 # Datenschutzerklärung der Website BrainBlooms
 
-**Für den öffentlichen Website-Start vorbereitet · noch nicht veröffentlicht · Stand 21. Oktober 2026**
+**Website-Fassung zur Veröffentlichung am 22. Oktober 2026**
 
-> Diese Erklärung betrifft brainblooms.de einschließlich der Browserdemo unter /play/. Sie beschreibt nicht die Datenverarbeitung in der mobilen App Chef Sort oder in anderen Produkten. Vorgesehene Website-Adresse: https://brainblooms.de/datenschutz-website/.
+> Website-Adresse: https://brainblooms.de/datenschutz-website/.
 
 ## Deutsch
 

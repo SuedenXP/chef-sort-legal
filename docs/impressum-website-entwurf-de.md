@@ -1,11 +1,10 @@
 # Impressum
 
-**Entwurf für die Website · im lokalen Website-Entwurf eingebaut · nicht veröffentlicht**
+**Website-Fassung zur Veröffentlichung am 22. Oktober 2026**
 
 ## Anbieter
 
-Sven Schöttke  
-Einzelunternehmer, tätig unter der Geschäftsbezeichnung BrainBlooms  
+Sven Schöttke · BrainBlooms<br>
 Abbentorswallstraße 49  
 28195 Bremen  
 Deutschland

@@ -41,3 +41,10 @@ p:last-child { margin-bottom: 0; }
 }
 .language-switch button:active { border-color: currentColor; box-shadow: inset 0 0 0 2px currentColor; }
 .back:active, .legal-footer a:active { text-decoration: underline; text-decoration-thickness: 4px; }
+
+/* Local website legal copy: readable contacts and visible link states. */
+.legal-copy a { display: inline-block; min-height: 44px; max-width: 100%; padding-block: .35rem; font-weight: 700; }
+@media (hover:hover) and (pointer:fine) {
+  .legal-copy a:hover:not(:active) { color: #103f38; text-decoration-thickness: 3px; }
+}
+.legal-copy a:active { color: #103f38; text-decoration-thickness: 4px; }

@@ -1,6 +1,7 @@
 /* Chef Sort: game-like surfaces, restricted to the game presentation. */
-.google-play-pending { margin-top: 1.35rem; width: min(100%, 13.5rem); }
-.google-play-note { margin: 0; color: #fff1c8; font: 600 .875rem/1.5 system-ui, sans-serif; text-align: center; }
+.google-play-pending { position: relative; margin-top: 1.35rem; padding-top: 1.3125rem; width: min(100%, 13.5rem); }
+.google-play-note { position: absolute; z-index: 1; top: calc(50% + .65625rem); inset-inline: 0; transform: translateY(-50%) rotate(-7deg); margin: 0; padding: .25rem .4rem; border: 2px solid #fff1c8; border-radius: .3rem; background: #f5ca65; color: #103b39; box-shadow: 0 3px 0 #102539; font: 800 .875rem/1.5 system-ui, sans-serif; text-align: center; }
+.google-play-pending .google-play-badge { opacity: .55; }
 .google-play-badge { display: block; width: 100%; height: auto; }
 .google-play-link { display: inline-flex; width: min(100%, 13.5rem); min-height: 44px; margin-top: 1.35rem; }
 .game-brand { display: flex; align-items: center; gap: clamp(.65rem, 1.5vw, 1.25rem); width: min(100%, 40rem); }
@@ -120,7 +121,6 @@
   .banner .copy { text-align: left; }
   .banner h1 { margin-inline: 0; }
   .google-play-pending { margin-inline: 0; }
-  .google-play-note { text-align: left; }
 }
 
 /* Hero actions: discover the game plus the playable Level 7 prototype (play/). */
@@ -142,3 +142,8 @@
 
 /* The primary play link keeps its triangle pointing right in every state. */
 .banner .button-link.is-play > .icon { transform: none !important; }
+
+/* Opt-in localhost troubleshooting; this panel is never created on the public site. */
+.local-motion-diagnostic { margin: 1rem; padding: 1rem; border: 2px solid #175f54; border-radius: .5rem; background: #fff3d8; color: #182522; }
+.local-motion-diagnostic h2 { margin: 0 0 .75rem; font: 700 1.1rem/1.4 system-ui,sans-serif; }
+.local-motion-diagnostic pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 1rem/1.6 system-ui,sans-serif; }

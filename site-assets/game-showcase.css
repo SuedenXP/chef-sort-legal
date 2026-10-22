@@ -65,7 +65,7 @@
 .has-fan.is-ready .stack-card[data-depth="1"] { z-index: 3; transform: translate(8%,-1%) rotate(4deg) scale(.96); }
 .has-fan.is-ready .stack-card[data-depth="2"] { z-index: 2; transform: translate(16%,-2%) rotate(8deg) scale(.92); }
 .has-fan.is-ready .stack-card[data-depth="3"] { z-index: 1; transform: translate(24%,-3%) rotate(12deg) scale(.88); }
-.has-fan.is-ready .stack-card[data-depth="4"] { visibility: hidden; pointer-events: none; }
+.has-fan.is-ready .stack-card[data-depth]:not([data-depth="0"]):not([data-depth="1"]):not([data-depth="2"]):not([data-depth="3"]) { visibility: hidden; pointer-events: none; }
 .has-fan.is-ready .stack-card.item-overview { top: 20%; }
 .has-fan.is-ready .stack-card.item-overview[data-depth="0"] { left: 5%; width: 85%; }
 .has-fan.is-ready .item-overview .game-screenshot { aspect-ratio: 1; height: auto; }

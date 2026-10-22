@@ -15,6 +15,8 @@
     root.querySelectorAll('.showcase-controls,.showcase-dots,.showcase-image-controls').forEach(el => el.hidden = false);
     root.querySelectorAll('[data-go] > span').forEach(dot=>{const fill=document.createElement('span');fill.className='dot-progress';fill.setAttribute('aria-hidden','true');dot.append(fill);});
     function schedule() {
+      // Pointer activation leaves buttons focused too; only keyboard focus pauses autoplay.
+      focused = root.contains(document.activeElement) && document.activeElement.matches(':focus-visible');
       if(!autoEnabled()){
         progress?.cancel();progress=null;root.removeAttribute('data-progress');return;
       }
@@ -62,12 +64,12 @@
     }
     root.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',e=>show(index+Number(b.dataset.step),true,e.detail===0)));
     root.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',e=>show(Number(b.dataset.go),true,e.detail===0)));
-    root.addEventListener('focusin',()=>{focused=true;schedule();});
-    root.addEventListener('focusout',e=>{focused=root.contains(e.relatedTarget);schedule();});
+    root.addEventListener('focusin',schedule);
+    root.addEventListener('focusout',()=>queueMicrotask(schedule));
     root.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'){touching=true;schedule();}});
-    root.addEventListener('pointerup',()=>{touching=false;schedule();});
-    root.addEventListener('pointercancel',()=>{touching=false;schedule();});
-    root.addEventListener('mouseenter',()=>{hovering=true;schedule();});
+    window.addEventListener('pointerup',()=>{touching=false;schedule();});
+    window.addEventListener('pointercancel',()=>{touching=false;schedule();});
+    root.addEventListener('mouseenter',()=>{hovering=matchMedia('(hover: hover) and (pointer: fine)').matches;schedule();});
     root.addEventListener('mouseleave',()=>{hovering=false;schedule();});
     root.addEventListener('keydown',e=>{
       if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();show(index+(e.key==='ArrowLeft'?-1:1),true,true);}
