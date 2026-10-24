@@ -64,5 +64,11 @@
     "crons": [
       "0 3 * * *"
     ]
+  },
+  "previews": {
+    "vars": {
+      "STATS_ENABLED": "false"
+    },
+    "d1_databases": []
   }
 }
