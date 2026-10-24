@@ -1,5 +1,37 @@
 # BrainBlooms: Projektregeln
 
+## Cloudflare-Hosting und Tagesstatistik – 24.10.2026
+
+Der Nutzer hat den Umzug der öffentlichen Website und die eigene cookie-freie
+Aufrufstatistik beauftragt; beides wurde veröffentlicht. Aktuelles Hosting:
+Cloudflare **Workers mit Static Assets**, nicht Cloudflare Pages. GitHub bleibt
+Quellcode-/Versionsablage; `main` löst die bestehende automatische
+Cloudflare-Veröffentlichung aus. Diese konkrete Freigabe ersetzt für den
+umgesetzten Umzug und die aggregierte Statistik die älteren lokalen
+Beschränkungen. Keine pauschale Freigabe kostenpflichtiger oder weiterer Dienste.
+
+Die eigene D1-Statistik speichert nur Tageszähler je öffentlichem Seitenpfad.
+Keine Besucherwiedererkennung, IP-/Fingerprint-Statistik, eigenen Analyse-Cookies,
+externen Klickzähler oder App-Installationsmessung ergänzen, ohne den Umfang
+erneut mit dem Nutzer zu klären. Aktuell gibt es keine eigenen Download-Dateien.
+Öffentliche Website ohne Login; Auswertung geschützt über Cloudflare.
+Vorschauen haben deaktivierte Messung und keine D1-Bindung.
+
+Maßgebliche Betriebseinstellungen stehen in `wrangler.jsonc`; die
+Website-Datenschutzerklärung unter `datenschutz-website/index.html` wurde
+gezielt in den Hosting-/Statistikabschnitten DE/EN angepasst.
+App-Datenschutz und Impressum wurden beim Umzug nicht ersetzt. `CNAME` und
+bisherige Rechtstextpfade bleiben erhalten. Neue Änderungen und
+Veröffentlichungen nur im jeweils beauftragten Umfang.
+
+Vollständiges Protokoll einschließlich bestätigter Werte, DNS/Mail,
+Buildbefehle, Fehlerkorrekturen, Live-Nachweis und offener Nachweise:
+[docs/cloudflare-betrieb.md](docs/cloudflare-betrieb.md).
+Kurzanleitung: [docs/cloudflare-statistics.md](docs/cloudflare-statistics.md).
+Frühere Abschnitte dieser Datei sind historische Auftragsstände; die
+aktuellen Grenzen zu Kosten, Legal-Unterlagen, lokalen Originalen und
+Unity-Projekt gelten weiter.
+
 ## Veröffentlichung vom 22.10.2026
 
 Der Nutzer beauftragt die Veröffentlichung der geprüften öffentlichen Startfassung des Entwurfs. Diese Fassung entfernt die temporäre Vorschau-Anmeldung aus Startseite und Browserdemo. Website-Datenschutz unter `/datenschutz-website/`, aktualisiertes Impressum, neue Spielbilder und Demnächst-Banner werden übernommen. Die bestehende App-Datenschutzseite unter `/datenschutz/` bleibt inhaltlich erhalten; `/terms/` bleibt als Weiterleitung erreichbar. Diese konkrete Freigabe ersetzt für diesen Start die älteren Vorgaben zur Beibehaltung der Vorschau-Anmeldung. Keine zusätzlichen Dienste oder Kosten.

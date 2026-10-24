@@ -1,6 +1,7 @@
 # Cloudflare-Hosting und Tagesstatistik
 
-Stand: 24.10.2026.
+Stand: 24.10.2026. Vollständiges Einstellungs- und Umzugsprotokoll:
+[Cloudflare-Betrieb](cloudflare-betrieb.md).
 
 ## Aufbau
 
@@ -44,9 +45,11 @@ Cloudflare Workers Builds:
   die Veröffentlichung.
 - Der Build-Token muss auf diesen Worker und die bestehende D1-Bindung zugreifen
   können. Keine Tokenwerte in Code, Chat oder Repository speichern.
-- Preview builds können ausgeschaltet bleiben. Falls aktiviert, muss der
-  Preview-Befehl zur aktuellen Cloudflare-Preview-Funktion passen; ein
-  Vorschaufehler ist getrennt vom Produktionsbuild zu prüfen.
+- Branch-Preview-Builds sind tatsächlich aktiv und mit `npx wrangler preview`
+  erfolgreich getestet. `previews.vars.STATS_ENABLED = "false"` und eine leere
+  `previews.d1_databases`-Liste halten Vorschauen von der Produktionsstatistik
+  fern. Das top-level `preview_urls: false` betrifft die älteren Versions-URLs,
+  nicht diese separat eingerichteten Branch-Previews.
 
 Die GitHub-Prüfung verwendet einen Standardrunner des bestehenden öffentlichen
 Repositorys, lesende Berechtigungen und keine Secrets. Sie führt denselben
@@ -61,9 +64,11 @@ angelegten Tabelle und kann bei Bedarf erneut ausgeführt werden.
 `vars.STATS_ENABLED` ist auf `"true"` gesetzt. Zum Abschalten im Repository auf
 `"false"` ändern und deployen. Dashboard-Änderungen an dieser Variable würden
 beim nächsten Deploy von der versionierten Konfiguration überschrieben.
+Auch die Bereinigung ist bei ausgeschaltetem Zähler deaktiviert; Abschalten
+allein löscht keine gespeicherten Summen.
 
-Die Website-Datenschutzerklärung wird nur in den Abschnitten Hosting und
-Statistik (DE/EN) angepasst. App-Datenschutz, Impressum und sonstige Abschnitte
+Die Website-Datenschutzerklärung wurde in den Abschnitten Hosting und
+Statistik (DE/EN) angepasst und veröffentlicht. App-Datenschutz, Impressum und sonstige Abschnitte
 bleiben inhaltlich erhalten. Die Angaben wurden anhand des Programmcodes und
 der unten genannten Anbieterquellen geprüft; dies ist keine anwaltliche
 Rechtsprüfung. Cloudflare-Konto-/Auftragsverarbeitungseinstellungen sind vom
@@ -124,7 +129,11 @@ gesicherten Web-DNS-Einträge zurücksetzen. Keine Mail-Einträge ändern.
 
 9 Tests mit 38 Assertions in isoliertem V8 mit simuliertem URL-Konstruktor und
 HTTP-Objekten bestanden. Reale Node-/Wrangler-Ergebnisse werden getrennt über
-den GitHub-Check und den Cloudflare-Build ausgewiesen.
+den GitHub-Check und den Cloudflare-Build ausgewiesen. Inzwischen bestätigt:
+alle 9 Node-Tests und Wrangler-Dry-Run erfolgreich; Branch-Preview und
+Produktionsbuild von PR #2 erfolgreich. Der Nutzer-Screenshot aus der D1-Konsole
+zeigt `2026-10-24 | / | 8` und bestätigt echte Startseiten-Schreibzugriffe.
+Ein separater /play/-Zähler- und planmäßiger Bereinigungsnachweis steht aus.
 
 Quellcodeprüfung der geänderten Rechtstextlinks: vorhandene 44px-Linkflächen,
 Hover-/Druckzustände und globaler focus-visible-Rahmen greifen weiterhin.

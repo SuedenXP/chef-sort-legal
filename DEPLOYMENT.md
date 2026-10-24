@@ -1,4 +1,28 @@
-# Geschützte Website-Vorschau
+# Website-Betrieb und Veröffentlichung
+
+## Cloudflare-Hosting und Statistik – 24.10.2026
+
+Die öffentliche Website wurde auf Nutzerauftrag von GitHub Pages zu
+**Cloudflare Workers mit Static Assets** umgezogen. Beide Domains sind am
+Worker `brainblooms` angebunden, DNS wird über Cloudflare verwaltet, Domain
+und vorhandene Domain-Maildienste bleiben bei IONOS. Free-Tarif, keine
+kostenpflichtige Zusatzbuchung. GitHub Pages wurde als Altbestand nicht deaktiviert.
+
+Die cookie-freie eigene Aufrufstatistik schreibt Tageszähler in D1
+(`brainblooms-stats`, `daily_stats`). Keine eindeutigen Besucher, keine eigenen
+aktuellen Downloads, kein externer Klick-/Installationszähler.
+Nutzer-Screenshot bestätigt am 24.10.2026 die Zeile `/ = 8`.
+Website-Datenschutz wurde in den Hosting-/Statistikabschnitten DE/EN aktualisiert.
+
+PR [#2](https://github.com/SuedenXP/chef-sort-legal/pull/2) wurde übernommen;
+Produktionscommit `b091ec8d34cf906e5b583148ae6f947f91c8c7b5`.
+9 echte Node-Tests, Wrangler-Dry-Run, Branch-Preview und Produktionsbuild
+erfolgreich. Vorschauen haben keine D1-Bindung und zählen keine Aufrufe.
+
+**Aktueller vollständiger Betrieb:** [Cloudflare-Einstellungen und Umzugsprotokoll](docs/cloudflare-betrieb.md).
+**Auswertung und Technik:** [Tagesstatistik](docs/cloudflare-statistics.md).
+Die folgenden älteren Einträge beschreiben frühere Veröffentlichungsstände;
+ihre GitHub-Pages-/Vorschauangaben sind keine aktuelle Hostinganleitung.
 
 ## Öffentlicher Website-Start – 22.10.2026
 
