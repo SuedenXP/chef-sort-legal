@@ -3,3 +3,11 @@
 
 # Grosse Originalcover bleiben lokal; Webkopien liegen in der Vorschau.
 /art/pictures/
+
+# Cloudflare build output, local D1 state and local credentials.
+/dist/
+/.wrangler/
+/.dev.vars
+/.dev.vars.*
+/.env
+/.env.*
