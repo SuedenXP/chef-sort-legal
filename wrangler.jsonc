@@ -35,7 +35,7 @@
     ]
   },
   "vars": {
-    "STATS_ENABLED": "false"
+    "STATS_ENABLED": "true"
   },
   "d1_databases": [
     {
@@ -56,5 +56,13 @@
   ],
   "observability": {
     "enabled": false
+  },
+  "build": {
+    "command": "node --test tests/worker.test.mjs"
+  },
+  "triggers": {
+    "crons": [
+      "0 3 * * *"
+    ]
   }
 }

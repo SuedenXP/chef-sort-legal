@@ -1,83 +1,79 @@
-# Cloudflare-Hosting und eigene Tageszähler
+# Cloudflare-Hosting und Tagesstatistik
 
-Stand: 24.10.2026. Vorbereitete Umsetzung, Messung absichtlich noch deaktiviert.
+Stand: 24.10.2026.
 
-## Vorhandene Einrichtung
+## Aufbau
 
-- Cloudflare Worker: `brainblooms`
-- Domains: `brainblooms.de`, `www.brainblooms.de`
-- Testadresse: `brainblooms.brainblooms-official.workers.dev`
-- D1: `brainblooms-stats`, Tabelle `daily_stats`
-- Die D1-Datenbank-ID aus der Nutzeransicht ist in `wrangler.jsonc` eingetragen.
-  Sie ist keine Zugangsdatenfreigabe; Zugang erfolgt über Cloudflare-Berechtigungen.
-- Der gewünschte EU-Standort muss in den D1-Einstellungen bestätigt werden.
-- CNAME und die bisherigen Rechtstexte bleiben in diesem Änderungsvorschlag erhalten.
-- `.local-preview/`, Originale, Projektunterlagen und Worker-Dateien werden nicht in
-  den öffentlichen Asset-Ordner kopiert.
+Worker `brainblooms` liefert die öffentlichen Dateien über das ASSETS-Binding aus
+und schreibt die eigenen Tageszähler über STATS_DB in die bestehende D1-Datenbank
+`brainblooms-stats`. Die Datenbank-ID ist ein öffentlicher Ressourcenbezeichner,
+kein API-Schlüssel. Der EU-Standort ist in den Datenbankeinstellungen zu prüfen.
+Die Konfiguration erhält beide Domains und die bisherige workers.dev-Testadresse.
 
-## Was die Messung leisten kann
+Der Zähler verwendet weder Cookies noch ein Browser-Messskript, localStorage oder
+Fingerprinting. In `daily_stats` stehen nur Tag (Europe/Berlin), Zählerart,
+kanonischer öffentlicher Seitenpfad und Summe. IP-Adressen, vollständige
+User-Agents, Referer, Querystrings und einzelne Aufrufereignisse werden nicht
+in dieser Statistik gespeichert. Cloudflares eigene technische Verarbeitung
+ist davon getrennt.
 
-Der Worker liefert die Website über `ASSETS` aus. Erst bei
-`STATS_ENABLED = "true"` zählt er erfolgreiche HTML-Dokumentanfragen auf einer
-festen Liste öffentlicher Seiten. Speicherung: Kalendertag in Europe/Berlin,
-Zählerart, kanonischer Seitenpfad, Summe. Keine einzelnen Ereignisdatensätze.
+Gezählt werden erfolgreiche HTML-Dokumentanfragen auf einer festen Seitenliste.
+DNT/GPC, erkennbare Vorababrufe, offensichtliche Bots, Testhosts, Assets,
+Redirects und Fehler werden ausgeschlossen. Die Summen sind **Anfragen, keine
+eindeutigen Personen**. Wiederholtes Laden kann mehrfach zählen. Nicht erkannte
+Bots, Browser-Caches und Speicherfehler begrenzen die Genauigkeit.
 
-Kein Cookie, Browser-Skript, localStorage, Fingerprint, IP- oder Referer-Speicherung
-durch den Zähler. Querystrings und beliebige unbekannte Pfade gelangen nicht in D1.
-DNT und GPC führen zum Ausschluss aus der eigenen Zählung. Der User-Agent wird
-flüchtig auf offensichtliche Bot-Bezeichnungen geprüft und nicht gespeichert.
-Cloudflares technische Verarbeitung ist davon getrennt und muss in den
-Datenschutzinformationen berücksichtigt werden.
+Die Website bietet derzeit keine eigenen Download-Dateien an. Google Play ist
+ein Demnächst-Banner. Deshalb ist keine Downloadzählung aktiviert. Externe
+Store-/Amazon-/Social-Links bleiben normale Links ohne Klicktracking.
+Für spätere eigene Dateien muss der exakte Pfad sowohl in DOWNLOADS als auch
+in assets.run_worker_first ergänzt werden. Eine gezählte 200/206-Dateianfrage
+belegt weder einen vollständigen Download noch eine Installation.
 
-Die Zahlen sind **Anfragen, keine eindeutigen Personen**. Erneutes Laden zählt
-erneut. Nicht erkannte Bots können enthalten sein; Browser-Cache, fehlgeschlagene
-Speicherzugriffe und Opt-outs können zu Unterzählung führen.
-Redirects und Fehler werden nicht gezählt. Eine gecachte 304-Antwort zählt nicht.
+## Deployment
 
-Aktuell bietet die Website keine eigenen Download-Dateien an. Google Play ist
-ein Demnächst-Banner. Daher bleibt die Download-Liste leer. Für spätere eigene
-Downloads: exakten Dateipfad in `DOWNLOADS` und `assets.run_worker_first` ergänzen.
-Dann werden erfolgreiche GET-Dateianfragen (200/206) gezählt; Teilanfragen oder
-Wiederholungen können mehrfach zählen. Dies beweist keinen vollständigen
-Download und keine Installation. App-Installationen werden im Store ausgewertet.
-Externe Amazon-/YouTube-/Social-Links bleiben gewöhnliche Links ohne Klicktracking.
+Cloudflare Workers Builds:
+- Build command bleibt:
+  `mkdir -p dist && cp -R index.html style.css language.js site-assets play datenschutz datenschutz-website impressum terms daten-loeschen delete-data dist/`
+- Empfohlener Deploy command: `npx wrangler@4.152.0 deploy`.
+  Der bisherige Befehl mit passenden --name-, --assets- und
+  --compatibility-date-Werten funktioniert ebenfalls; Wrangler liest die
+  Konfigurationsdatei automatisch.
+- Vor jedem Wrangler-Deploy führt build.command automatisch
+  `node --test tests/worker.test.mjs` aus. Ein fehlgeschlagener Test verhindert
+  die Veröffentlichung.
+- Der Build-Token muss auf diesen Worker und die bestehende D1-Bindung zugreifen
+  können. Keine Tokenwerte in Code, Chat oder Repository speichern.
+- Preview builds können ausgeschaltet bleiben. Falls aktiviert, muss der
+  Preview-Befehl zur aktuellen Cloudflare-Preview-Funktion passen; ein
+  Vorschaufehler ist getrennt vom Produktionsbuild zu prüfen.
 
-## Veröffentlichung und Aktivierung
+Die GitHub-Prüfung verwendet einen Standardrunner des bestehenden öffentlichen
+Repositorys, lesende Berechtigungen und keine Secrets. Sie führt denselben
+Testlauf und einen Wrangler-Dry-Run aus. Sie veröffentlicht weder Website noch
+Datenbankänderungen.
 
-1. Änderungen zunächst in einem Branch prüfen. Lokales Testkommando:
-   `node --test tests/worker.test.mjs`.
-2. Öffentliche Dateien wie bisher in `dist/` kopieren:
-   ```sh
-   mkdir -p dist && cp -R index.html style.css language.js site-assets play datenschutz datenschutz-website impressum terms daten-loeschen delete-data dist/
-   ```
-3. In Cloudflare Workers Builds den Deploy-Befehl auf
-   `npx wrangler@4.152.0 deploy` setzen. Die Konfigurationsdatei liefert Worker,
-   Bindings und Domains. Nicht erneut nur Assets ohne Worker veröffentlichen.
-   Den Produktionsbranch erst nach Prüfung übernehmen.
-4. Der Build-Token benötigt neben Worker-Schreibrechten Leserechte für D1-Metadaten,
-   um die vorhandene Datenbank binden zu können. Bei Berechtigungsfehlern den
-   automatisch angelegten Token prüfen; keine Tokenwerte ins Repository schreiben.
-5. Zuerst deaktiviert ausliefern. Beide Domains, /play/, Rechtstextpfade und
-   Sprachwechsel prüfen. In Bindings muss `STATS_DB` erscheinen.
-6. Die öffentliche Website-Datenschutzerklärung nennt noch GitHub Pages als Hosting.
-   Diese Angabe muss wegen des bereits durchgeführten Umzugs korrigiert werden.
-   Hosting, Cloudflare-Auftragsverarbeitung/internationale Verarbeitung, eigene
-   Statistik und Aufbewahrung müssen vor Aktivierung geprüft und verständlich
-   beschrieben werden. Bestehende Rechtstexte werden hier nicht eigenständig
-   ersetzt oder als geprüft ausgegeben.
-7. Erst danach `vars.STATS_ENABLED` auf `"true"` ändern und veröffentlichen.
-   Die Variable ist bewusst versioniert; Änderungen nur im Dashboard würden
-   beim nächsten Deploy von der Konfiguration überschrieben.
-8. Einen echten Seitenaufruf testen und die Änderung in D1 prüfen. Testadresse,
-   HEAD-Anfragen, statische Dateien und Opt-out-Anfragen dürfen nicht zählen.
-   Ein D1-Ausfall darf die Antwort der Website nicht verändern.
+Das Schema unter cloudflare/schema.sql entspricht der bereits manuell
+angelegten Tabelle und kann bei Bedarf erneut ausgeführt werden.
 
-## Auswertung ohne öffentliche Statistikseite
+## Aktivierung, Aufbewahrung und Auswertung
 
-Cloudflare-Anmeldung schützt den Zugriff auf die D1-Konsole.
-Es gibt keine öffentliche Lese-API und keinen versteckten HTML-Zähler.
+`vars.STATS_ENABLED` ist auf `"true"` gesetzt. Zum Abschalten im Repository auf
+`"false"` ändern und deployen. Dashboard-Änderungen an dieser Variable würden
+beim nächsten Deploy von der versionierten Konfiguration überschrieben.
 
-In D1 -> Console:
+Die Website-Datenschutzerklärung wird nur in den Abschnitten Hosting und
+Statistik (DE/EN) angepasst. App-Datenschutz, Impressum und sonstige Abschnitte
+bleiben inhaltlich erhalten. Die Angaben wurden anhand des Programmcodes und
+der unten genannten Anbieterquellen geprüft; dies ist keine anwaltliche
+Rechtsprüfung. Cloudflare-Konto-/Auftragsverarbeitungseinstellungen sind vom
+Kontoinhaber zu kontrollieren.
+
+Täglich um 03:00 UTC entfernt ein Scheduled Handler Summen, deren Tag mehr als
+13 Monate zurückliegt. Bei einem Plattform-/Datenbankausfall erfolgt die
+Bereinigung erst nach einem späteren erfolgreichen Lauf.
+
+Auswertung ausschließlich nach Anmeldung in Cloudflare -> D1 -> Console:
 ```sql
 SELECT day, metric, resource, count
 FROM daily_stats
@@ -93,37 +89,44 @@ GROUP BY day
 ORDER BY day DESC;
 ```
 
-Optional nach festgelegter Aufbewahrungsfrist manuell bereinigen, beispielsweise:
-```sql
-DELETE FROM daily_stats
-WHERE day < date('now', '-13 months');
-```
+Es gibt keine öffentliche Statistik-API und keinen im HTML versteckten Zähler.
 
-Die 13 Monate sind ein Vorschlag, keine schon vereinbarte Frist.
-Eine automatische Löschung ist nicht eingerichtet.
+## Live-Prüfung und Grenzen
 
-## Kosten, Fehler und Rückweg
+Nach erfolgreichem Deployment beide Domains, /play/, Rechtstextpfade,
+Sprachwechsel und STATS_DB-Binding kontrollieren. Vorher und nach einem echten
+Seitenaufruf die passende D1-Zeile vergleichen. HEAD, Assets, Opt-out- und
+Testhost-Anfragen dürfen nicht zählen. Browser-Reload kann eine 304-Antwort
+auslösen und wird dann nicht gezählt; bei Bedarf einen frischen Browseraufruf
+verwenden. Den öffentlichen Live-Nachweis kann nur der Kontoinhaber anhand
+der geschützten D1-Auswertung bestätigen.
 
-Bilder, CSS und JavaScript werden direkt als Assets ausgeliefert; nur die
-aufgeführten Dokumentpfade laufen zuerst durch den Worker.
-Bei D1-Fehlern wird die Zählung ausgelassen und die Website-Antwort bleibt erhalten.
-Bei ausgeschöpftem Worker-Tageskontingent können jedoch gerade diese
-Dokumentanfragen mit 429 scheitern. Fehlerbehandlung im Code kann eine
-Plattformsperre nicht umgehen. Gratisverbrauch im Dashboard überwachen.
+Bei einem D1-Schreibfehler bleibt die ursprüngliche Website-Antwort erhalten.
+Ein ausgeschöpftes Worker-Tageskontingent kann dennoch Dokumentanfragen mit
+429 ablehnen; Code kann eine Plattformsperre nicht umgehen. Gratisverbrauch
+im Cloudflare-Dashboard überwachen. Assets wie Bilder und CSS laufen direkt
+über das Asset-Hosting.
 
-Die Zählung lässt sich mit `STATS_ENABLED = "false"` abschalten.
-Bei Plattform-/Quotenproblemen in Cloudflare -> Worker -> Deployments auf die
-vorherige erfolgreiche Veröffentlichung mit ausschließlich statischen Assets
-zurückrollen und die Domain-Bindungen prüfen. Alternativ kann nach Entfernen der
-Worker-Custom-Domain-Bindungen DNS auf die gesicherten GitHub-Pages-Ziele
-zurückgestellt werden. Keine Mail-Einträge verändern.
+Rückweg: in Cloudflare -> Worker -> Deployments die vorherige erfolgreiche
+Veröffentlichung wiederherstellen und Domain-Bindungen prüfen. Bei vollständiger
+Rückkehr zu GitHub Pages zunächst Worker-Domain-Bindungen entfernen und die
+gesicherten Web-DNS-Einträge zurücksetzen. Keine Mail-Einträge ändern.
 
-## Validierung dieser Vorbereitung
+## Quellen und Prüfung
 
-35 Prüfungen der JavaScript-Logik in isolierter V8-Umgebung bestanden:
-Tageswechsel/Sommerzeit, Pfadnormalisierung, Opt-out, Bots, Prefetch,
-Statuscodes, ausschließlich aggregierte Datenbankparameter, deaktivierte
-Messung, fehlendes Binding und Datenbankfehler. Request-/Response-Objekte und
-URL-Konstruktor wurden dabei simuliert. Die beigefügten Node-Tests decken
-dieselben Fälle ab; sie wurden hier nicht mit Node ausgeführt.
-Wrangler-Build, echte D1-Integration und Live-Zählung stehen noch aus.
+- https://developers.cloudflare.com/workers/static-assets/binding/
+- https://developers.cloudflare.com/workers/wrangler/configuration/
+- https://developers.cloudflare.com/d1/configuration/data-location/
+- https://www.cloudflare.com/cloudflare-customer-dpa/
+- https://www.cloudflare.com/privacypolicy/
+- https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/
+- https://www.gesetze-im-internet.de/ttdsg/__25.html
+
+9 Tests mit 38 Assertions in isoliertem V8 mit simuliertem URL-Konstruktor und
+HTTP-Objekten bestanden. Reale Node-/Wrangler-Ergebnisse werden getrennt über
+den GitHub-Check und den Cloudflare-Build ausgewiesen.
+
+Quellcodeprüfung der geänderten Rechtstextlinks: vorhandene 44px-Linkflächen,
+Hover-/Druckzustände und globaler focus-visible-Rahmen greifen weiterhin.
+Keine CSS-/Layoutänderung. Browser-/Gerätetest und visuelle Prüfung wurden
+hier mangels Browserwerkzeug nicht durchgeführt.

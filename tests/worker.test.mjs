@@ -77,3 +77,19 @@ test("database failure is swallowed without changing website availability", asyn
   await Promise.all(pending);
   assert.equal(pending.length, 1);
 });
+
+test("daily maintenance deletes old aggregates and respects the off switch", async () => {
+  let sql, runs = 0;
+  const pending = [];
+  const db = { prepare: (statement) => {
+    sql = statement;
+    return { run: async () => { runs++; } };
+  } };
+  const ctx = { waitUntil: (p) => pending.push(p) };
+  await worker.scheduled({}, { STATS_ENABLED: "false", STATS_DB: db }, ctx);
+  assert.equal(pending.length, 0);
+  await worker.scheduled({}, { STATS_ENABLED: "true", STATS_DB: db }, ctx);
+  await Promise.all(pending);
+  assert.equal(runs, 1);
+  assert.equal(sql, "DELETE FROM daily_stats WHERE day < date('now', '-13 months')");
+});

@@ -52,9 +52,15 @@ export async function recordCount(db, event, day = berlinDay()) {
 }
 
 export default {
+  async scheduled(_event, env, ctx) {
+    if (env.STATS_ENABLED !== "true" || !env.STATS_DB) return;
+    ctx.waitUntil(env.STATS_DB.prepare(
+      "DELETE FROM daily_stats WHERE day < date('now', '-13 months')"
+    ).run());
+  },
   async fetch(request, env, ctx) {
     const response = await env.ASSETS.fetch(request);
-    // Disabled until hosting/privacy information and live checks are ready.
+    // The flag supports disabling the counter independently of website delivery.
     if (env.STATS_ENABLED !== "true" || !env.STATS_DB) return response;
     try {
       const event = classifyRequest(request, new URL(request.url), response);
