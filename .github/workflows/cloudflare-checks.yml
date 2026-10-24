@@ -1,0 +1,35 @@
+name: Cloudflare worker checks
+on:
+  pull_request:
+    paths:
+      - "worker.mjs"
+      - "wrangler.jsonc"
+      - "tests/**"
+      - "cloudflare/**"
+      - "datenschutz-website/**"
+      - ".github/workflows/cloudflare-checks.yml"
+  push:
+    branches: [main]
+    paths:
+      - "worker.mjs"
+      - "wrangler.jsonc"
+      - "tests/**"
+      - "cloudflare/**"
+      - "datenschutz-website/**"
+      - ".github/workflows/cloudflare-checks.yml"
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - name: Prepare public website files
+        run: mkdir -p dist && cp -R index.html style.css language.js site-assets play datenschutz datenschutz-website impressum terms daten-loeschen delete-data dist/
+      - name: Run tests and validate the Worker bundle without deploying
+        run: npx --yes wrangler@4.152.0 deploy --dry-run
+        env:
+          WRANGLER_SEND_METRICS: "false"

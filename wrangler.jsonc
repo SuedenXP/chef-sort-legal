@@ -1,0 +1,74 @@
+{
+  "name": "brainblooms",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-19",
+  "send_metrics": false,
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/",
+      "/index.html",
+      "/play",
+      "/play/",
+      "/play/index.html",
+      "/impressum",
+      "/impressum/",
+      "/impressum/index.html",
+      "/datenschutz-website",
+      "/datenschutz-website/",
+      "/datenschutz-website/index.html",
+      "/datenschutz",
+      "/datenschutz/",
+      "/datenschutz/index.html",
+      "/terms",
+      "/terms/",
+      "/terms/index.html",
+      "/daten-loeschen",
+      "/daten-loeschen/",
+      "/daten-loeschen/index.html",
+      "/delete-data",
+      "/delete-data/",
+      "/delete-data/index.html"
+    ]
+  },
+  "vars": {
+    "STATS_ENABLED": "true"
+  },
+  "d1_databases": [
+    {
+      "binding": "STATS_DB",
+      "database_name": "brainblooms-stats",
+      "database_id": "2d268058-8d1a-47f2-9809-3756e1ea238e"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "brainblooms.de",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.brainblooms.de",
+      "custom_domain": true
+    }
+  ],
+  "observability": {
+    "enabled": false
+  },
+  "build": {
+    "command": "node --test tests/worker.test.mjs"
+  },
+  "triggers": {
+    "crons": [
+      "0 3 * * *"
+    ]
+  },
+  "previews": {
+    "vars": {
+      "STATS_ENABLED": "false"
+    },
+    "d1_databases": []
+  }
+}
