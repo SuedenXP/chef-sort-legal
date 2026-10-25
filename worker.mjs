@@ -5,10 +5,8 @@ const PAGES = new Set([
   "/terms/", "/daten-loeschen/", "/delete-data/"
 ]);
 
-// There are currently no first-party downloads on the website.
-// Add only real downloadable files here and to assets.run_worker_first.
-// A click to an app store is not a completed download or installation.
-const DOWNLOADS = new Set([]);
+// Exact first-party file paths only. Count requests, not completed saves or people.
+const DOWNLOADS = new Set(['/site-assets/downloads/brief-an-den-weihnachtsmann.pdf']);
 
 export function berlinDay(date = new Date()) {
   const parts = new Intl.DateTimeFormat("en", {
@@ -60,10 +58,20 @@ export default {
   },
   async fetch(request, env, ctx) {
     const response = await env.ASSETS.fetch(request);
+    const url = new URL(request.url);
+    let outgoing = response;
+    if (DOWNLOADS.has(url.pathname) && (response.status === 200 || response.status === 206)) {
+      const headers = new Headers(response.headers);
+      headers.set('Content-Type', 'application/pdf');
+      headers.set('Content-Disposition', 'attachment; filename="brief-an-den-weihnachtsmann.pdf"');
+      outgoing = new Response(response.body, {
+        status: response.status, statusText: response.statusText, headers
+      });
+    }
     // The flag supports disabling the counter independently of website delivery.
-    if (env.STATS_ENABLED !== "true" || !env.STATS_DB) return response;
+    if (env.STATS_ENABLED !== "true" || !env.STATS_DB) return outgoing;
     try {
-      const event = classifyRequest(request, new URL(request.url), response);
+      const event = classifyRequest(request, url, response);
       if (event) {
         // Storage errors must not change the website response. No request details logged.
         ctx.waitUntil(recordCount(env.STATS_DB, event).catch(() => {}));
@@ -71,6 +79,6 @@ export default {
     } catch {
       // Telemetry must never prevent an otherwise valid asset response.
     }
-    return response;
+    return outgoing;
   }
 };

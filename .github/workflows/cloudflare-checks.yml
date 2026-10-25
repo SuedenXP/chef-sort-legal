@@ -4,6 +4,11 @@ on:
     paths:
       - "worker.mjs"
       - "wrangler.jsonc"
+      - "site.config.json"
+      - "scripts/**"
+      - "index.html"
+      - "site-assets/downloads.css"
+      - "site-assets/downloads/**"
       - "tests/**"
       - "cloudflare/**"
       - "datenschutz-website/**"
@@ -13,6 +18,11 @@ on:
     paths:
       - "worker.mjs"
       - "wrangler.jsonc"
+      - "site.config.json"
+      - "scripts/**"
+      - "index.html"
+      - "site-assets/downloads.css"
+      - "site-assets/downloads/**"
       - "tests/**"
       - "cloudflare/**"
       - "datenschutz-website/**"

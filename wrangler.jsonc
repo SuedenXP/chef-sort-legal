@@ -31,7 +31,8 @@
       "/daten-loeschen/index.html",
       "/delete-data",
       "/delete-data/",
-      "/delete-data/index.html"
+      "/delete-data/index.html",
+      "/site-assets/downloads/brief-an-den-weihnachtsmann.pdf"
     ]
   },
   "vars": {
@@ -58,7 +59,7 @@
     "enabled": false
   },
   "build": {
-    "command": "node --test tests/worker.test.mjs"
+    "command": "node scripts/build-public.mjs && node --test tests/worker.test.mjs"
   },
   "triggers": {
     "crons": [

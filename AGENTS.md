@@ -1,5 +1,19 @@
 # BrainBlooms: Projektregeln
 
+## PDF-Briefvorlage – 25.10.2026
+
+Aktuelle ausdrückliche Nutzerentscheidung: nur lokaler Offline-Entwurf zum
+Anschauen, kein Commit/Push und keine Veröffentlichung dieser Erweiterung.
+Lokaler Starter: `.local-preview/Briefvorlage ansehen.cmd` (Port 4180).
+
+Der Nutzer stellt die PDF „Lieber Weihnachtsmann_20261025_145612.pdf“ für einen
+Download bereit: vorübergehender Banner oberhalb der Kopfzeile und dauerhafter
+Button bei den Malbüchern. Beide führen zur unveränderten deutschen PDF mit
+zwei Seiten. `site.config.json` schaltet nur den Banner; der öffentliche Build
+über `scripts/build-public.mjs` muss dabei ausgeführt werden. Die vorhandene
+Statistik zählt Dateianfragen als `download_request`, keine Personen oder
+ausgefüllten Briefe. Einzelheiten und Herkunft: [docs/briefvorlage-download.md](docs/briefvorlage-download.md).
+
 ## Cloudflare-Hosting und Tagesstatistik – 24.10.2026
 
 Der Nutzer hat den Umzug der öffentlichen Website und die eigene cookie-freie
@@ -13,7 +27,9 @@ Beschränkungen. Keine pauschale Freigabe kostenpflichtiger oder weiterer Dienst
 Die eigene D1-Statistik speichert nur Tageszähler je öffentlichem Seitenpfad.
 Keine Besucherwiedererkennung, IP-/Fingerprint-Statistik, eigenen Analyse-Cookies,
 externen Klickzähler oder App-Installationsmessung ergänzen, ohne den Umfang
-erneut mit dem Nutzer zu klären. Aktuell gibt es keine eigenen Download-Dateien.
+erneut mit dem Nutzer zu klären. Seit 25.10.2026 ist die vom Nutzer bereitgestellte
+Weihnachtsbrief-PDF als konkrete Download-Datei vorgesehen; keine weiteren Dateien
+oder personenbezogenen Messverfahren daraus ableiten.
 Öffentliche Website ohne Login; Auswertung geschützt über Cloudflare.
 Vorschauen haben deaktivierte Messung und keine D1-Bindung.
 

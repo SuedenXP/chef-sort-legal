@@ -1,0 +1,28 @@
+/* User-provided letter PDF: ordinary download links, no scripts or motion. */
+.download-banner { color: var(--deep); background: var(--gold); border-bottom: 1px solid var(--deep); }
+.download-banner-inner { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .5rem 1.5rem; padding-block: .75rem; }
+.download-banner-copy { display: flex; flex-wrap: wrap; justify-content: center; gap: .1rem .65rem; text-align: center; font-size: .9375rem; }
+.banner-download { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-width: 44px; min-height: 44px; max-width: 100%; padding: .45rem 1rem; border: 1px solid var(--deep); border-radius: .5rem; background: var(--bg); color: var(--deep); font-size: .875rem; font-weight: 700; text-decoration: none; text-align: center; }
+.banner-download:focus-visible { outline-color: var(--deep); }
+.letter-download { display: grid; gap: 1.25rem; margin-bottom: 2.5rem; padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 1rem; background: var(--bg); }
+.letter-copy .section-label { margin-bottom: .5rem; }
+.letter-copy h3 { color: var(--accent); font-size: clamp(1.375rem, 2.2vw, 1.875rem); line-height: 1.25; letter-spacing: -.025em; }
+.letter-copy > p:last-child { max-width: 42rem; margin-top: .65rem; color: var(--muted); }
+.letter-download-action { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: .6rem; }
+.pdf-download { display: inline-flex; justify-content: center; align-items: center; gap: .65rem; min-width: 44px; min-height: 48px; max-width: 100%; padding: .8rem 1.1rem; border: 2px solid var(--accent); border-radius: .6rem; background: var(--accent); color: var(--bg); font-size: .9375rem; font-weight: 700; line-height: 1.4; text-decoration: none; text-align: center; }
+.letter-file-info { color: var(--muted); font-size: .8125rem; }
+@media (hover: hover) and (pointer: fine) {
+  .banner-download:hover:not(:active) { background: var(--deep); color: var(--bg); text-decoration: underline; text-decoration-thickness: 2px; }
+  .pdf-download:hover:not(:active) { background: var(--deep); border-color: var(--deep); text-decoration: underline; text-decoration-thickness: 2px; }
+}
+.banner-download:active { background: var(--paper); color: var(--deep); box-shadow: inset 0 0 0 2px var(--deep); text-decoration: underline; text-decoration-thickness: 3px; }
+.pdf-download:active { background: var(--gold); color: var(--deep); border-color: var(--deep); box-shadow: inset 0 0 0 2px var(--deep); text-decoration: underline; text-decoration-thickness: 3px; }
+@media (min-width: 60rem) {
+  .letter-download { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2rem; }
+}
+@media (max-width: 30rem) {
+  .download-banner-inner { gap: .55rem; }
+  .download-banner-copy { display: block; }
+  .download-banner-copy strong { display: block; }
+  .letter-download-action, .pdf-download { width: 100%; }
+}

@@ -4,6 +4,23 @@ Stand: **24.10.2026**, Zeitzone für die Projektkommunikation: Europe/Berlin.
 Dieser Bericht dokumentiert den gemeinsam durchgeführten Umzug und den letzten
 belegten Stand. Er ist kein automatischer Export aller Cloudflare-Kontoeinstellungen.
 
+## Fortschreibung vom 25.10.2026: Briefvorlage
+
+Diese Erweiterung ist auf ausdrücklichen Nutzerwunsch ausschließlich als lokaler
+Offline-Entwurf vorbereitet, nicht veröffentlicht. Die folgenden Änderungen
+beschreiben den vorbereiteten Entwurf, nicht den öffentlichen Betriebsstand.
+
+Die folgenden Abschnitte bleiben das Einstellungsprotokoll vom 24.10.2026.
+Neu hinzugekommen sind eine konkrete deutsche PDF-Briefvorlage, ein abschaltbarer
+Banner und ein dauerhafter Download-Button bei den Malbüchern. Damit sind die
+älteren Angaben „keine eigenen Downloads“ seit dieser Erweiterung überholt.
+Dateianfragen werden als `download_request` gezählt. `site.config.json` enthält
+den zentralen Banner-Schalter; der Wrangler-Build führt jetzt
+`node scripts/build-public.mjs && node --test tests/worker.test.mjs` aus.
+Der vorhandene Dashboard-Kopierbefehl kann unverändert bleiben. Keine neue
+Cloudflare-Datenbank, kein zusätzlicher Dienst und keine Tarifänderung.
+Vollständige Beschreibung: [Briefvorlage-Download](briefvorlage-download.md).
+
 ## 1. Ergebnis und Nachweise
 
 - Website, Browserdemo und Rechtstextseiten laufen über **Cloudflare Workers mit Static Assets**.
