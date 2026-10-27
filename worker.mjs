@@ -6,7 +6,11 @@ const PAGES = new Set([
 ]);
 
 // Exact first-party file paths only. Count requests, not completed saves or people.
-const DOWNLOADS = new Set(['/site-assets/downloads/brief-an-den-weihnachtsmann.pdf']);
+const DOWNLOADS = new Set([
+  "/site-assets/downloads/weihnachtsbrief-kleinkinder.pdf",
+  "/site-assets/downloads/weihnachtsbrief-kindergarten.pdf",
+  "/site-assets/downloads/weihnachtsbrief-schulkinder.pdf"
+]);
 
 export function berlinDay(date = new Date()) {
   const parts = new Intl.DateTimeFormat("en", {
@@ -63,7 +67,7 @@ export default {
     if (DOWNLOADS.has(url.pathname) && (response.status === 200 || response.status === 206)) {
       const headers = new Headers(response.headers);
       headers.set('Content-Type', 'application/pdf');
-      headers.set('Content-Disposition', 'attachment; filename="brief-an-den-weihnachtsmann.pdf"');
+      headers.set('Content-Disposition', 'attachment; filename="' + url.pathname.split('/').at(-1) + '"');
       outgoing = new Response(response.body, {
         status: response.status, statusText: response.statusText, headers
       });

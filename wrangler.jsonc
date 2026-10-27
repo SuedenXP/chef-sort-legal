@@ -32,7 +32,9 @@
       "/delete-data",
       "/delete-data/",
       "/delete-data/index.html",
-      "/site-assets/downloads/brief-an-den-weihnachtsmann.pdf"
+      "/site-assets/downloads/weihnachtsbrief-kleinkinder.pdf",
+      "/site-assets/downloads/weihnachtsbrief-kindergarten.pdf",
+      "/site-assets/downloads/weihnachtsbrief-schulkinder.pdf"
     ]
   },
   "vars": {

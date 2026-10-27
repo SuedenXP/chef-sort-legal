@@ -1,5 +1,58 @@
 # Briefvorlage zum Weihnachtsmann
 
+## Druckrand-Korrektur 27.10.2026
+
+Auf Nutzerauftrag haben alle drei Webkopien einen weißen Druckrand erhalten.
+Die vom Nutzer benannten Originaldateien bleiben unverändert; die bisherigen
+Webkopien sind zusätzlich unter `.local-preview/pdf-originals-2026-10-27/` gesichert.
+Die aktuelle Webfassung ist deshalb nicht mehr bytegleich mit dem Original.
+
+Ausgabeformat A4, 210 × 297 mm. Inhalt proportional auf 90,4421 % verkleinert und
+zentriert: links/rechts 10 mm, oben/unten rund 14,136 mm weißer Rand. Kein Beschnitt
+oder Verzerren des ursprünglichen Seiteninhalts. Vorhandene zweite Leerseite in
+jeder Vorlage beibehalten. Kein physischer Probedruck in diesem Durchgang.
+
+| Webkopie | Neue Größe | SHA-256 |
+| --- | --- | --- |
+| weihnachtsbrief-kleinkinder.pdf | 1.266.561 Bytes | 037fb9b2f8ae50de29f29daba0e8fb749709bcebb4e985c30c4e6bdeea28aecc |
+| weihnachtsbrief-kindergarten.pdf | 336.915 Bytes | 587506c470184c82c4ec022ea56ad1ebb4fbdbdaa394dd765feef4b2b9c7726e |
+| weihnachtsbrief-schulkinder.pdf | 600.717 Bytes | d0cb85ff2e26704c77320ab0da1e18ab08b95aa90e3d387a4e08c387cba4fba6 |
+
+Bearbeitet ausschließlich mit den bereits installierten Poppler-/Cairo-Bibliotheken
+von GIMP. Kein zusätzlicher Paketdownload, kein Upload der PDFs. Cairo erzeugt eine
+neue PDF-Ausgabe; vorhandene Autor-, Titel-, Betreff-, Stichwort- und Creator-Metadaten
+werden soweit vorhanden übernommen, die technische Producer-Angabe ändert sich.
+Alle sechs Seiten gerendert, A4-Maße und weiße Ränder geprüft. Mit vorhandenem
+`pdftotext` extrahierte Texte vor/nach Bearbeitung stimmen nach Normalisierung
+von Leerraum überein. Neue Dateigrößen in der Website aktualisiert.
+Prüfnachweise: `.local-preview/qa/pdf-margins-2026-10-27/`, Skript
+`.local-preview/pdf-print-margins.py`. Weiterhin nur lokal, nicht veröffentlicht.
+
+## Fortschreibung 27.10.2026: drei Vorlagen
+
+Weiterhin ausschließlich lokaler Entwurf. Der Bannerbutton „Zu den Vorlagen“
+führt jetzt zu `#weihnachtsvorlagen`; drei Downloadbuttons stehen im Kasten bei
+den Malbüchern. Vorherige Einzeldatei-Angaben weiter unten sind historisch.
+
+| Vom Nutzer bereitgestellte Datei in `site-assets/downloads/` | Unveränderte Webkopie | Größe |
+| --- | --- | --- |
+| Grün Creme Elegant Weihnachten Kleinkinder.pdf | weihnachtsbrief-kleinkinder.pdf | 1.165.742 Bytes |
+| Grün Creme Elegant Weihnachten Kindergarten.pdf | weihnachtsbrief-kindergarten.pdf | 232.736 Bytes |
+| Grün Creme Elegant Weihnachten Schulkinder.pdf | weihnachtsbrief-schulkinder.pdf | 487.451 Bytes |
+
+Originale bleiben unverändert. Webkopien sind bytegleich, mit eigenen Dateinamen
+für stabile Links und Downloads. Der Worker erlaubt nur diese drei Pfade für
+`download_request`, jeweils als eigene Ressource in der vorhandenen Tagesstatistik.
+Der Sprung im Banner ist kein Download und wird nicht als solcher gezählt.
+Die öffentliche Cloudflare-Konfiguration wurde nicht geändert oder veröffentlicht.
+Der lokale Vorschau-Server liefert nur Dateien aus und zählt nichts.
+
+Die Datenschutzfassung nennt nun drei Vorlagen. Quelle dieser begrenzten
+Tatsachenänderung: Nutzerauftrag, die bereitgestellten Dateien sowie die
+Download-Allowlist in `worker.mjs`. Zählverfahren und Aufbewahrung unverändert.
+
+## Historischer Stand der einzelnen Vorlage
+
 Stand: 25.10.2026. Erweiterung der bestehenden Website um einen PDF-Download.
 
 **Aktueller Freigabestand:** Auf Nutzerwunsch ausschließlich lokaler Offline-

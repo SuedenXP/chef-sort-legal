@@ -1,5 +1,14 @@
 # BrainBlooms: Projektregeln
 
+## Drei Weihnachtsbrief-Vorlagen – 27.10.2026
+
+Der Nutzer ersetzt die einzelne Briefvorlage im lokalen Entwurf durch drei eigene
+PDFs für Kleinkinder, Kindergartenkinder und Schulkinder aus `site-assets/downloads/`.
+Der Bannerbutton springt zum Downloadkasten; dort stehen drei Downloadbuttons.
+Zählung weiterhin nur Dateianfragen, getrennt nach den drei ausdrücklich angebotenen
+Dateipfaden. Weiterhin nur Offline-Entwurf, kein Commit/Push und keine Veröffentlichung.
+Die ältere Einzeldatei-Beschreibung unten ist damit historisch.
+
 ## PDF-Briefvorlage – 25.10.2026
 
 Aktuelle ausdrückliche Nutzerentscheidung: nur lokaler Offline-Entwurf zum
