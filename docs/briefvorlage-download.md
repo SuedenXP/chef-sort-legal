@@ -1,5 +1,50 @@
 # Briefvorlage zum Weihnachtsmann
 
+## Leerseiten entfernt – 28.10.2026
+
+Auf ausdrücklichen Nutzerauftrag die vollständig weißen zweiten Seiten aller
+drei aktuellen Web-PDFs entfernt. Jede Vorlage hat jetzt genau eine A4-Seite.
+Die erste Seite mit korrigierter Kreisumrandung und Druckrand bleibt erhalten.
+Weiße Druckränder, Seitenanzahl und ausgelesene Texte geprüft; alle drei
+gerenderten einseitigen Fassungen visuell angesehen. Aktuelle Größen und
+SHA-256-Prüfsummen: `.local-preview/qa/pdf-single-page-2026-10-28/report.json`.
+Ältere zweiseitige Webfassungen sind in
+`.local-preview/pdf-before-empty-page-removal-2026-10-28/` gesichert.
+Dateigrößen und lokaler Build aktualisiert. Keine Veröffentlichung.
+Angaben zu beibehaltenen Leerseiten in den folgenden historischen Abschnitten
+beschreiben den vorherigen Stand.
+
+## Vollständige Kreisumrandung – 28.10.2026
+
+Der Nutzer beanstandet die bereits in den Original-PDFs oben und rechts angeschnittenen
+Kreise und beauftragt die Neuerzeugung aller drei PDFs. Die alte Umrandung wurde
+aus dem Druckbereich ausgeblendet und durch vollständig innerhalb der Seite
+liegende rote/grüne Vektorkreise ersetzt. Die Umrandung ist eine Rekonstruktion,
+kein wiederhergestellter Originalexport. Texte und zentrale Gestaltung wurden aus
+den Originalen übernommen; Farbflächen/Papiertextur am äußeren Rahmen begrenzt.
+Die Nutzer haben die eigene Herstellung und Veröffentlichungsrechte bestätigt.
+
+A4 und mindestens 10 mm weißer Druckrand bleiben bestehen. Inhalte proportional
+skaliert; seitlich 10 mm Platz bis zum ursprünglichen Seitenrechteck, oben/unten
+rund 14,1 mm. Die neu gesetzten Kreise liegen zusätzlich vollständig darin.
+Alle drei ersten Seiten visuell geprüft, weiße Außenränder auf allen sechs Seiten
+gemessen und mit dem installierten `pdftotext` die Texte vor/nach Bearbeitung
+verglichen (gleich nach Leerraumnormalisierung). Gleiche Kreisbreite an einer
+Referenzzeile in allen drei gerenderten Fassungen pixelgenau bestätigt.
+Die bereits vorhandenen zweiten Leerseiten bleiben erhalten. Kein physischer Probedruck.
+
+| Aktuelle Webdatei | Größe | SHA-256 |
+| --- | --- | --- |
+| weihnachtsbrief-kleinkinder.pdf | 1.224.122 Bytes | cad89008a1105085bd9ce5a12ca0e24b2631807be53de37ad1afbb7635e8abdd |
+| weihnachtsbrief-kindergarten.pdf | 294.769 Bytes | e8ca0e48a5d0a0934236b519d373fa9301b6648d0c03e935141a26e6aa5607c9 |
+| weihnachtsbrief-schulkinder.pdf | 559.413 Bytes | c46abf45737b18d7d527a3dfe4f3c103a9a7e9a7f39284a3a135a810fa5bc4f4 |
+
+Bisherige Druckfassungen gesichert in `.local-preview/pdf-before-border-repair-2026-10-28/`.
+Originale bleiben erhalten. Skript: `.local-preview/rebuild-letter-borders.py`;
+Renderbilder, Textvergleiche und Bericht: `.local-preview/qa/pdf-borders-2026-10-28/`.
+Nur vorhandene lokale GIMP/Poppler/Cairo-Bibliotheken; keine Installation und kein
+PDF-Upload. Neue Fassungen und Größen im Offline-Entwurf übernommen. Nicht veröffentlicht.
+
 ## Druckrand-Korrektur 27.10.2026
 
 Auf Nutzerauftrag haben alle drei Webkopien einen weißen Druckrand erhalten.

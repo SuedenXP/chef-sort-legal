@@ -288,6 +288,13 @@ Zwölf vom Nutzer bereitgestellte korrigierte PNGs aus art/pictures/Kitchen Sort
 
 ### Ersatz durch drei vom Nutzer bereitgestellte Vorlagen – 27.10.2026
 
+28.10.2026: Nutzer bestätigt eigene Erstellung und Veröffentlichungsrechte der
+Vorlagen. Auf ausdrücklichen Auftrag die angeschnittene Kreisumrandung in den
+drei Web-PDFs durch vollständig sichtbare, projektintern gezeichnete Vektorkreise
+ersetzt. Originale und ältere Druckfassungen gesichert, Rechtehinweis im Seiteninhalt
+erhalten. Keine neuen Fremdassets oder Dienste. Aktuelle Hashes und Prüfnachweise
+in `docs/briefvorlage-download.md`, Abschnitt Vollständige Kreisumrandung.
+
 Nachfolgend auf ausdrücklichen Nutzerauftrag Druckränder ergänzt. Aktuelle
 Webkopien haben A4-Seiten, proportional verkleinerten Inhalt und mindestens
 10 mm weißen Außenrand. Originale unverändert erhalten, bisherige Webkopien
