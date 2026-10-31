@@ -346,12 +346,16 @@ IP-/Browsermerkmale wurde nur besprochen und **nicht eingebaut**.
 Ein Hash ist nicht automatisch anonym; keine solche Erkennung nachträglich
 ohne geklärten Auftrag und Datenschutzprüfung ergänzen.
 
-**Keine aktuellen Downloadzählungen:** keine eigenen Download-Dateien,
-Google-Play-Badge weiterhin „Demnächst“ und ohne Store-Downloadlink.
-`DOWNLOADS` ist leer. Externe Amazon-/Social-/YouTube-Links bleiben normale Links;
-keine Klickstatistik oder Installationszählung. Später müssten echte Dateipfade
-gezielt in DOWNLOADS und run_worker_first aufgenommen werden. Status 200/206
-würde nur Dateianfragen, nicht sichere vollständige Downloads beweisen.
+**Historischer Stand vom 24.10.2026, vor den Weihnachtsbrief-PDFs:** Es gab
+keine eigenen Download-Dateien; `DOWNLOADS` war leer. Externe
+Amazon-/Social-/YouTube-Links blieben normale Links ohne Klickstatistik oder
+Installationszählung.
+
+Seit 31.10.2026 zählt der Worker erfolgreiche Anfragen für genau drei
+Briefvorlagen getrennt als `download_request`; diese Pfade sind zusätzlich in
+`assets.run_worker_first` eingetragen. Status 200/206 bezeichnet Dateianfragen,
+keine eindeutigen Personen und keinen Nachweis eines vollständig gespeicherten
+Dokuments. Details und Abfrage: [Download-Protokoll](briefvorlage-download.md).
 
 Browser-Caches, Opt-outs, Bots, Datenbankfehler und Wiederholungen begrenzen die
 Genauigkeit. Eine sichtbare 8 ist keine Aussage „acht Personen“.
