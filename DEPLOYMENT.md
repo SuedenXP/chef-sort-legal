@@ -1,5 +1,27 @@
 # Website-Betrieb und Veröffentlichung
 
+## Aktueller Stand: Weihnachtsbriefe und Entwurfsabgleich – 31.10.2026
+
+PR [#3](https://github.com/SuedenXP/chef-sort-legal/pull/3) veröffentlichte
+Banner, drei einseitige PDFs, getrennte Downloadanfragen-Zählung und die
+Datenschutzerklärung DE/EN. Der Nutzer meldete danach eine Abweichung zwischen
+Entwurf und Website: Weihnachtsfarben, Karten-Innenlayout, Stern, Umschlagsprite,
+Tanne und Animation waren vom lokalen Server nachträglich eingefügt worden.
+PR [#4](https://github.com/SuedenXP/chef-sort-legal/pull/4) übernahm diese
+Gestaltung in die versionierten öffentlichen Dateien und synchronisierte die
+Offline-Vorschau. Der Banner bleibt gemäß Nutzerentscheidung aktiv.
+
+Produktionscommit der visuellen Korrektur:
+`4f6df30d4ce6a463dafc600c50d9fdfe2ff873f6`. GitHub-Workercheck erfolgreich;
+14 Worker-Tests bestanden. Live-Browserprüfung bei 320/390/768/1440 px in DE/EN,
+mit 200-%-Text, Banner-Sprung, drei Downloads sowie Hover-, Druck- und
+Fokuszuständen bestanden. Live-HTML, Datenschutzhinweis, Downloadantworten und
+CSS-/PNG-/JS-Assets wurden mit erfolgreichen Antworten geprüft. Kontrollabrufe
+verwendeten DNT=1 beziehungsweise HEAD und sollten die Zähler nicht erhöhen.
+
+Details: [Weihnachtsbrief-Download](docs/briefvorlage-download.md) und
+[Cloudflare-Betrieb](docs/cloudflare-betrieb.md).
+
 ## PDF-Briefvorlage und temporärer Banner – 25.10.2026
 
 **Nur lokaler Offline-Entwurf auf Nutzerwunsch; nicht veröffentlicht.**

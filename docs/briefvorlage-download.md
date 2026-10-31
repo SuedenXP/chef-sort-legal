@@ -7,8 +7,11 @@ abgenommenen Entwurf abwich. Ursache: Bannerfarben, Karten-Innenlayout, Stern,
 Briefsprite, Tanne und die Sternbewegung wurden bis dahin nur vom gitignorierten
 Offline-Server ergänzt. Sie sind jetzt Bestandteil der öffentlichen HTML-, CSS-,
 PNG- und JavaScript-Dateien; der Offline-Server liefert dieselben Quelldateien
-ohne nachträgliche Gestaltungseingriffe aus. Banner bleibt aktiv. Prüfnachweis
-und Veröffentlichungscommit der Korrektur folgen in `DEPLOYMENT.md`.
+ohne nachträgliche Gestaltungseingriffe aus. Banner bleibt aktiv. Korrektur über
+[PR #4](https://github.com/SuedenXP/chef-sort-legal/pull/4), Produktionscommit
+`4f6df30d4ce6a463dafc600c50d9fdfe2ff873f6`. Live geprüft: Startseite, Stylesheet,
+Sprite und Animationsdatei werden ausgeliefert; die Browserprüfung bestand auf
+der Live-Domain bei 320/390/768/1440 px, Deutsch/Englisch und 200 % Text.
 
 ## Leerseiten entfernt – 28.10.2026
 
