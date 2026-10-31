@@ -1,5 +1,18 @@
 # Asset- und Komponentenregister
 
+## Weihnachtsgestaltung im Downloadbereich – 31.10.2026
+
+Auf ausdrücklichen Veröffentlichungsauftrag übernommen: Rot-grüner Banner,
+Briefkarte mit zentriertem Innenlayout, Stern, Umschlagsprite und gezeichnete
+Tanne. Die vierteilige PNG-Spritegrafik wurde mit dem eingebauten Image-Generator
+ohne Referenzbilder erstellt; Originalatlas lokal erhalten. Öffentliche Webkopie:
+`site-assets/images/christmas-sprites-v1.png`, 1254 × 1254 Pixel, SHA-256
+`7A0D27E7671231B9DFE846916A1ABC29FFD5768E9720246A4D72BCF09D84A82A`.
+Stern und Briefumschlag werden in der Website verwendet; der Stern bewegt sich
+einmal kurz über die native Web Animations API. Die Tanne ist internes Inline-SVG.
+Keine Fremdassets, Referenzbilder, Bibliotheken oder externen Ladeverbindungen;
+keine Aussage über ausschließliche Rechte am generierten Bild.
+
 ## Neue Chef-Sort-Aufnahmen – 21.10.2026
 
 Nutzerauftrag: Level-1-Aufnahme aus dem Fächer entfernen, Level 3 und Restaurant-Imperium in beiden Sprachen ergänzen, im Spieleinstieg Burger Hub durch Restaurant-Imperium ersetzen. Eigene vom Nutzer bereitgestellte Originale unter `art/pictures/Kitchen Sort/`: `de-level-03.png`, `en-level-03.png`, `de-franchise.png`, `en-franchise.png`, jeweils 2160 × 4080 Pixel. Alle vier Originale visuell angesehen und unverändert erhalten. Keine externe Quelle, generative Bearbeitung oder zusätzliche Lizenzbehauptung.

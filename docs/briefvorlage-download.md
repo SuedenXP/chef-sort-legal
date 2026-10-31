@@ -1,5 +1,15 @@
 # Briefvorlage zum Weihnachtsmann
 
+## Öffentliche Gestaltung auf den Entwurfsstand gebracht – 31.10.2026
+
+Nach dem ersten Livegang meldete der Nutzer, dass das Erscheinungsbild vom
+abgenommenen Entwurf abwich. Ursache: Bannerfarben, Karten-Innenlayout, Stern,
+Briefsprite, Tanne und die Sternbewegung wurden bis dahin nur vom gitignorierten
+Offline-Server ergänzt. Sie sind jetzt Bestandteil der öffentlichen HTML-, CSS-,
+PNG- und JavaScript-Dateien; der Offline-Server liefert dieselben Quelldateien
+ohne nachträgliche Gestaltungseingriffe aus. Banner bleibt aktiv. Prüfnachweis
+und Veröffentlichungscommit der Korrektur folgen in `DEPLOYMENT.md`.
+
 ## Leerseiten entfernt – 28.10.2026
 
 Auf ausdrücklichen Nutzerauftrag die vollständig weißen zweiten Seiten aller
