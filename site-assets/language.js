@@ -20,6 +20,9 @@
     document.querySelectorAll('[data-label-de]').forEach(element => {
       element.setAttribute('aria-label', element.getAttribute(`data-label-${lang}`));
     });
+    document.querySelectorAll('a[data-href-de]').forEach(element => {
+      element.setAttribute('href', element.getAttribute(`data-href-${lang}`));
+    });
     document.querySelectorAll('[data-title-de]').forEach(element => {
       element.title = element.getAttribute(`data-title-${lang}`);
     });
