@@ -1,5 +1,24 @@
 # Cloudflare-Hosting und Tagesstatistik
 
+## SQL-Abfragen zum Kopieren
+
+Die aktuelle, wiederverwendbare Referenz steht in [`cloudflare/queries.sql`](../cloudflare/queries.sql).
+In Cloudflare öffnen: **D1 → brainblooms-stats → Console**. Die Datei enthält
+jeweils eine Abfrage für Seitenpfade pro Tag, Seitenaufrufe pro Tag,
+PDF-Downloadanfragen pro Tag und PDF-Summen je Vorlage. Eine Kopie der Abfrage
+bleibt damit im Repository; in die D1-Console wird die gewünschte Abfrage
+einzeln hineinkopiert und ausgeführt.
+
+Der Seitenzähler speichert keine Referrer-Quelle. Die Seitenabfrage zeigt also,
+welche Website-Pfade angefragt wurden, aber nicht, ob jemand z. B. über Google
+oder einen Link von einer anderen Website kam.
+
+Am 31.10.2026 meldete der Nutzer je eine Downloadanfrage pro PDF und bestätigte,
+dass alle drei von seinem eigenen Funktionstest stammten. Diese Testabrufe sind
+keine Downloads anderer Besucher.
+
+## Technische Historie
+
 Stand: 24.10.2026. Vollständiges Einstellungs- und Umzugsprotokoll:
 [Cloudflare-Betrieb](cloudflare-betrieb.md).
 
