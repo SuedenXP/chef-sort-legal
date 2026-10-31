@@ -217,6 +217,9 @@ WHERE metric = 'download_request'
 ORDER BY day DESC, resource;
 ```
 
+Alle Seiten- und Downloadabfragen zusammen stehen in
+[`cloudflare/queries.sql`](../cloudflare/queries.sql).
+
 Die Beschreibung in der Website-Datenschutzerklärung wurde für diese konkrete
 Dateianfragezählung in DE/EN aktualisiert. Sonstige Verarbeitungszwecke und die
 App-Datenschutzerklärung bleiben erhalten.
