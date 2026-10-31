@@ -1,5 +1,21 @@
 # Website-Betrieb und Veröffentlichung
 
+## Datenschutzerklärungen im Footer – 31.10.2026
+
+Auf ausdrücklichen Nutzerauftrag werden im Footer zwei getrennte Links angeboten:
+„Datenschutzerklärung Website“ und „Datenschutzerklärung Spiel“
+(EN: „Website privacy“ und „Game privacy“). Sie führen auf
+`/datenschutz-website/?lang=de` beziehungsweise `/datenschutz/?lang=de`;
+bei englischer Seitensprache erhalten die Ziele `?lang=en`.
+Auch der Impressumslink übernimmt die gewählte Sprache. Die vorhandenen
+Rechtstextseiten werten den Sprachparameter bereits aus.
+
+Vor Veröffentlichung: beide Datenschutzlinks in DE/EN im lokalen Edge geöffnet,
+einschließlich gesperrtem Browserspeicher und widersprechender gespeicherter Sprache.
+390/1440 Pixel, 200 Prozent Schriftgröße sowie Hover, Druckfeedback und
+Tastaturfokus erfolgreich geprüft; 14 bestehende Worker-Tests bestanden.
+Die Veröffentlichung nutzt den bestehenden `main`-Deploy auf Cloudflare.
+
 ## Aktueller Stand: Weihnachtsbriefe und Entwurfsabgleich – 31.10.2026
 
 PR [#3](https://github.com/SuedenXP/chef-sort-legal/pull/3) veröffentlichte
