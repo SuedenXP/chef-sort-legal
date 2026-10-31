@@ -93,3 +93,65 @@ test("daily maintenance deletes old aggregates and respects the off switch", asy
   assert.equal(runs, 1);
   assert.equal(sql, "DELETE FROM daily_stats WHERE day < date('now', '-13 months')");
 });
+
+const downloadPaths = ["/site-assets/downloads/weihnachtsbrief-kleinkinder.pdf","/site-assets/downloads/weihnachtsbrief-kindergarten.pdf","/site-assets/downloads/weihnachtsbrief-schulkinder.pdf"];
+const downloadPath = downloadPaths[0];
+test('only an offered PDF counts as a download, including partial requests and opt-outs', () => {
+  const fileRequest = request({ accept: '*/*', 'sec-fetch-dest': 'empty' });
+  for (const status of [200, 206]) {
+    assert.deepEqual(classify(fileRequest, { ...url, pathname: downloadPath }, { ...response, status }), {
+      metric: 'download_request', resource: downloadPath
+    });
+  }
+  for (const status of [301, 304, 404, 500]) assert.equal(classify(fileRequest, { ...url, pathname: downloadPath }, { ...response, status }), null);
+  assert.equal(classify(fileRequest, { ...url, pathname: '/site-assets/downloads/unknown.pdf' }), null);
+  assert.equal(classify(request({ dnt: '1' }), { ...url, pathname: downloadPath }), null);
+  assert.equal(classify({ ...fileRequest, method: 'HEAD' }, { ...url, pathname: downloadPath }), null);
+  assert.equal(classify(fileRequest, { hostname: 'preview.workers.dev', pathname: downloadPath }), null);
+});
+test('PDF is delivered as an attachment with unchanged bytes even when counting is disabled', async () => {
+  const bytes = new Uint8Array([37, 80, 68, 70, 45, 49, 46, 52]);
+  const env = {
+    ASSETS: { fetch: async () => new Response(bytes, { headers: { 'Content-Type': 'application/pdf' } }) },
+    STATS_ENABLED: 'false'
+  };
+  for (const path of downloadPaths) {
+    const result = await worker.fetch(new Request('https://brainblooms.de' + path), env, {});
+    assert.equal(result.headers.get('content-disposition'), 'attachment; filename="' + path.split('/').at(-1) + '"');
+    assert.equal(result.headers.get('content-type'), 'application/pdf');
+    assert.deepEqual(new Uint8Array(await result.arrayBuffer()), bytes);
+  }
+});
+test('a failed PDF request remains a normal error response and is not counted', async () => {
+  const original = new Response('Not found', { status: 404 });
+  const env = { ASSETS: { fetch: async () => original }, STATS_ENABLED: 'true', STATS_DB: {} };
+  const result = await worker.fetch(new Request('https://brainblooms.de' + downloadPath), env, {
+    waitUntil: () => { throw new Error('Must not count errors'); }
+  });
+  assert.equal(result, original);
+  assert.equal(result.headers.has('content-disposition'), false);
+});
+
+test('a successful PDF request records one aggregate without query parameters', async () => {
+  const pending = [];
+  const bound = [];
+  const env = {
+    ASSETS: { fetch: async () => new Response('%PDF-1.4', { headers: { 'Content-Type': 'application/pdf' } }) },
+    STATS_ENABLED: 'true',
+    STATS_DB: { prepare: () => ({ bind: (...values) => ({ run: async () => { bound.push(values); } }) }) }
+  };
+  const req = new Request('https://brainblooms.de' + downloadPath + '?source=banner', {
+    headers: { Accept: '*/*', 'Sec-Fetch-Dest': 'empty', 'User-Agent': 'Mozilla/5.0' }
+  });
+  const result = await worker.fetch(req, env, { waitUntil: (p) => pending.push(p) });
+  await Promise.all(pending);
+  assert.equal(result.status, 200);
+  assert.equal(bound.length, 1);
+  assert.deepEqual(bound[0].slice(1), ['download_request', downloadPath]);
+  assert.equal(await result.text(), '%PDF-1.4');
+});
+
+test('three templates are counted separately; the retired file is excluded', () => {
+ for(const path of downloadPaths) assert.deepEqual(classify(request(), {...url, pathname:path}), {metric:'download_request', resource:path});
+ assert.equal(classify(request(), {...url, pathname:'/site-assets/downloads/brief-an-den-weihnachtsmann.pdf'}), null);
+});

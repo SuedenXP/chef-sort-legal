@@ -1,5 +1,28 @@
 # Website-Betrieb und Veröffentlichung
 
+## PDF-Briefvorlage und temporärer Banner – 25.10.2026
+
+**Nur lokaler Offline-Entwurf auf Nutzerwunsch; nicht veröffentlicht.**
+Aufruf über `.local-preview/Briefvorlage ansehen.cmd`, lokale Adresse
+`http://127.0.0.1:4180/`. Öffentliche Website bleibt unverändert.
+
+Nutzer stellt seine gewählte deutsche Weihnachtsbrief-PDF als Download bereit.
+Unveränderte Webkopie unter `site-assets/downloads/brief-an-den-weihnachtsmann.pdf`,
+zwei Seiten, 1.305.145 Bytes. Temporärer goldener Banner oberhalb der Kopfzeile,
+dauerhafter Downloadbereich bei den Malbüchern; beide Links führen zur selben
+Datei. Deutsch/Englisch kennzeichnen die PDF als deutschsprachig.
+
+`site.config.json` -> `christmasLetterBanner: false` entfernt beim nächsten
+öffentlichen Build ausschließlich den Banner. `scripts/build-public.mjs`
+erstellt die öffentliche Fassung; Wrangler führt diesen Build und die
+Worker-Tests vor der Veröffentlichung aus. Bisheriger Dashboard-Kopierbefehl
+kann bleiben. PDF-Header erzwingt einen Dateidownload; vorhandene D1-Statistik
+zählt erfolgreiche Dateianfragen getrennt als `download_request`.
+Website-Datenschutzhinweis für diese Zählung in DE/EN gezielt aktualisiert.
+
+Herkunft, Abschaltung, SQL-Auswertung und Prüfung:
+[docs/briefvorlage-download.md](docs/briefvorlage-download.md).
+
 ## Cloudflare-Hosting und Statistik – 24.10.2026
 
 Die öffentliche Website wurde auf Nutzerauftrag von GitHub Pages zu

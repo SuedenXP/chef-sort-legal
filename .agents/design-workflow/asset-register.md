@@ -282,3 +282,37 @@ Nutzer erlaubt Veröffentlichung und sinnvolle Bildverkleinerung. 18 vorhandene 
 ## Aktualisierte Spiel-Screenshots – 21.10.2026
 
 Zwölf vom Nutzer bereitgestellte korrigierte PNGs aus art/pictures/Kitchen Sort/ ersetzen die bisherigen Webfassungen: DE/EN für 01-hero, 02-sorting, 03-gravity, 04-burger-restaurant, level-03 und franchise. Nur proportional auf 540/1080 Pixel Breite verkleinert und als JPEG optimiert; Originale per SHA-256 unverändert. Bestehende Herkunft und Rechtebasis gelten weiter; keine neuen Fremdassets, Dienste, Lizenzen oder Kosten. Lokaler Entwurf und vorbereitete Startfassung enthalten dieselben 24 Webbilder. Keine Veröffentlichung. Prüfnachweis: .local-preview/qa/game-image-refresh-2026-10-21.md.
+
+
+## Weihnachtsbrief-PDF – 25.10.2026
+
+### Ersatz durch drei vom Nutzer bereitgestellte Vorlagen – 27.10.2026
+
+28.10.2026: Nutzer bestätigt eigene Erstellung und Veröffentlichungsrechte der
+Vorlagen. Auf ausdrücklichen Auftrag die angeschnittene Kreisumrandung in den
+drei Web-PDFs durch vollständig sichtbare, projektintern gezeichnete Vektorkreise
+ersetzt. Originale und ältere Druckfassungen gesichert, Rechtehinweis im Seiteninhalt
+erhalten. Keine neuen Fremdassets oder Dienste. Aktuelle Hashes und Prüfnachweise
+in `docs/briefvorlage-download.md`, Abschnitt Vollständige Kreisumrandung.
+
+Nachfolgend auf ausdrücklichen Nutzerauftrag Druckränder ergänzt. Aktuelle
+Webkopien haben A4-Seiten, proportional verkleinerten Inhalt und mindestens
+10 mm weißen Außenrand. Originale unverändert erhalten, bisherige Webkopien
+zusätzlich lokal gesichert. Nachstehende ursprüngliche Hashes bleiben
+Herkunftsnachweise; aktuelle Hashes, Größen und Prüfungen stehen in
+`docs/briefvorlage-download.md`, Abschnitt Druckrand-Korrektur. Keine neuen
+Gestaltungselemente, Fremdassets oder externen PDF-Verbindungen hinzugefügt.
+
+Originale liegen in `site-assets/downloads/`, unverändert erhalten. Benutzer stellt
+sie ausdrücklich für drei Website-Downloads bereit; keine weitergehende Lizenz-
+oder Rechtefreiheit behauptet. Keine Fremddienste oder externe Ladeverbindungen.
+
+| Original | Bytegleiche Webkopie | SHA-256 |
+| --- | --- | --- |
+| Grün Creme Elegant Weihnachten Kleinkinder.pdf | weihnachtsbrief-kleinkinder.pdf | a880c92a29eea86b9bcddd5d17ec4352b2ea5e72a1b86829894204975e2caabc |
+| Grün Creme Elegant Weihnachten Kindergarten.pdf | weihnachtsbrief-kindergarten.pdf | 185836cb85c9080f21321e21cd1a01dd835db4bc5d5d57bbb244db28aa854d50 |
+| Grün Creme Elegant Weihnachten Schulkinder.pdf | weihnachtsbrief-schulkinder.pdf | 991f84336ec7830002e40d3cec2e59d60a61587d089eb38f065d0402ad5693f0 |
+
+Die folgenden Angaben betreffen die zuvor verwendete Einzelvorlage.
+
+Vom Nutzer zum Webdownload bereitgestellte Datei: `C:\Users\anmel\Downloads\Lieber Weihnachtsmann_20261025_145612.pdf`. Unveränderte Webkopie unter `site-assets/downloads/brief-an-den-weihnachtsmann.pdf`, zwei deutsche Seiten, 1.305.145 Bytes; SHA-256 `f0cf1265b4387ea8d9f0b63769e823c38ecc64d5e3de6df960ade09563392722`. Creator/Producer laut PDF-Metadaten Canva, Autorin Suvi Virtanen. Herkunftsgrundlage ist die ausdrückliche Nutzerbereitstellung für den Download; keine gesonderte Lizenz-/Rechtekette vorgelegt und keine allgemeine Rechtefreiheit oder unabhängige Canva-Asset-Freigabe behauptet. Vorhandene Metadaten und Hinweise bleiben erhalten. Keine neue Bildgenerierung, Fremdschrift, Bibliothek, Einbettung, externe Ladeverbindung oder kostenpflichtiger Dienst. Die einfachen Downloadpfeile sind projektinternes Inline-SVG, keine fremde Iconbibliothek. Original in Downloads bleibt unverändert; lokale Prüfkopien und Screenshots bleiben in .local-preview/. Einbau über temporären Banner und dauerhaften Malbuch-Download, siehe docs/briefvorlage-download.md.

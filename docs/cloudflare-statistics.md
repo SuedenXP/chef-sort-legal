@@ -3,6 +3,11 @@
 Stand: 24.10.2026. Vollständiges Einstellungs- und Umzugsprotokoll:
 [Cloudflare-Betrieb](cloudflare-betrieb.md).
 
+Ergänzung vom 25.10.2026: [PDF-Briefvorlage und Banner-Schalter](briefvorlage-download.md).
+Die PDF ist im lokalen, noch nicht veröffentlichten Entwurf als konkretes
+Downloadziel in Worker und Asset-Routing vorbereitet. Auf der öffentlichen
+Website ist diese Erweiterung noch nicht aktiv.
+
 ## Aufbau
 
 Worker `brainblooms` liefert die öffentlichen Dateien über das ASSETS-Binding aus
@@ -24,9 +29,11 @@ Redirects und Fehler werden ausgeschlossen. Die Summen sind **Anfragen, keine
 eindeutigen Personen**. Wiederholtes Laden kann mehrfach zählen. Nicht erkannte
 Bots, Browser-Caches und Speicherfehler begrenzen die Genauigkeit.
 
-Die Website bietet derzeit keine eigenen Download-Dateien an. Google Play ist
-ein Demnächst-Banner. Deshalb ist keine Downloadzählung aktiviert. Externe
-Store-/Amazon-/Social-Links bleiben normale Links ohne Klicktracking.
+Der noch nicht veröffentlichte lokale Entwurf enthält die deutsche Briefvorlage unter
+`/site-assets/downloads/brief-an-den-weihnachtsmann.pdf` an. Erfolgreiche GET-
+Dateianfragen werden getrennt als `download_request` gezählt. Google Play ist
+weiterhin ein Demnächst-Banner. Externe Store-/Amazon-/Social-Links bleiben
+normale Links ohne Klicktracking.
 Für spätere eigene Dateien muss der exakte Pfad sowohl in DOWNLOADS als auch
 in assets.run_worker_first ergänzt werden. Eine gezählte 200/206-Dateianfrage
 belegt weder einen vollständigen Download noch eine Installation.
@@ -41,8 +48,9 @@ Cloudflare Workers Builds:
   --compatibility-date-Werten funktioniert ebenfalls; Wrangler liest die
   Konfigurationsdatei automatisch.
 - Vor jedem Wrangler-Deploy führt build.command automatisch
-  `node --test tests/worker.test.mjs` aus. Ein fehlgeschlagener Test verhindert
-  die Veröffentlichung.
+  `node scripts/build-public.mjs && node --test tests/worker.test.mjs` aus.
+  Der Build berücksichtigt `site.config.json` und entfernt bei Bedarf nur den
+  vorübergehenden Banner. Ein fehlgeschlagener Test verhindert die Veröffentlichung.
 - Der Build-Token muss auf diesen Worker und die bestehende D1-Bindung zugreifen
   können. Keine Tokenwerte in Code, Chat oder Repository speichern.
 - Branch-Preview-Builds sind tatsächlich aktiv und mit `npx wrangler preview`
