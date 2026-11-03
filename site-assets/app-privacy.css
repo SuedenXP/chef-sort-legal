@@ -1,0 +1,14 @@
+/* App privacy: typography for the supplied policy and its English translation. */
+.app-privacy h1 { font-size: clamp(1.5rem, 3.2vw, 2.75rem); hyphens: auto; }
+.app-privacy h3 { margin: 1.5rem 0 .65rem; font-size: 1.0625rem; line-height: 1.45; }
+.app-privacy li { margin-bottom: .55rem; }
+.app-privacy table { width: 100%; margin-block: 1.25rem; border-collapse: collapse; table-layout: fixed; font-size: .875rem; }
+.app-privacy th, .app-privacy td { padding: .6rem; border: 1px solid var(--line); vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+.app-privacy th { background: #eeeee5; font-weight: 750; }
+.app-privacy > [data-lang] > p:first-of-type { color: var(--muted); font-size: .875rem; }
+@media (max-width: 30rem) {
+  .app-privacy th, .app-privacy td { padding: .4rem; }
+}
+@media (max-width: 22.5rem) {
+  .app-privacy h1 { font-size: 1.25rem; }
+}
