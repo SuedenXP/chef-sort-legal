@@ -1,5 +1,13 @@
 # BrainBlooms: Projektregeln
 
+## Spiel-Datenschutzerklärung – Veröffentlichungsauftrag 03.11.2026
+
+Der Nutzer gibt die eingebaute deutsche Endfassung und ihre englische Übersetzung
+unter `/datenschutz/` ausdrücklich zur Veröffentlichung frei. Interne Entwurfs-
+und Anwaltsvermerke wurden auf Nutzerentscheidung entfernt. Website-Hosting wird
+über die separate Website-Datenschutzerklärung erläutert. Die Unity-Quelle bleibt
+unverändert. `/terms/` enthält weiterhin die bestehende Seite in Vorbereitung.
+
 ## Drei Weihnachtsbrief-Vorlagen – veröffentlicht am 31.10.2026
 
 Die drei einseitigen PDFs für Kleinkinder, Kindergartenkinder und Schulkinder
